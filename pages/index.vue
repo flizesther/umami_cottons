@@ -89,7 +89,9 @@ export default {
   },
   data() {
     return {
-      mainProps: { blank: true, width: 75, height: 75, class: 'm1' }
+      mainProps: { blank: true, width: 75, height: 75, class: 'm1' },
+      slide: 0,
+      sliding: null
     }
   },
   methods: {
@@ -104,9 +106,16 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+//import personal font
+@font-face {
+  font-family: "merlodAutre";
+  src: url("../assets/fonts/MerlodAutre-Regular.otf");
+}
 * {
+  font-family: "merlodAutre";
   background-color: $blue;
 }
+
 .image-slide {
   height: 500px;
   width: 500px;

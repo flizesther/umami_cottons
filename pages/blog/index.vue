@@ -20,4 +20,11 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "merlodAutre";
+  src: url("../../assets/fonts/MerlodAutre-Regular.otf");
+}
+* {
+  font-family: "merlodAutre";
+}
 </style>
