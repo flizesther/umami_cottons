@@ -9,6 +9,7 @@
         <b-nav-item to="/" exact>Inicio</b-nav-item>
         <b-nav-item to="/buy">¿Cómo comprar?</b-nav-item>
         <b-nav-item to="/products">Nuestros Productos</b-nav-item>
+        <b-nav-item to="/nuestras-telas">Nuestras Telas</b-nav-item>
         <b-nav-item to="/about">Sobre Umami_cottons</b-nav-item>
         <b-nav-item to="/contact-us">Contáctanos</b-nav-item>
       </b-navbar-nav>

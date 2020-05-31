@@ -1,14 +1,5 @@
 <template>
   <b-container-fluid>
-    <vue-horizontal-list :items="items" :options="options">
-      <template v-slot:default="{item}">
-        <div class="item">
-          <h5>{{item.title}}</h5>
-          <p>{{item.content}}</p>
-        </div>
-      </template>
-    </vue-horizontal-list>
-
     <b-img src="/images/main-image.jpg" class="w-100" fluid alt="Responsive image"></b-img>
     <h1 class="d-flex justify-content-center">Umami Cottons</h1>
     <b-img
@@ -106,7 +97,6 @@
 </template>
 
 <script>
-import VueHorizontalList from "vue-horizontal-list";
 export default {
   head() {
     return {
@@ -116,33 +106,13 @@ export default {
       ]
     };
   },
-  components: {
-    VueHorizontalList
-  },
   data() {
     return {
       mainProps: { blank: true, width: 75, height: 75, class: "m1" },
       slide: 0,
-      sliding: null,
-      options: {
-        responsive: [
-          { end: 576, size: 1 },
-          { start: 576, end: 768, size: 2 },
-          { start: 768, end: 992, size: 3 },
-          { size: 4 }
-        ],
-        list: {
-          // 1200 because @media (min-width: 1200px) and therefore I want to switch to windowed mode
-          windowed: 1200,
-
-          // Because: #app {padding: 80px 24px;}
-          padding: 24
-        }
-      },
-      items: [{ title: "Item 0", content: "Content item with description" }]
-    };
+      sliding: null
+    }
   },
-
   methods: {
     onSlideStart(slide) {
       this.sliding = true;

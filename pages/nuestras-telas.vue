@@ -1,7 +1,7 @@
 <template>
   <b-container>
-    <h1>Buy</h1>
-    <!-- <h1>Buy</h1> -->    
+    <h1>Nuestras telas</h1>
+    <b-img src="/images/telas-upenda.jpg" class="w-100" fluid alt="Nuestras Telas"></b-img>
   </b-container>
 </template>
 
@@ -9,7 +9,7 @@
 export default {
   head() {
     return {
-      title: "¿Cómo comprar?"
+      title: "Nuestras Telas"
     };
   }
 };
