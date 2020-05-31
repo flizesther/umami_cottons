@@ -11,10 +11,18 @@
       fluid
       alt="Responsive image"
     ></b-img>
-    <div class="my-4 d-flex justify-content-center subtitle-section">Nuestros productos</div>
+    <div class="py-4 d-flex justify-content-center subtitle-section">
+      Nuestros productos
+      </div>
+      <div class="pb-4 d-flex justify-content-center">
+        <div class="py-2 shipping-section d-flex flex-column">
+          <p class="py-2 mb-0 d-flex justify-content-center text-section text-center">Todos productos están cosidos a mano, todos nuestras cajas están estampadas a mano, todo está hecho con grandes dosis de amor</p>
+          <p class="d-flex mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
+        </div>
+      </div>    
     <div class="d-flex justify-content-center">
       <b-button v-b-modal.modal-center-1>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/11.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-1" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -26,7 +34,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-3>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/12.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-3" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -34,7 +42,7 @@
     </div>
     <div class="d-flex justify-content-center">
       <b-button v-b-modal.modal-center-4>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/4.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-4" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -46,7 +54,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-6>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/5.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-6" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -72,6 +80,15 @@
         </b-modal>
       </b-button>
     </div>
+    <div class="mb-4 d-flex justify-content-center">
+      <div class="py-2 shipping-section d-flex flex-column">
+        <div class="py-2 shipping-section d-flex flex-column">Gastos de envío:
+          <div class="">Gratis Pedidos Nacionales superiores a 50 euros</div>
+          <div class="">5 Euros - Pedidos nacionales inferiores a 50 euros</div>
+          <div class="">15 Euros - Pedidos internacionales.</div>
+        </div>
+      </div>
+    </div> 
     <div class="my-4 d-flex justify-content-center subtitle-section">¿Cómo puedo comprar?</div>
     <b-card-group deck class="screen-width d-flex justify-content-center mx-auto">
       <b-card
@@ -320,6 +337,7 @@ export default {
 }
 .subtitle-section {
   font-size:40px;
+  background-color: #f8f9fa;
 }
 .screen-width {
   width:1000px;
@@ -335,9 +353,10 @@ export default {
   justify-content: center;
   background-color: #F47DBC;
 }
- 
+.shipping-section {
+  width:400px;
+}
 footer{
-	position: fixed;
 	bottom: 0;
 }
  
@@ -348,7 +367,6 @@ footer{
  
  
 .footer-distributed{
-	background-color: #2c292f;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
@@ -371,7 +389,7 @@ footer{
 }
  
 .footer-distributed h3{
-	color:  #ffffff;
+	color:  #212529;
 	font: normal 36px;
 	margin: 0;
 }
@@ -382,14 +400,10 @@ footer{
 	width: 30%;
 }
  
-.footer-distributed h3 span{
-	color:  #e0ac1c;
-}
- 
 /* Footer links */
  
 .footer-distributed .footer-links{
-	color:  #ffffff;
+	color:  #8f9296;
 	margin: 20px 0 12px;
 }
  
@@ -416,7 +430,7 @@ footer{
  
 .footer-distributed .footer-center i{
 	background-color:  #33383b;
-	color: #ffffff;
+	color: #8f9296;
 	font-size: 25px;
 	width: 38px;
 	height: 38px;
@@ -434,7 +448,7 @@ footer{
  
 .footer-distributed .footer-center p{
 	display: inline-block;
-	color: #ffffff;
+	color: #8f9296;
 	vertical-align: middle;
 	margin:0;
 }
@@ -468,7 +482,7 @@ footer{
  
 .footer-distributed .footer-company-about span{
 	display: block;
-	color:  #ffffff;
+	color:  #8f9296;
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -487,7 +501,7 @@ footer{
 	border-radius: 2px;
  
 	font-size: 20px;
-	color: #ffffff;
+	color: #8f9296;
 	text-align: center;
 	line-height: 35px;
  
