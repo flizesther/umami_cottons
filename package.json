@@ -1,0 +1,24 @@
+{
+  "name": "umami-cottons",
+  "version": "1.0.0",
+  "description": "My incredible Nuxt.js project",
+  "author": "Esther Rodriguez",
+  "private": true,
+  "scripts": {
+    "start": "nuxt",
+    "build": "nuxt build",
+    "serve": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@bazzite/nuxt-netlify": "^0.1.1",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "bootstrap": "^4.1.3",
+    "bootstrap-vue": "^2.0.0-rc.11",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "sass-loader": "^8.0.0"
+  }
+}
