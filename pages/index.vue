@@ -34,7 +34,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-3>
-        <b-img class="image-bottom" src="/images/12.png" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/2.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-3" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -42,7 +42,7 @@
     </div>
     <div class="d-flex justify-content-center">
       <b-button v-b-modal.modal-center-4>
-        <b-img class="image-bottom" src="/images/4.png" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/nino.jpg" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-4" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -62,7 +62,7 @@
     </div>
     <div class="d-flex justify-content-center mb-4">
       <b-button v-b-modal.modal-center>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/3.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -74,7 +74,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/4.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>

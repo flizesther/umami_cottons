@@ -1,6 +1,7 @@
 <template>
   <b-container>
     <h1>Productos Umami</h1>
+    
     <footer class="footer-distributed">
  
 			<div class="footer-left">
