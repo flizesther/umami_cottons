@@ -1,7 +1,9 @@
 <template>
   <b-container>
-    <h1>Nuestras telas</h1>
-    <b-img src="/images/telas-upenda.jpg" class="w-100" fluid alt="Nuestras Telas"></b-img>
+      <div class="d-flex justify-content-center flex-column">
+        <h1 class="mx-auto my-4">Nuestras telas</h1>
+        <b-img src="/images/telas-upenda.jpg" class="w-75 mx-auto" fluid alt="Nuestras Telas"></b-img>
+      </div>
     <footer class="footer-distributed">
  
 			<div class="footer-left">
@@ -67,7 +69,6 @@ export default {
 }
 
 footer{
-	position: fixed;
 	bottom: 0;
 }
  

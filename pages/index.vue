@@ -42,13 +42,13 @@
     </div>
     <div class="d-flex justify-content-center">
       <b-button v-b-modal.modal-center-4>
-        <b-img class="image-bottom" src="/images/nino.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/19.png" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-4" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-5>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
+        <b-img class="image-bottom" src="/images/productos.jpg" alt="HEX shorthand color image (#777)"></b-img>
         <b-modal id="modal-center-5" centered title="BootstrapVue">
           <p class="my-4">Vertically centered modal!</p>
         </b-modal>
@@ -90,82 +90,57 @@
       </div>
     </div> 
     <div class="my-4 d-flex justify-content-center subtitle-section">¿Cómo puedo comprar?</div>
-    <b-card-group deck class="screen-width d-flex justify-content-center mx-auto">
-      <b-card
-        class="first-box"
-        title="Cóntactanos"
-        img-src="https://picsum.photos/300/300/?image=41"
-        img-alt="Image"
-        img-top
-      > 
-        <b-card-text>
-          Indícanos la fecha que quieres recibir tu pedido
-        </b-card-text>
-      </b-card>
-      <b-card
-        title="Producto"
-        img-src="https://picsum.photos/300/300/?image=41"
-        img-alt="Image"
-        img-top
-      >
-        <b-card-text>una upenda, un meraki, un sobre cambiador, una bandana, un pack...
-        </b-card-text>
-      </b-card>
-      <b-card
-        title="Tela"
-        img-src="https://picsum.photos/300/300/?image=41"
-        img-alt="Image"
-        img-top
-      >
-        <b-card-text>
-        Elige la tela que mas te guste, recuerda que todas son 100% algodón</b-card-text>
-      </b-card>
-      <b-card
-        class="first-box"
-        title="Packaging"
-        img-src="https://picsum.photos/300/300/?image=41"
-        img-alt="Image"
-        img-top
-      > 
-        <b-card-text>
-          Escríbenos la dirección de tu pedido + el nombre de la personita especial 
-        </b-card-text>
-      </b-card>
-    </b-card-group>
+      <b-card-group deck class="screen-width d-flex justify-content-center mx-auto">
+        <b-card
+          class="first-box"
+          title="Cóntactanos"
+          img-src="/images/telefono.png"
+          img-alt="Image"
+          img-top
+        > 
+          <b-card-text>
+            Indícanos la fecha que quieres recibir tu pedido
+          </b-card-text>
+        </b-card>
+        <b-card
+          title="Producto"
+          img-src="/images/productos.jpg"
+          img-alt="Image"
+          img-top
+        >
+          <b-card-text>una upenda, un meraki, un sobre cambiador, una bandana, un pack...
+          </b-card-text>
+        </b-card>
+        <b-card
+          title="Tela"
+          img-src="/images/21.png"
+          img-alt="Image"
+          img-top
+        >
+          <b-card-text>
+          Elige la tela que mas te guste, recuerda que todas son 100% algodón</b-card-text>
+        </b-card>
+        <b-card
+          class="first-box"
+          title="Packaging"
+          img-src="/images/22.png"
+          img-alt="Image"
+          img-top
+        > 
+          <b-card-text>
+            Escríbenos la dirección de tu pedido + el nombre de la personita especial 
+          </b-card-text>
+        </b-card>
+      </b-card-group>
     <div class="d-flex justify-content-center my-4">
     <b-carousel
       id="carousel-1"
-      v-model="slide"
       :interval="4000"
-      controls
-      indicators
       background="#ababab"
       class="image-slide"
       style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
     >
-      <!-- Text slides with image -->
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/cierre.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Second slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/nina-con-upendas.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Third slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/upenda.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Third slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/upenda-abrazo.jpg"
-      ></b-carousel-slide>
+    <b-img src="/images/24.png" class="w-100 borders" fluid alt="Responsive image"></b-img>
     </b-carousel>
     <b-carousel
       id="carousel-1"
@@ -203,46 +178,23 @@
     </b-carousel>
     <b-carousel
       id="carousel-1"
-      v-model="slide"
       :interval="4000"
-      controls
-      indicators
       background="#ababab"
       class="image-slide"
       style="text-shadow: 1px 1px 2px #333;"
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <!-- Text slides with image -->
-      <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/cierre.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Second slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/nina-con-upendas.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Third slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/upenda.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Third slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
-        img-src="/images/upenda-abrazo.jpg"
-      ></b-carousel-slide>
+      <b-img src="/images/25.png" class="w-100 borders" fluid alt="Responsive image"></b-img>
     </b-carousel>
     </div>
-    <div class="d-flex justify-content-center">SIGUE A UMAMI_COTTONS EN INSTAGRAM</div>
+    <div class="d-flex justify-content-center subtitle-section">SIGUE A UMAMI_COTTONS EN INSTAGRAM</div>
     <div class="d-flex justify-content-center">
-      <b-img class="image-bottom" src="/images/cierre.jpg" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/cierre.jpg" alt="Named color image (black)"></b-img>
-      <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX color image"></b-img>
-      <b-img class="image-bottom" src="/images/cierre.jpg" alt="RGBa color image"></b-img>
-      <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color (#88f)"></b-img>
+      <b-img class="image-bottom" src="/images/13.png" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/15.png" alt="Named color image (black)"></b-img>
+      <b-img class="image-bottom" src="/images/16.png" alt="HEX color image"></b-img>
+      <b-img class="image-bottom" src="/images/17.png" alt="RGBa color image"></b-img>
+      <b-img class="image-bottom" src="/images/18.png" alt="HEX shorthand color (#88f)"></b-img>
     </div>
     <footer class="footer-distributed">
  
@@ -326,7 +278,9 @@ export default {
   font-family: "merlodAutre";
   background-color: $blue;
 }
-
+.borders {
+  padding: 40px;
+}
 .image-slide {
   height: 500px;
   width: 500px;

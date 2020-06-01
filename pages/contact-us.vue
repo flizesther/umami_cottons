@@ -204,7 +204,6 @@ export default {
 }
 
 footer{
-	position: fixed;
 	bottom: 0;
 }
  
