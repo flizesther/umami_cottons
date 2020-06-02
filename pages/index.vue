@@ -22,61 +22,61 @@
       </div>    
     <div class="d-flex justify-content-center">
       <b-button v-b-modal.modal-center-1>
-        <b-img class="image-bottom" src="/images/11.png" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center-1" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+        <b-img class="image-bottom" src="/images/11.png" alt="Hecho a mano"></b-img>
+        <b-modal id="modal-center-1" centered title="Hecho a mano">
+          <p class="my-4">Hecho a mano</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-2>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center-2" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+        <b-img class="image-bottom" src="/images/cierre.jpg" alt="vida sencilla"></b-img>
+        <b-modal id="modal-center-2" centered title="Si, un snap nos cambió la vida">
+          <p class="my-4">Nuestros diseños están pensados para hacerte la vida más sencilla</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-3>
-        <b-img class="image-bottom" src="/images/2.png" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center-3" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+        <b-img class="image-bottom" src="/images/2.png" alt="telas de algodón"></b-img>
+        <b-modal id="modal-center-3" centered title="Telas 100% algodón">
+          <p class="my-4">Telas 100% algodón, tanto el popelín como la tela de toalla</p>
         </b-modal>
       </b-button>
     </div>
     <div class="d-flex justify-content-center">
       <b-button v-b-modal.modal-center-4>
-        <b-img class="image-bottom" src="/images/19.png" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center-4" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+        <b-img class="image-bottom" src="/images/19.png" alt="fiesta"></b-img>
+        <b-modal id="modal-center-4" centered title="Vive la vida">
+          <p class="my-4">Y así empieza todo, con una fiesta!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-5>
-        <b-img class="image-bottom" src="/images/productos.jpg" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center-5" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+        <b-img class="image-bottom" src="/images/productos.jpg" alt="muselina"></b-img>
+        <b-modal id="modal-center-5" centered title="Muselina">
+          <p class="my-4">Hemos incorporado tela muselina para tocar el cielo!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-6>
-        <b-img class="image-bottom" src="/images/5.png" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center-6" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+        <b-img class="image-bottom" src="/images/5.png" alt="packs"></b-img>
+        <b-modal id="modal-center-6" centered title="Un pack lo arregla todo">
+          <p class="my-4">A veces no sabes qué tienes que comprar o regalar. Un pack te cambia la vida! mira las posibles combinaciones</p>
         </b-modal>
       </b-button>
     </div>
     <div class="d-flex justify-content-center mb-4">
-      <b-button v-b-modal.modal-center>
-        <b-img class="image-bottom" src="/images/3.png" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+      <b-button v-b-modal.modal-center-7>
+        <b-img class="image-bottom" src="/images/3.png" alt="sobres de muda"></b-img>
+        <b-modal id="modal-center" centered title="Sobre de muda">
+          <p class="my-4">Producto estrella. Ten todo organizado. Uno sabe lo ordenado con lo que sale, pero no como llega. Con los sobres de muda, la organización está garantizada!</p>
         </b-modal>
       </b-button>
-      <b-button v-b-modal.modal-center>
-        <b-img class="image-bottom" src="/images/cierre.jpg" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+      <b-button v-b-modal.modal-center-8>
+        <b-img class="image-bottom" src="/images/upenda/upenda-12.jpg" alt="upenda"></b-img>
+        <b-modal id="modal-center" centered title="Upenda">
+          <p class="my-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
         </b-modal>
       </b-button>
-      <b-button v-b-modal.modal-center>
-        <b-img class="image-bottom" src="/images/4.png" alt="HEX shorthand color image (#777)"></b-img>
-        <b-modal id="modal-center" centered title="BootstrapVue">
-          <p class="my-4">Vertically centered modal!</p>
+      <b-button v-b-modal.modal-center-9>
+        <b-img class="image-bottom" src="/images/4.png" alt="disfruta con umami"></b-img>
+        <b-modal id="modal-center" centered title="Disfrutar con umami">
+          <p class="my-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
         </b-modal>
       </b-button>
     </div>
@@ -132,7 +132,7 @@
           </b-card-text>
         </b-card>
       </b-card-group>
-    <div class="d-flex justify-content-center my-4">
+    <div class="d-flex justify-content-center py-4">
     <b-carousel
       id="carousel-1"
       :interval="4000"
@@ -156,23 +156,23 @@
     >
       <!-- Text slides with image -->
       <b-carousel-slide
-        caption="First slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        caption="Alta Calidad"
+        text="Todas nuestras telas son de alta calidad tanto en diseño como en el tejido en sí."
         img-src="/images/cierre.jpg"
       ></b-carousel-slide>
       <b-carousel-slide
-        caption="Second slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        caption="Es su momento, es tu momento"
+        text="Pensada para hacer la vida del papá y la mamá más fácil"
         img-src="/images/nina-con-upendas.jpg"
       ></b-carousel-slide>
       <b-carousel-slide
-        caption="Third slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        caption="Querer es sentir"
+        text="Siente la suavidad de nuestras telas"
         img-src="/images/upenda.jpg"
       ></b-carousel-slide>
       <b-carousel-slide
-        caption="Third slide"
-        text="Nulla vitae elit libero, a pharetra augue mollis interdum."
+        caption="El regalo perfecto"
+        text="Una prenda única, hecha a mano con todo nuestro cariño y amor."
         img-src="/images/upenda-abrazo.jpg"
       ></b-carousel-slide>
     </b-carousel>
@@ -211,14 +211,14 @@
 					<a href="/">Contact</a>
 				</p>
  
-				<p class="footer-company-name">© 2020 Umami Cottons Company.</p>
+				<p class="footer-company-name d-flex justify-content-center">© 2020 Umami Cottons Company.</p>
 			</div>
  
 			<div class="footer-center">
 				<div class="d-flex justify-content-center">
           <img class="w-50" src="/images/logoUC.jpg">
 				</div>
-        <div class="d-flex justify-content-center mx-auto my-4">Síguenos en:</div>
+        <div class="d-flex justify-content-center mx-auto py-4">Síguenos en:</div>
           <div class="footer-icons d-flex justify-content-center mx-auto">
 					<a href="#"><i class="fa fa-facebook"></i></a>
 					<a href="#"><i class="fa fa-twitter"></i></a>
@@ -276,10 +276,13 @@ export default {
 }
 * {
   font-family: "merlodAutre";
-  background-color: $blue;
+  background-color: $light-grey;
 }
 .borders {
   padding: 40px;
+}
+.btn-secondary {
+  border-color: $grey;
 }
 .image-slide {
   height: 500px;
@@ -305,7 +308,7 @@ export default {
   align-items: center;
   display:flex;
   justify-content: center;
-  background-color: #F47DBC;
+  background-color: $umami-pink;
 }
 .shipping-section {
   width:400px;
@@ -326,7 +329,10 @@ footer{
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 50px 50px 60px 50px;
-	margin-top: 80px;
+  padding-top: 80px;
+  & a {
+    color: $umami-pink;
+  }
 }
  
 .footer-distributed .footer-left,
@@ -343,7 +349,7 @@ footer{
 }
  
 .footer-distributed h3{
-	color:  #212529;
+	color:  $black;
 	font: normal 36px;
 	margin: 0;
 }
@@ -357,7 +363,7 @@ footer{
 /* Footer links */
  
 .footer-distributed .footer-links{
-	color:  #8f9296;
+	color:  $grey;
 	margin: 20px 0 12px;
 }
  
@@ -369,7 +375,7 @@ footer{
 }
  
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	color:  $grey;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -383,8 +389,8 @@ footer{
  
  
 .footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #8f9296;
+	background-color:  $grey;
+	color: $grey;
 	font-size: 25px;
 	width: 38px;
 	height: 38px;
@@ -428,7 +434,7 @@ footer{
  
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  $grey;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -451,7 +457,7 @@ footer{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  $grey;
 	border-radius: 2px;
  
 	font-size: 20px;

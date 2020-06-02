@@ -68,7 +68,7 @@
                             <a href="#">Meraki</a>
                           </h4>
                           <h5>55 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
+                          <p class="card-text">Los Meraki son los poncho toallas para niñ@s más originales y gustosos!</p>
                         </div>
                     <b-modal id="modal-center-meraki" centered title="Meraki">
                     <div class="col-lg-12">
@@ -83,15 +83,12 @@
                   <!-- /.card -->
                       <div class="card card-outline-secondary my-4">
                         <div class="card-body">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+                          <p>Para nosotros, su nombre lo dice todo. Meraki es una palabra que proviene del griego moderno, y signfica "hacer algo con amor y creatividad, poniendo el alma en ello".</p>
+                          <p>El Meraki está diseñado para que gracias a su forma de poncho y su abertura amplia en el cuello sea fácil de poner y quitar. Además, hemos incorporado unos snaps laterales para poder ajustar el Meraki al cuerpo, y una amplia capucha para proteger la delicada cabecita de tu pequeñ@</p>                          <hr>
                           <hr>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
+                          <p>Están hechas en Algodón 100% y talla de alta de calidad, y están disponibles en dos tallas:</p>
+                          <p>- Talla 1: de 1 a 4 años</p>
+                          <p>- Talla 2: de 4 a 7 años</p>
                         </div>
                       </div>
                     </div>
@@ -517,7 +514,7 @@
 					<a href="#"><i class="fa fa-linkedin"></i></a>
 					<a href="#"><i class="fa fa-youtube"></i></a>
 				</div>
-        <p class="footer-company-name">© 2020 Umami Cottons Company.</p>
+        <p class="footer-company-name d-flex justify-content-center">© 2020 Umami Cottons Company.</p>
 			</div>
 			<div class="footer-right">
 				<p class="footer-company-about">
@@ -576,13 +573,15 @@ footer{
  
  
 .footer-distributed{
-	background-color: #2c292f;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 50px 50px 60px 50px;
-	margin-top: 80px;
+  padding-top: 80px;
+  & a {
+    color: $umami-pink;
+  }
 }
  
 .footer-distributed .footer-left,
@@ -599,7 +598,7 @@ footer{
 }
  
 .footer-distributed h3{
-	color:  #212529;
+	color:  $black;
 	font: normal 36px;
 	margin: 0;
 }
@@ -610,11 +609,10 @@ footer{
 	width: 30%;
 }
  
- 
 /* Footer links */
  
 .footer-distributed .footer-links{
-	color:  #8f9296;
+	color:  $grey;
 	margin: 20px 0 12px;
 }
  
@@ -626,7 +624,7 @@ footer{
 }
  
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	color:  $grey;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -640,8 +638,8 @@ footer{
  
  
 .footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #8f9296;
+	background-color:  $grey;
+	color: $grey;
 	font-size: 25px;
 	width: 38px;
 	height: 38px;
@@ -670,7 +668,13 @@ footer{
 	font-size:14px;
 	line-height:2;
 }
-  
+ 
+.footer-distributed .footer-center p a{
+	color:  #e0ac1c;
+	text-decoration: none;;
+}
+ 
+ 
 /* Footer Right */
  
 .footer-distributed .footer-right{
@@ -679,7 +683,7 @@ footer{
  
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  $grey;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -702,7 +706,7 @@ footer{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  $grey;
 	border-radius: 2px;
  
 	font-size: 20px;

@@ -123,7 +123,7 @@
 					<a href="/">Contact</a>
 				</p>
  
-				<p class="footer-company-name">© 2020 Umami Cottons Company.</p>
+				<p class="footer-company-name d-flex justify-content-center">© 2020 Umami Cottons Company.</p>
 			</div>
  
 			<div class="footer-center">
@@ -214,13 +214,15 @@ footer{
  
  
 .footer-distributed{
-	background-color: #2c292f;
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
 	padding: 50px 50px 60px 50px;
-	margin-top: 80px;
+  padding-top: 80px;
+  & a {
+    color: $umami-pink;
+  }
 }
  
 .footer-distributed .footer-left,
@@ -237,7 +239,7 @@ footer{
 }
  
 .footer-distributed h3{
-	color:  #ffffff;
+	color:  $black;
 	font: normal 36px;
 	margin: 0;
 }
@@ -248,14 +250,10 @@ footer{
 	width: 30%;
 }
  
-.footer-distributed h3 span{
-	color:  #e0ac1c;
-}
- 
 /* Footer links */
  
 .footer-distributed .footer-links{
-	color:  #ffffff;
+	color:  $grey;
 	margin: 20px 0 12px;
 }
  
@@ -267,7 +265,7 @@ footer{
 }
  
 .footer-distributed .footer-company-name{
-	color:  #8f9296;
+	color:  $grey;
 	font-size: 14px;
 	font-weight: normal;
 	margin: 0;
@@ -281,8 +279,8 @@ footer{
  
  
 .footer-distributed .footer-center i{
-	background-color:  #33383b;
-	color: #ffffff;
+	background-color:  $grey;
+	color: $grey;
 	font-size: 25px;
 	width: 38px;
 	height: 38px;
@@ -300,7 +298,7 @@ footer{
  
 .footer-distributed .footer-center p{
 	display: inline-block;
-	color: #ffffff;
+	color: #8f9296;
 	vertical-align: middle;
 	margin:0;
 }
@@ -326,7 +324,7 @@ footer{
  
 .footer-distributed .footer-company-about{
 	line-height: 20px;
-	color:  #92999f;
+	color:  $grey;
 	font-size: 13px;
 	font-weight: normal;
 	margin: 0;
@@ -334,7 +332,7 @@ footer{
  
 .footer-distributed .footer-company-about span{
 	display: block;
-	color:  #ffffff;
+	color:  #8f9296;
 	font-size: 18px;
 	font-weight: bold;
 	margin-bottom: 20px;
@@ -349,11 +347,11 @@ footer{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  #33383b;
+	background-color:  $grey;
 	border-radius: 2px;
  
 	font-size: 20px;
-	color: #ffffff;
+	color: #8f9296;
 	text-align: center;
 	line-height: 35px;
  
