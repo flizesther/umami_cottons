@@ -1,493 +1,31 @@
 <template>
   <b-container>
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
+      <b-row>
+        <b-col lg="3">
           <h1 class="my-4">Productos Umami</h1>
-          <div class="list-group">
-            <a href="#" class="list-group-item">Upenda</a>
-            <a href="#" class="list-group-item">Meraki</a>
-            <a href="#" class="list-group-item">Muselina</a>
-            <a href="#" class="list-group-item">Bandanas</a>
-            <a href="#" class="list-group-item">Sobres</a>
-            <a href="#" class="list-group-item">Chupeteros</a>
-            <a href="#" class="list-group-item">Toallitas Ü</a>
-            <a href="#" class="list-group-item">Baberos</a>
-            <a href="#" class="list-group-item">Mascarillas</a>
-            <a href="#" class="list-group-item">Toalla con Goma</a>
-            <a href="#" class="list-group-item">Toalla cambiador</a>
-            <a href="#" class="list-group-item">Cestos de Algodón</a>
+          <span>
+            <div class="h2 mb-0">
+              <b-icon-chevron-compact-left></b-icon-chevron-compact-left>
+            </div>
+          </span>
+          <div class="list-group" v-for="product in filteredProducts" :key="product.category">
+            <span class="list-group-item" @click="setFilter(product.category)">
+              {{ product.category }}
+            </span>
           </div>
-        </div>
-        <!-- /.col-lg-3 -->
-        <div class="col-lg-9 products-row">
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4 upenda">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-upenda>
-                    <a href="#"><img class="card-img-top" src="/images/upenda/upenda-1.jpg" alt="upenda"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">Upenda</a>
-                          </h4>
-                          <h5>35 euros</h5>
-                          <p class="card-text">Las Upendas son nuestras toallas, diseñadas para hacer más fácil la vida de papá y mamá</p>
-                        </div>
-                    <b-modal id="modal-center-upenda" centered title="Upenda">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/upenda/upenda-2.jpg" alt="upenda">
-                          <div class="card-body">
-                            <h3 class="card-title">Upenda</h3>
-                            <h4>35 Euros</h4>
-                            <p class="card-text">Fueron clave en mi maternidad. Estas toallas miden 80x80cm y son tan útiles porque se colocan al cuello con un fácil snap.</p>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-                      <div class="card card-outline-secondary my-4">
-                        <div class="card-body">
-                          <p>Así empiezas a disfrutar de bañar a tu bebé con dos manos, sin que acabes mojada con los chapoteos y secarlo es tan fácil!</p>
-                          <p>Solo tienes que coger a tu bebé para abrazarlo y cubrirlo con los laterales de la Upenda para que esté protegido y seco.</p>
-                          <p>Además, la Upenda lleva capucha pensando sobretodo en esos primeros meses tan delicados.</p>
-                          <p>Las telas son de algodón 100%: una toall suave, y una tela de tu elección para hacer que tu toalla sea personalmente bonita.</p>
-                          <hr>
-                          <p class="bold text-center">Si no la tienes es porque aún no la has probado.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 meraki">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-meraki>
-                    <a href="#"><img class="card-img-top" src="/images/meraki/meraki-1.jpg" alt="meraki-1"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">Meraki</a>
-                          </h4>
-                          <h5>55 euros</h5>
-                          <p class="card-text">Los Meraki son los poncho toallas para niñ@s más originales y gustosos!</p>
-                        </div>
-                    <b-modal id="modal-center-meraki" centered title="Meraki">
-                    <div class="col-lg-12">
-                      <div class="card mt-4">
-                        <img class="card-img-top img-fluid" src="/images/meraki/meraki-2.jpg" alt="meraki-2">
-                        <div class="card-body">
-                          <h3 class="card-title">Meraki</h3>
-                          <h4>55 euros</h4>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                        </div>
-                      </div>
-                  <!-- /.card -->
-                      <div class="card card-outline-secondary my-4">
-                        <div class="card-body">
-                          <p>Para nosotros, su nombre lo dice todo. Meraki es una palabra que proviene del griego moderno, y signfica "hacer algo con amor y creatividad, poniendo el alma en ello".</p>
-                          <p>El Meraki está diseñado para que gracias a su forma de poncho y su abertura amplia en el cuello sea fácil de poner y quitar. Además, hemos incorporado unos snaps laterales para poder ajustar el Meraki al cuerpo, y una amplia capucha para proteger la delicada cabecita de tu pequeñ@</p>                          <hr>
-                          <hr>
-                          <p>Están hechas en Algodón 100% y talla de alta de calidad, y están disponibles en dos tallas:</p>
-                          <p>- Talla 1: de 1 a 4 años</p>
-                          <p>- Talla 2: de 4 a 7 años</p>
-                        </div>
-                      </div>
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 muselina">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-muselina>
-                    <a href="#"><img class="card-img-top" src="/images/muselina/muselina-1.jpg" alt="muselina"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">Muselina</a>
-                          </h4>
-                          <h5>15 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                    <b-modal id="modal-center-4" centered title="Muselina">
-                    <div class="col-lg-12">
-                      <div class="card mt-4">
-                        <img class="card-img-top img-fluid" src="/images/muselina/muselina-2.jpg" alt="muselina">
-                        <div class="card-body">
-                          <h3 class="card-title">Muselina</h3>
-                          <h4>15  euros</h4>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                        </div>
-                      </div>
-                      <div class="card card-outline-secondary my-4">
-                        <div class="card-body">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
-                        </div>
-                      </div>
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 bandana">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-bandana>
-                    <a href="#"><img class="card-img-top" src="/images/bandanas/bandana-1.jpg" alt=""></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">Bandana</a>
-                          </h4>
-                          <h5>8 euros</h5>
-                          <p class="card-text">Adiós a las babas en la ropa!</p>
-                        </div>
-                    <b-modal id="modal-center-bandana" centered title="bandana">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/bandanas/bandana-2.jpg" alt="">
-                          <div class="card-body">
-                            <h3 class="card-title">bandana</h3>
-                            <h4>8 euros</h4>
-                            <p class="card-text">Las bandanas, nuestras aliadas contra las babas y reflujos de nuestro bebé!</p>
-                          </div>
-                        </div>
-                        <div class="card card-outline-secondary my-4">
-                          <div class="card-body">
-                          <p>Al igual que las upenda, las bandanas son de tela algodón 100% de tu elección y tela toalla por el reverso.</p>
-                          <p> Se ponen en el cuello de tu bebé con un fácil snap y hace que tu bebé luzca precios@ a la vez que protege la ropita de ensuciarse.</p>
-                          <p> Es una prenda más para llevar cada día, sobretodo si tu bebé está en periodo de salir dientes (habrás notado que produce más baba de lo normal) o si tu bebé tiene reflujos de leche, muy común en periodo de lactancia y bibes.</p>
-                          <hr>
-                          </div>
-                        </div>
-                      </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 sobres">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-sobres>
-                    <a href="#"><img class="card-img-top" src="/images/sobres/sobre-1.jpg" alt="sobre"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">Sobres</a>
-                          </h4>
-                          <h5>12 euros</h5>
-                          <p class="card-text">uno de nuestros MUST!</p>
-                        </div>
-                    <b-modal id="modal-center-sobres" centered title="Sobres de Muda">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/sobres/sobre-2.jpg" alt="Sobre de Muda 2">
-                          <div class="card-body">
-                            <h3 class="card-title">Sobres</h3>
-                            <h4>12 euros</h4>
-                            <p class="card-text">Son bolsitas hechas de tela Algodón 100% (a tu elección), forrados y con un snap para el cierre.</p>
-                          </div>
-                        </div>
-                        <!-- /.card -->
-                        <div class="card card-outline-secondary my-4">
-                          <div class="card-body">
-                            <p>Antes no sabía que eran, y ahora no puedo salir sin ellos.</p>
-                            <hr>
-                            <p>Nuestros sobres de muda son primero usados para llevar "a salvo" y "bien organizado" las mudas de la primera puesta en el momento del parto, y también las cosas de la futura mamá</p>
-                            <p>Pero luego su utilidad es tan amplia como tu imaginación: llevar la muda en el carro o en tu bolso, pañales, juguetes, tu ropa interior cuando te vas de viaje, y un largo etcétera.</p>
-                          </div>
-                        </div>
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 chupeteros">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-chupeteros>
-                    <a href="#"><img class="card-img-top" src="/images/chupetero.jpg" alt="chupetero"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">Chupeteros</a>
-                          </h4>
-                          <h5>8 euros</h5>
-                          <p class="card-text">Se acabó perder más chupeteros!</p>
-                        </div>
-                    <b-modal id="modal-center-chupeteros" centered title="chupeteros">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/chupetero.jpg" alt="chupetero">
-                          <div class="card-body">
-                            <h3 class="card-title">chupeteros</h3>
-                            <h4>8 euros</h4>
-                            <p class="card-text">Son tan molones, que las mamás y papás nos gustan, pero l@s peques lo adoran!</p>
-                          </div>
-                        </div>
-                        <div class="card card-outline-secondary my-4">
-                          <div class="card-body">
-                            <p>Se acabó perder más chupetes!</p>
-                            <hr>
-                            <p>Cuélgate uno y no me perderás!</p>
-                          </div>
-                        </div>
-                        <!-- /.card -->
-                      </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 toallitas-u">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-toallitas-u>
-                    <a href="#"><img class="card-img-top" src="/images/toallitas-u/toallitas-u-1.jpg" alt="toallitas-u-1"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">toallitas Ü</a>
-                          </h4>
-                          <h5>12 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                    <b-modal id="modal-center-toallitas-u" centered title="toallitas Ü">
-                    <div class="col-lg-12">
-                      <div class="card mt-4">
-                        <img class="card-img-top img-fluid" src="/images/toallitas-u/toallitas-u-2.jpg" alt="toallitas-u-2">
-                        <div class="card-body">
-                          <h3 class="card-title">toallitas Ü</h3>
-                          <h4>12 euros</h4>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                        </div>
-                      </div>
-                      <div class="card card-outline-secondary my-4">
-                        <div class="card-body">
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                          <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                          <hr>
-                        </div>
-                      </div>
-                      </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 baberos">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-baberos>
-                    <a href="#"><img class="card-img-top" src="/images/baberos/babero-1.jpg" alt="baberos-1"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">baberos</a>
-                          </h4>
-                          <h5>12 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                    <b-modal id="modal-center-baberos" centered title="baberos">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/baberos/babero-2.jpg" alt="">
-                          <div class="card-body">
-                            <h3 class="card-title">baberos</h3>
-                            <h4>12 euros</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                          </div>
-                        </div>
-                        <div class="card card-outline-secondary my-4">
-                          <div class="card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                          </div>
-                        </div>
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 mascarillas">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-mascarillas>
-                    <a href="#"><img class="card-img-top mascarilla" src="/images/mascarilla/mascarilla-1.jpg" alt="mascarillas"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">mascarillas</a>
-                          </h4>
-                          <h5>8 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                    <b-modal id="modal-center-mascarillas" centered title="Mascarillas">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top mascarilla img-fluid" src="/images/mascarilla/mascarilla-2.jpg" alt="mascarillas">
-                          <div class="card-body">
-                            <h3 class="card-title">mascarillas</h3>
-                            <h4>8 euros</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-                        <div class="card card-outline-secondary my-4">
-                          <div class="card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 toalla-goma">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-4>
-                    <a href="#"><img class="card-img-top" src="/images/upenda/upenda-11.jpg" alt=""></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">toalla-goma</a>
-                          </h4>
-                          <h5>12 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                    <b-modal id="modal-center-toalla-goma" centered title="toalla-goma">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/upenda/upenda-12.jpg" alt="">
-                          <div class="card-body">
-                            <h3 class="card-title">toalla-goma</h3>
-                            <h4>12 euros</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-
-                        <div class="card card-outline-secondary my-4">
-                          <div class="card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 toalla-cambiador">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-toalla-cambiador>
-                    <a href="#"><img class="card-img-top" src="/images/upenda/upenda-14.jpg" alt=""></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">toalla-cambiador</a>
-                          </h4>
-                          <h5>12 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                    <b-modal id="modal-center-toalla-cambiador" centered title="toalla-cambiador">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/upenda/upenda-15.jpg" alt="">
-                          <div class="card-body">
-                            <h3 class="card-title">toalla-cambiador</h3>
-                            <h4>12 euros</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-                  <div class="card card-outline-secondary my-4">
-                    <div class="card-body">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                      <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                      <hr>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                      <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                      <hr>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                      <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                      <hr>
-                    </div>
-                  </div>
-                  <!-- /.card -->
-
-                </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4 cestos-de-algodon">
-              <div class="card h-100">
-                <b-button v-b-modal.modal-center-cestos-de-algodon>
-                    <a href="#"><img class="card-img-top" src="/images/cestas.jpg" alt="cesta"></a>
-                        <div class="card-body">
-                          <h4 class="card-title">
-                            <a href="#">cestos-de-algodon</a>
-                          </h4>
-                          <h5>20 euros</h5>
-                          <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-                        </div>
-                    <b-modal id="modal-center-cestos-de-algodon" centered title="cestos-de-algodon">
-                      <div class="col-lg-12">
-                        <div class="card mt-4">
-                          <img class="card-img-top img-fluid" src="/images/cestas.jpg" alt="cesta">
-                          <div class="card-body">
-                            <h3 class="card-title">cestos-de-algodon</h3>
-                            <h4>20 euros</h4>
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta fugit fugiat hic aliquam itaque facere, soluta. Totam id dolores, sint aperiam sequi pariatur praesentium animi perspiciatis molestias iure, ducimus!</p>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-                        <div class="card card-outline-secondary my-4">
-                          <div class="card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
-                            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
-                            <hr>
-                          </div>
-                        </div>
-                  <!-- /.card -->
-                    </div>
-                  </b-modal>
-                </b-button>
-              </div>
-            </div>
-          </div>
-          <!-- /.row -->
-        </div>
-      </div>
-      <!-- /.row -->
+          <span class="list-group-item" @click="noFilter()">
+              {{ allProducts }}
+          </span>
+        </b-col>
+        <b-col lg="9" class="products-row">
+          <b-row>
+            <b-col cols="4" v-for="product in filteredProducts" :key="product.category">
+              <product :product="product" />
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
     </div>
     <footer class="footer-distributed">
 			<div class="footer-left">
@@ -530,16 +68,227 @@
 </template>
 
 <script>
+import Product from '../components/Product'
+
 export default {
   head() {
     return {
       title: "Nuestros productos"
     };
+  },
+  components: {
+    Product
+  },
+  data () {
+    return {
+    allProducts: 'todos',
+    currentFilter: 'todos', 
+    products: [
+      {
+        id:1,
+        title: "Upenda",
+        image: "/images/upenda/upenda-1.jpg",
+        category: 'Upenda',
+        shortDescription: 'Las Upendas son nuestras toallas, diseñadas para hacer más fácil la vida de papá y mamá',
+        price: 35,
+        modalDescription1: 'Fueron clave en mi maternidad. Estas toallas miden 80x80cm y son tan útiles porque se colocan al cuello con un fácil snap.',
+        modalDescription2: 'Así empiezas a disfrutar de bañar a tu bebé con dos manos, sin que acabes mojada con los chapoteos y secarlo es tan fácil!Solo tienes que coger a tu bebé para abrazarlo y cubrirlo con los laterales de la Upenda para que esté protegido y seco.Además, la Upenda lleva capucha pensando sobretodo en esos primeros meses tan delicados.Las telas son de algodón 100%: una toall suave, y una tela de tu elección para hacer que tu toalla sea personalmente bonita.',
+        modalDescription3: 'Si no la tienes es porque aún no la has probado.',
+        modalImage: "/images/upenda/upenda-2.jpg"
+      },
+      {
+        id:2,
+        title: "Meraki",
+        image: "/images/meraki/meraki-1.jpg",
+        category: 'Meraki',
+        shortDescription: 'Los Meraki son los poncho toallas para niñ@s más originales y gustosos!',
+        price: 55,
+        modalDescription1: 'Para nosotros, su nombre lo dice todo. Meraki es una palabra que proviene del griego moderno, y signfica "hacer algo con amor y creatividad, poniendo el alma en ello. El Meraki está diseñado para que gracias a su forma de poncho y su abertura amplia en el cuello sea fácil de poner y quitar. Además, hemos incorporado unos snaps laterales para poder ajustar el Meraki al cuerpo, y una amplia capucha para proteger la delicada cabecita de tu pequeñ@',
+        modalDescription2: 'Están hechas en Algodón 100% y talla de alta de calidad, y están disponibles en dos tallas:',
+        modalDescription3: '- Talla 1: de 1 a 4 años, - Talla 2: de 4 a 7 años',
+        modalImage: "/images/meraki/meraki-2.jpg"
+      },
+      {
+        id:3,
+        title: "Muselina",
+        image: "/images/muselina/muselina-1.jpg",
+        category: 'Muselina',
+        shortDescription: 'lorem impsum lorem impsum lorem impsum lorem impsum lorem impsum',
+        price: 15,
+        modalDescription1: 'lorem ipsum',
+        modalDescription2: 'lorem ipsum',
+        modalDescription3: 'lorem ipsum',
+        modalImage: "/images/muselina/muselina-2.jpg"
+      },
+      ,
+      {
+        id:4,
+        title: "Bandana",
+        image: "/images/bandanas/bandana-1.jpg",
+        category: 'Bandana',
+        shortDescription: 'Adiós a las babas en la ropa!',
+        price: 8,
+        modalDescription1: 'Las bandanas, nuestras aliadas contra las babas y reflujos de nuestro bebé!',
+        modalDescription2: 'Al igual que las upenda, las bandanas son de tela algodón 100% de tu elección y tela toalla por el reverso.Se ponen en el cuello de tu bebé con un fácil snap y hace que tu bebé luzca precios@ a la vez que protege la ropita de ensuciarse.Es una prenda más para llevar cada día, sobretodo si tu bebé está en periodo de salir dientes (habrás notado que produce más baba de lo normal) o si tu bebé tiene reflujos de leche, muy común en periodo de lactancia y bibes.',
+        modalDescription3: '',
+        modalImage: "/images/bandanas/bandana-2.jpg"
+      },
+      {
+        id:5,
+        title: "Sobres",
+        image: "/images/sobres/sobre-1.jpg",
+        category: 'Sobres',
+        shortDescription: 'Uno de nuestros MUST!',
+        price: 12,
+        modalDescription1: 'Son bolsitas hechas de tela Algodón 100% (a tu elección), forrados y con un snap para el cierre.',
+        modalDescription2: 'Antes no sabía que eran, y ahora no puedo salir sin ellos.',
+        modalDescription3: 'Nuestros sobres de muda son primero usados para llevar "a salvo" y "bien organizado" las mudas de la primera puesta en el momento del parto, y también las cosas de la futura mamá. Pero luego su utilidad es tan amplia como tu imaginación: llevar la muda en el carro o en tu bolso, pañales, juguetes, tu ropa interior cuando te vas de viaje, y un largo etcétera.',
+        modalImage: "/images/sobres/sobre-2.jpg"
+      },
+      {
+        id:6,
+        title: "Chupeteros",
+        image: "/images/chupetero.jpg",
+        category: 'Chupeteros',
+        shortDescription: 'Se acabó perder más chupeteros!',
+        price: 8,
+        modalDescription1: 'Son tan molones, que las mamás y papás nos gustan, pero l@s peques lo adoran!',
+        modalDescription2: 'Se acabó perder más chupetes!',
+        modalDescription3: 'Cuélgate uno y no me perderás!',
+        modalImage: "/images/chupetero.jpg"
+      },
+      {
+        id:7,
+        title: "toallitas Ü",
+        image: "/images/toallitas-u/toallitas-u-1.jpg",
+        category: 'toallitas-u',
+        shortDescription: '',
+        price: 12,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/toallitas-u/toallitas-u-2.jpg"
+      },
+      {
+        id:8,
+        title: "Babero",
+        image: "/images/baberos/babero-1.jpg",
+        category: 'Babero',
+        shortDescription: '',
+        price: 35,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/baberos/babero-2.jpg"
+      },
+      {
+        id:9,
+        title: "Mascarillas",
+        image: "/images/mascarilla/mascarilla-1.jpg",
+        category: 'Mascarillas',
+        shortDescription: '',
+        price: 8,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/mascarilla/mascarilla-2.jpg"
+      },
+      {
+        id:10,
+        title: "toalla goma",
+        image: "/images/upenda/upenda-11.jpg",
+        category: 'toalla-goma',
+        shortDescription: '',
+        price: 12,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/upenda/upenda-12.jpg"
+      },
+      {
+        id:11,
+        title: "toalla-cambiador",
+        image: "/images/upenda/upenda-14.jpg",
+        category: 'toalla-cambiador',
+        shortDescription: '',
+        price: 12,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/upenda/upenda-15.jpg"
+      },
+      {
+        id:12,
+        title: "cestos-de-algodon",
+        image: "/images/cestas.jpg",
+        category: 'cestos-de-algodon',
+        shortDescription: '',
+        price: 35,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/cestas.jpg"
+      },
+      {
+        id:13,
+        title: "Banderolas",
+        image: "/images/upenda/upenda-2.jpg",
+        category: 'Banderolas',
+        shortDescription: '',
+        price: 35,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/upenda/upenda-2.jpg"
+      },
+      {
+        id:14,
+        title: "Corona",
+        image: "/images/upenda/upenda-2.jpg",
+        category: 'Corona',
+        shortDescription: '',
+        price: 35,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/upenda/upenda-2.jpg"
+      },
+      {
+        id:15,
+        title: "Conjunto cocinero",
+        image: "/images/upenda/upenda-2.jpg",
+        category: 'Conjunto-cocinero',
+        shortDescription: '',
+        price: 35,
+        modalDescription1: '',
+        modalDescription2: '',
+        modalDescription3: '',
+        modalImage: "/images/upenda/upenda-2.jpg"
+      }
+    ]
+    }
+  },
+  computed: {
+    filteredProducts () {
+      return this.products.filter(p => this.currentFilter === 'todos' || p.category.toLowerCase() === this.currentFilter.toLowerCase())
+    },
+    noFilteredProducts () {
+      return this.allProducts = this.products.map(p => p.category.toLowerCase())
+    }
+  },
+  methods: {
+    setFilter(filter) {
+      this.currentFilter = filter;
+    },
+    noFilter()  {
+      this.allProducts
+      // this.allProducts = this.noFilteredProducts
+    }
   }
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 @font-face {
   font-family: "merlodAutre";
@@ -737,5 +486,129 @@ footer{
 		margin-left: 0;
 	}
  
+}
+
+/* demo css */
+html,body {
+    margin:0;
+    font-family: 'Dawning of a New Day', cursive;
+}
+
+.title-container {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.title {
+    font-family: 'Dawning of a New Day', cursive;
+    font-size:30pt;
+    font-weight:normal;
+}
+
+.project-title {
+font-size:16pt  
+}
+
+.filter {
+    font-family:arial;
+    padding: 6px 6px;
+    cursor:pointer;
+    border-radius: 6px;
+    transition: all 0.35s;
+}
+
+.filter.active {
+    box-shadow:0px 1px 3px 0px #00000026;
+}
+
+.filter:hover {
+    background:lightgray;
+} 
+
+.projects {
+    margin-bottom:50px;
+    margin-top:25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.projects-enter {
+    transform: scale(0.5) translatey(-80px);
+    opacity:0;
+}
+
+.projects-leave-to{
+    transform: translatey(30px);
+    opacity:0;
+}
+
+.projects-leave-active {
+    position: absolute;
+    z-index:-1;
+}
+
+.circle {
+    text-align:center;
+    position:absolute;
+    bottom:-38px;
+    left:40px;
+    width:100px;
+    height:100px;
+    border-radius:50px;
+/*  border:1px solid black; */
+    display:flex;
+    box-shadow: 0px -4px 3px 0px #494d3257;
+    justify-content:center;
+    align-items:center;
+    background-color:#fff;
+/*  box-shadow:0px -3px 3px #484848a6; */
+}
+
+.project {
+    transition: all .35s ease-in-out;
+    margin:10px;
+    box-shadow:0px 2px 8px lightgrey;
+    border-radius:3px;
+    width:180px;
+    height:200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.project-image-wrapper {
+    position:relative;
+}
+
+.gradient-overlay {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:150px;
+    opacity:0.09;
+    background: 
+        linear-gradient(to bottom, rgba(0,210,247,0.65) 0%,rgba(0,210,247,0.64) 1%,rgba(0,0,0,0) 100%), 
+        linear-gradient(to top, rgba(247,0,156,0.65) 0%,rgba(247,0,156,0.64) 1%,rgba(0,0,0,0) 100%);
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+
+.project-image {
+    width:100%;
+    height:150px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    border-top-left-radius:3px;
+    border-top-right-radius:3px;
+}
+
+::v-deep .btn-secondary {
+  background-color: $umami-pink;
 }
 </style>

@@ -1,59 +1,55 @@
 <template>
-  <b-container>
+  <b-container class="mt-4">
     <h1>Contáctanos</h1>
     <div>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group
         id="input-group-1"
-        label="Email address:"
+        label="Email:"
         label-for="input-1"
-        description="We'll never share your email with anyone else."
+        description="No compartiremos tu email con nadie."
       >
         <b-form-input
           id="input-1"
           v-model="form.email"
           type="email"
           required
-          placeholder="Enter email"
+          placeholder="Introduce tu mail"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-2" label="Your Name:" label-for="input-2">
+      <b-form-group id="input-group-2" label="Tu nombre y apellidos:" label-for="input-2">
         <b-form-input
           id="input-2"
           v-model="form.name"
           required
-          placeholder="Enter name"
+          placeholder="Tu nombre y Apellidos"
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group id="input-group-3" label="Food:" label-for="input-3">
+      <b-form-group id="input-group-3" label="Prenda:" label-for="input-3">
         <b-form-select
           id="input-3"
-          v-model="form.food"
-          :options="foods"
+          v-model="form.prenda"
+          :options="prendas"
           required
         ></b-form-select>
       </b-form-group>
 
       <b-form-group id="input-group-4">
         <b-form-checkbox-group v-model="form.checked" id="checkboxes-4">
-          <b-form-checkbox value="me">Check me out</b-form-checkbox>
-          <b-form-checkbox value="that">Check that out</b-form-checkbox>
+          <b-form-checkbox value="me">Es para mi</b-form-checkbox>
+          <b-form-checkbox value="that">Es para regalar</b-form-checkbox>
         </b-form-checkbox-group>
       </b-form-group>
 
-      <b-button type="submit" variant="primary">Submit</b-button>
-      <b-button type="reset" variant="danger">Reset</b-button>
+    <b-button type="submit" class="mb-4 button-color">Enviar</b-button>
     </b-form>
-    <b-card class="mt-3" header="Form Data Result">
-      <pre class="m-0">{{ form }}</pre>
-    </b-card>
   </div>
-    <div>
+    <div class="mt-4">
     <b-card bg-variant="light">
         <b-form-group
-        label-cols-lg="3"
+        label-cols-lg="2"
         label="Shipping Address"
         label-size="lg"
         label-class="font-weight-bold pt-0"
@@ -61,7 +57,7 @@
         >
         <b-form-group
             label-cols-sm="3"
-            label="Street:"
+            label="Calle/nº/piso/escalera:"
             label-align-sm="right"
             label-for="nested-street"
         >
@@ -70,7 +66,7 @@
 
         <b-form-group
             label-cols-sm="3"
-            label="City:"
+            label="Ciudad:"
             label-align-sm="right"
             label-for="nested-city"
         >
@@ -79,7 +75,7 @@
 
         <b-form-group
             label-cols-sm="3"
-            label="State:"
+            label="Código Postal/Pais:"
             label-align-sm="right"
             label-for="nested-state"
         >
@@ -88,21 +84,37 @@
 
         <b-form-group
             label-cols-sm="3"
-            label="Country:"
+            label="Alguna otra información:"
             label-align-sm="right"
             label-for="nested-country"
         >
             <b-form-input id="nested-country"></b-form-input>
         </b-form-group>
-
         <b-form-group
             label-cols-sm="3"
-            label="Ship via:"
+            label="¿Qué quieres poner en la caja?"
+            label-align-sm="right"
+            label-for="nested-country"
+        >
+            <b-form-input id="nested-country"></b-form-input>
+        </b-form-group>
+        <b-form-group
+            label-cols-sm="3"
+            label="Alguna otra cosa que debamos saber?"
+            label-align-sm="right"
+            label-for="nested-country"
+        >
+            <b-form-input id="nested-country"></b-form-input>
+        </b-form-group>
+        <b-form-group
+            label-cols-sm="3"
+            label="Envío:"
             label-align-sm="right" class="mb-0"
+            description="Recuerda que solo los pedidos que superen los 55 euros serán gratuitos. 5 euros envío nacional - 15 envío internacional"
         >
             <b-form-radio-group
             class="pt-2"
-            :options="['Air', 'Courier', 'Mail']"
+            :options="['Si', 'No']"
             ></b-form-radio-group>
         </b-form-group>
         </b-form-group>
@@ -159,10 +171,10 @@ export default {
         form: {
           email: '',
           name: '',
-          food: null,
+          prenda: null,
           checked: []
         },
-        foods: [{ text: 'Select One', value: null }, 'Carrots', 'Beans', 'Tomatoes', 'Corn'],
+        prendas: [{ text: 'Selecciona una', value: null }, 'Upenda', 'Meraki', 'Paquete', 'Bandana', 'Muselina', 'Corona', 'Banderolas de cumpleaños', 'Chupetero', 'Prefiero escribir todo lo que quiero en el mail'],
         show: true
       }
     },
@@ -378,5 +390,11 @@ footer{
 		margin-left: 0;
 	}
  
+}
+
+// footer fin
+
+::v-deep .btn-secondary {
+  background-color: $umami-pink!important;
 }
 </style>
