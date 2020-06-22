@@ -4,11 +4,6 @@
       <b-row>
         <b-col lg="3">
           <h1 class="my-4">Productos Umami</h1>
-          <span>
-            <div class="h2 mb-0">
-              <b-icon-chevron-compact-left></b-icon-chevron-compact-left>
-            </div>
-          </span>
           <fa :icon="['fas', 'chevron-left']" />
           <div class="list-group" v-for="product in filteredProducts" :key="product.category">
             <span class="list-group-item" @click="setFilter(product.category)">
