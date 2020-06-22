@@ -9,6 +9,7 @@
               <b-icon-chevron-compact-left></b-icon-chevron-compact-left>
             </div>
           </span>
+          <fa :icon="['fas', 'chevron-left']" />
           <div class="list-group" v-for="product in filteredProducts" :key="product.category">
             <span class="list-group-item" @click="setFilter(product.category)">
               {{ product.category }}
@@ -46,11 +47,12 @@
 				</div>
         <div class="d-flex justify-content-center mx-auto my-4">Síguenos en:</div>
           <div class="footer-icons d-flex justify-content-center mx-auto">
-					<a href="#"><i class="fa fa-facebook"></i></a>
-					<a href="#"><i class="fa fa-twitter"></i></a>
-					<a href="#"><i class="fa fa-instagram"></i></a>
-					<a href="#"><i class="fa fa-linkedin"></i></a>
-					<a href="#"><i class="fa fa-youtube"></i></a>
+					<a href="#">
+            <fa :icon="['fab', 'facebook-square']" />
+          </a>
+					<a href="#">
+            <fa :icon="['fab', 'instagram']" />
+          </a>
 				</div>
         <p class="footer-company-name d-flex justify-content-center">© 2020 Umami Cottons Company.</p>
 			</div>
@@ -455,7 +457,6 @@ footer{
 	width: 35px;
 	height: 35px;
 	cursor: pointer;
-	background-color:  $grey;
 	border-radius: 2px;
  
 	font-size: 20px;

@@ -19,6 +19,9 @@
     "vue-horizontal-list": "^1.0.7"
   },
   "devDependencies": {
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
+    "@nuxtjs/fontawesome": "^1.1.2",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0"
   }
