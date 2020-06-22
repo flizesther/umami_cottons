@@ -1,5 +1,6 @@
 <template>
   <b-container>
+    <MenuBar />
     <div class="container">
       <b-row>
         <b-col lg="3">
