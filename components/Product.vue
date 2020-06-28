@@ -17,15 +17,15 @@
                 <div class="card-body">
                 <h3 class="card-title"> {{ product.title }}</h3>
                 <h4>{{ product.price }}</h4>
-                <p class="card-text">{{ product.modalDescription1 }}</p>
+                <p class="card-text">{{ product.modalDescriptionOne }}</p>
                 </div>
             </div>
         <!-- /.card -->
             <div class="card card-outline-secondary my-4">
             <div class="card-body">
-                <p>{{ product.modalDescription2 }}</p>
+                <p>{{ product.modalDescriptionTwo }}</p>
                 <hr>
-                <p class="bold text-center">{{ product.modalDescription3 }}</p>
+                <p class="bold text-center">{{ product.modalDescriptionThree }}</p>
             </div>
             </div>
         </div>

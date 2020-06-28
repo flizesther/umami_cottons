@@ -5,7 +5,7 @@
       <b-img src="/images/logoUC.jpg" class="brand-image" fluid alt="Responsive image"></b-img>
     </b-navbar-brand>
     <b-collapse id="nav-text-collapse" is-nav>
-      <b-navbar-nav>
+      <b-navbar-nav class="nav-titles">
         <b-nav-item to="/" exact>Inicio</b-nav-item>
         <b-nav-item to="/buy">¿Cómo comprar?</b-nav-item>
         <b-nav-item to="/products">Nuestros Productos</b-nav-item>
@@ -24,5 +24,8 @@ export default {};
 <style>
 .brand-image {
   height:50px;
+}
+.nav-titles{
+  font-size:20px;
 }
 </style>

@@ -1,10 +1,14 @@
 export const state = () => ({
-  posts: []
+  posts: [],
+  products: []
 });
 
 export const mutations = {
   posts(state, posts) {
     state.posts = posts;
+  },
+  setProducts(state, receivedProducts) {
+    state.products = receivedProducts
   }
 };
 
@@ -21,5 +25,10 @@ export const actions = {
       return res;
     });
     commit("posts", posts);
+  },
+  async getProducts({ commit }) {
+    const response = await fetch ('https://umami-a6083.firebaseio.com/.json')
+    const productsJson = await response.json()
+    commit('setProducts', productsJson)
   }
 };
