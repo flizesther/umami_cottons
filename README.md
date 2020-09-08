@@ -1,6 +1,6 @@
 # umami-cottons
 
-> My incredible Nuxt.js project
+> Ummami Cottons Mola!!
 
 ## Build Setup
 
@@ -19,4 +19,18 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+## Generate, serve and deploy with Firebase
+``` bash
+# install dependencies
+$ npm install -g firebase-tools
+
+# serve with hot reload at localhost:5000
+$ firebase serve --only hosting
+
+# generate project
+$ npm run generate
+
+# deploy project
+$ firebase login
+$ firebase deploy
+```
