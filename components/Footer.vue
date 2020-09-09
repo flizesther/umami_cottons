@@ -2,19 +2,20 @@
     <footer class="footer-distributed d-flex justify-content-center">
         <div class="footer-left">
             <h3>Umami Cottons</h3>
+            <img class="d-lg-none d-block w-25 mx-auto pt-3" src="/images/logoUC.jpg">
             <p class="footer-links">
-                <a href="/products">Nuestros Productos</a>
-                <a href="/about">Sobre Umami</a>
-                <a href="/buy">Cómo comprar?</a>
-                <a href="/contact-us">Contáctanos</a>
+                <a href="/productos">Nuestros Productos</a>
+                <a href="/sobre-umami">Sobre Umami</a>
+                <a href="/comprar">Cómo comprar?</a>
+                <a href="/contacta">Contáctanos</a>
             </p>
         </div>
         <div class="footer-center">
             <div class="d-flex justify-content-center">
-        <img class="w-25" src="/images/logoUC.jpg">
+                <img class="d-none d-lg-block w-25" src="/images/logoUC.jpg">
             </div>
-    <div class="d-flex justify-content-center mx-auto my-4">Síguenos en:</div>
-        <div class="footer-icons d-flex justify-content-center mx-auto">
+        <div class="d-lg-flex justify-content-center mx-auto py-4 d-none">Síguenos en:</div>
+            <div class="footer-icons d-flex justify-content-center mx-auto">
                 <a href="https://www.facebook.com/pg/umamicottons/community/?mt_nav=0&msite_tab_async=0">
         <fa :icon="['fab', 'facebook-square']" />
         </a>
@@ -24,10 +25,10 @@
             </div>
     <p class="footer-company-name d-flex justify-content-center">© 2020 Umami Cottons Company.</p>
         </div>
-        <div class="footer-right">
+        <div class="footer-right d-none d-lg-block">
             <p class="footer-company-about">
-                <span>About the company</span>
-        Síguenos en:
+            <span>About the company</span>
+            <p class="d-none d-lg-block"> Síguenos en:</p>
         <div>
                 <i class="fa fa-envelope"></i>
                 <p><a href="mailto:umamicottons@gmail.com">umamicottons@gmail.com</a></p>
@@ -43,7 +44,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 @font-face {
   font-family: "merlodAutre";
   src: url("../assets/fonts/MerlodAutre-Regular.otf");
@@ -75,7 +75,7 @@ footer{
 }
  
  
-.footer-distributed{
+.footer-distributed {
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
@@ -84,6 +84,9 @@ footer{
   padding-top: 80px;
   & a {
     color: $umami-pink;
+  }
+  @media (max-width: 880px) {
+      flex-direction: column;
   }
 }
  
@@ -232,7 +235,6 @@ footer{
 	.footer-distributed .footer-right{
 		display: block;
 		width: 100%;
-		margin-bottom: 40px;
 		text-align: center;
 	}
  

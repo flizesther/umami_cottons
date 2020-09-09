@@ -20,67 +20,67 @@
           <p class="d-flex mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
         </div>
       </div>    
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-1>
         <b-img class="image-bottom" src="/images/11.png" alt="Hecho a mano"></b-img>
         <b-modal id="modal-center-1" centered title="Hecho a mano">
-          <p class="my-4">Hecho a mano</p>
+          <p class="py-4">Hecho a mano</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-2>
         <b-img class="image-bottom" src="/images/cierre.jpg" alt="vida sencilla"></b-img>
         <b-modal id="modal-center-2" centered title="Si, un snap nos cambió la vida">
-          <p class="my-4">Nuestros diseños están pensados para hacerte la vida más sencilla</p>
+          <p class="py-4">Nuestros diseños están pensados para hacerte la vida más sencilla</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-3>
         <b-img class="image-bottom" src="/images/2.png" alt="telas de algodón"></b-img>
         <b-modal id="modal-center-3" centered title="Telas 100% algodón">
-          <p class="my-4">Telas 100% algodón, tanto el popelín como la tela de toalla</p>
+          <p class="py-4">Telas 100% algodón, tanto el popelín como la tela de toalla</p>
         </b-modal>
       </b-button>
     </div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-4>
         <b-img class="image-bottom" src="/images/19.png" alt="fiesta"></b-img>
         <b-modal id="modal-center-4" centered title="Vive la vida">
-          <p class="my-4">Y así empieza todo, con una fiesta!</p>
+          <p class="py-4">Y así empieza todo, con una fiesta!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-5>
         <b-img class="image-bottom" src="/images/productos.jpg" alt="muselina"></b-img>
         <b-modal id="modal-center-5" centered title="Muselina">
-          <p class="my-4">Hemos incorporado tela muselina para tocar el cielo!</p>
+          <p class="py-4">Hemos incorporado tela muselina para tocar el cielo!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-6>
         <b-img class="image-bottom" src="/images/5.png" alt="packs"></b-img>
         <b-modal id="modal-center-6" centered title="Un pack lo arregla todo">
-          <p class="my-4">A veces no sabes qué tienes que comprar o regalar. Un pack te cambia la vida! mira las posibles combinaciones</p>
+          <p class="py-4">A veces no sabes qué tienes que comprar o regalar. Un pack te cambia la vida! mira las posibles combinaciones</p>
         </b-modal>
       </b-button>
     </div>
-    <div class="d-flex justify-content-center mb-4">
+    <div class="d-flex justify-content-center pb-4 mobile-grid">
       <b-button v-b-modal.modal-center-7>
         <b-img class="image-bottom" src="/images/3.png" alt="sobres de muda"></b-img>
         <b-modal id="modal-center" centered title="Sobre de muda">
-          <p class="my-4">Producto estrella. Ten todo organizado. Uno sabe lo ordenado con lo que sale, pero no como llega. Con los sobres de muda, la organización está garantizada!</p>
+          <p class="py-4">Producto estrella. Ten todo organizado. Uno sabe lo ordenado con lo que sale, pero no como llega. Con los sobres de muda, la organización está garantizada!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-8>
         <b-img class="image-bottom" src="/images/upenda/upenda-12.jpg" alt="upenda"></b-img>
         <b-modal id="modal-center" centered title="Upenda">
-          <p class="my-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
+          <p class="py-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-9>
         <b-img class="image-bottom" src="/images/4.png" alt="disfruta con umami"></b-img>
         <b-modal id="modal-center" centered title="Disfrutar con umami">
-          <p class="my-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
+          <p class="py-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
         </b-modal>
       </b-button>
     </div>
-    <div class="mb-4 d-flex justify-content-center">
+    <div class="pb-4 d-flex justify-content-center">
       <div class="py-2 shipping-section d-flex flex-column">
         <div class="py-2 shipping-section d-flex flex-column">Gastos de envío:
           <div class="">Gratis Pedidos Nacionales superiores a 50 euros</div>
@@ -89,8 +89,8 @@
         </div>
       </div>
     </div> 
-    <div class="my-4 d-flex justify-content-center subtitle-section">¿Cómo puedo comprar?</div>
-      <b-card-group deck class="screen-width d-flex justify-content-center mx-auto">
+    <div class="py-4 d-flex justify-content-center subtitle-section">¿Cómo puedo comprar?</div>
+      <b-card-group deck class="screen-width  mobile-grid d-flex justify-content-center py-4 mx-auto">
         <b-card
           class="first-box"
           title="Cóntactanos"
@@ -132,7 +132,10 @@
           </b-card-text>
         </b-card>
       </b-card-group>
-    <div class="d-flex justify-content-center py-4">
+      <div class="promotional-slider py-4">
+        Pedidos de más de 50 euros, los gastos de envío son gratuitos!
+      </div>
+    <div class="d-flex grid-slider mobile-grid justify-content-center py-4">
     <b-carousel
       id="carousel-1"
       :interval="4000"
@@ -189,7 +192,7 @@
     </b-carousel>
     </div>
     <div class="d-flex justify-content-center subtitle-section">SIGUE A UMAMI_COTTONS EN INSTAGRAM</div>
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center several-images mobile-grid">
       <b-img class="image-bottom" src="/images/13.png" alt="Named color image (red)"></b-img>
       <b-img class="image-bottom" src="/images/15.png" alt="Named color image (black)"></b-img>
       <b-img class="image-bottom" src="/images/16.png" alt="HEX color image"></b-img>
@@ -228,6 +231,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 //import personal font
 @font-face {
   font-family: "merlodAutre";
@@ -244,21 +248,32 @@ export default {
   border-color: $grey;
 }
 .image-slide {
-  height: 500px;
-  width: 500px;
+  @media (min-width: 880px) { 
+    height: 500px;
+    width: 500px;
+  }
 }
 .image-bottom {
-  height: 250px;
-  width: 250px;
+  width: 100%;
+  @media (min-width: 880px) { 
+    height: 250px;
+    width: 250px;
+  }
 }
 .subtitle-section {
   font-size:40px;
   background-color: #f8f9fa;
+  @media (max-width: 880px) {
+    font-size:30px;
+    text-align: center;
+  }
 }
 .screen-width {
-  width:1000px;
   display:flex;
   justify-content: center;
+  @media (min-width: 880px) { 
+    width:100%;
+  }
 }
 .promotional-slider {
   width:100%;
@@ -271,7 +286,17 @@ export default {
   color: $white;
 }
 .shipping-section {
-  width:400px;
+  max-width: 400px;
 }
-
+::v-deep .carousel-indicators {
+  display: none;
+}
+::v-deep .image-slide {
+  background: none!important;
+}
+.mobile-grid {
+  @media (max-width: 880px) { 
+    flex-direction: column;
+  }
+}
 </style>

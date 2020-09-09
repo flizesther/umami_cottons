@@ -5,20 +5,20 @@
       <div class="container">
         <b-row>
           <b-col lg="3">
-            <h1 class="my-4">Productos Umami</h1>
-            <fa :icon="['fas', 'chevron-left']" />
+            <h1 class="py-4">Productos Umami</h1>
+            <!-- <fa :icon="['fas', 'chevron-left']" /> -->
+            <span class="list-group-item background" @click="showAllProducts()">
+                {{ allProducts }}
+            </span>
             <div class="list-group" v-for="product in products" :key="product">
               <span v-if="product" class="list-group-item" @click="setFilter(product.category)">
                 {{ product.category }}
               </span>
             </div>
-            <span class="list-group-item" @click="showAllProducts()">
-                {{ allProducts }}
-            </span>
           </b-col>
           <b-col lg="9" class="products-row">
             <b-row>
-              <b-col cols="4" v-for="product in filteredProducts" :key="product.category">
+              <b-col cols="4" class="pb-4" v-for="product in filteredProducts" :key="product.category">
                 <product :product="product" />
               </b-col>
             </b-row>
@@ -84,6 +84,7 @@ export default {
     color: $white;
     background-color: #d6d8da;
     border-color: #d6d8da;
+    height: 100%;
 }
 a {
     color: #2c292f;
@@ -220,5 +221,8 @@ font-size:16pt
 }
 .selected {
   background-color:red;
+}
+.background {
+  color: $umami-pink;
 }
 </style>
