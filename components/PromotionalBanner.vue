@@ -8,7 +8,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .promotional-banner {
   width:100%;
   height:50px;
@@ -21,6 +21,7 @@ export default {
     font-size: 18px;
     text-align: center;
     padding: 10px 5px;
+    color: white;
   }
 }
 

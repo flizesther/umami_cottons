@@ -206,7 +206,6 @@
 export default {
   head() {
     return {
-      title: "Inicio",
       script: [
         { src: "https://identity.netlify.com/v1/netlify-identity-widget.js" }
       ]
