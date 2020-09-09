@@ -59,9 +59,7 @@ export default {
 a {
     color: $dark-grey;
 }
-.products-row {
-  margin-top: 98px;
-}
+
 .mascarilla {
   border: 15px solid $white;
 }

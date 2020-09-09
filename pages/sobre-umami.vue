@@ -42,9 +42,13 @@ export default {
 * {
   font-family: "merlodAutre";
 }
+
 .contain-width {
   max-width: 800px;
   font-size: 20px;
+  @media (max-width: 800px) {
+    font-size: 18px;
+  }
 }
 .text-bold {
   font-weight: bold;

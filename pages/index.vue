@@ -1,5 +1,5 @@
 <template>
-  <b-container-fluid>
+  <b-container-fluid class="home">
     <div class="promotional-slider">
       Pedidos de más de 50 euros, los gastos de envío son gratuitos!
     </div>

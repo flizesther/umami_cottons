@@ -17,6 +17,11 @@ export default {
   display:flex;
   justify-content: center;
   background-color: $umami-pink;
+  @media (min-height:800px){
+    font-size: 18px;
+    text-align: center;
+    padding: 10px 5px;
+  }
 }
 
 </style>

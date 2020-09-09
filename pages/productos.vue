@@ -2,23 +2,23 @@
   <div>
     <PromotionalBanner />
     <b-container>
-      <div class="container">
+      <div class="container product-list">
         <b-row>
           <b-col lg="3">
             <h1 class="py-4">Productos Umami</h1>
             <!-- <fa :icon="['fas', 'chevron-left']" /> -->
-            <span class="list-group-item background" @click="showAllProducts()">
+            <span class="list-group-item background d-lg-block d-none" @click="showAllProducts()">
                 {{ allProducts }}
             </span>
-            <div class="list-group" v-for="product in products" :key="product">
+            <div class="list-group d-lg-block d-none" v-for="product in products" :key="product">
               <span v-if="product" class="list-group-item" @click="setFilter(product.category)">
                 {{ product.category }}
               </span>
             </div>
           </b-col>
-          <b-col lg="9" class="products-row">
+          <b-col lg="9" cols="12" class="products-row">
             <b-row>
-              <b-col cols="4" class="pb-4" v-for="product in filteredProducts" :key="product.category">
+              <b-col cols="12" lg="4" class="pb-4" v-for="product in filteredProducts" :key="product.category">
                 <product :product="product" />
               </b-col>
             </b-row>
@@ -89,8 +89,10 @@ export default {
 a {
     color: #2c292f;
 }
-.products-row {
-  margin-top: 98px;
+::v-deep .products-row {
+  @media (min-height:800px){
+    margin-top: 98px;
+  }
 }
 .mascarilla {
   border: 15px solid white;

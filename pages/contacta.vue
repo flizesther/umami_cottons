@@ -120,9 +120,9 @@
         </b-form-group>
     </b-card>
     </div> -->
-    <div class="d-flex justify-content-center">
-      <p>Contacta con nosotras mandando un mail:</p>
-      <p>umamicottons@gmail.com</p>
+    <div class="d-flex justify-content-center contact-us">
+      <p class="text">Contacta con nosotras mandando un mail: </p>
+      <p class="text mail">umamicottons@gmail.com</p>
     </div>
   </b-container>
 </template>
@@ -180,5 +180,15 @@ export default {
 
 ::v-deep .btn-secondary {
   background-color: $umami-pink!important;
+}
+.contact-us {
+    flex-direction: column;
+    font-size: 20px;
+  .text {
+      margin:auto;
+  }
+  .mail {
+    color: $umami-pink;
+  }
 }
 </style>
