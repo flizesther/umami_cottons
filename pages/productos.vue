@@ -17,7 +17,7 @@
             </div>
           </b-col>
           <b-col lg="9" cols="12" class="products-row">
-            <b-row>
+            <b-row class="products">
               <b-col cols="12" lg="4" class="pb-4" v-for="product in filteredProducts" :key="product.category">
                 <product :product="product" />
               </b-col>
@@ -72,7 +72,11 @@ export default {
 </script>
 
 <style lang="scss">
-
+.products {
+  @media (min-height:800px){
+    margin-top: 98px;
+  }
+}
 @font-face {
   font-family: "merlodAutre";
   src: url("../assets/fonts/MerlodAutre-Regular.otf");
@@ -89,11 +93,7 @@ export default {
 a {
     color: #2c292f;
 }
-::v-deep .products-row {
-  @media (min-height:800px){
-    margin-top: 98px;
-  }
-}
+
 .mascarilla {
   border: 15px solid white;
 }
