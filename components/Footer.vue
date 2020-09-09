@@ -11,7 +11,7 @@
         </div>
         <div class="footer-center">
             <div class="d-flex justify-content-center">
-        <img class="w-50" src="/images/logoUC.jpg">
+        <img class="w-25" src="/images/logoUC.jpg">
             </div>
     <div class="d-flex justify-content-center mx-auto my-4">Síguenos en:</div>
         <div class="footer-icons d-flex justify-content-center mx-auto">

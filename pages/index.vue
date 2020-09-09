@@ -196,7 +196,6 @@
       <b-img class="image-bottom" src="/images/17.png" alt="RGBa color image"></b-img>
       <b-img class="image-bottom" src="/images/18.png" alt="HEX shorthand color (#88f)"></b-img>
     </div>
-    <Footer />
   </b-container-fluid>
 </template>
 

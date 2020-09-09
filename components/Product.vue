@@ -1,7 +1,7 @@
 <template>
    <div class="mb-4">
     <div class="card h-100">
-    <b-button v-b-modal.modal-center-upenda>
+    <b-button v-b-modal="`modal-center-${product.title}`">
         <a href="#"><img class="card-img-top" :src="product.image" alt="upenda"></a>
             <div class="card-body">
                 <h4 class="card-title">
@@ -10,7 +10,7 @@
                 <h5>{{ product.price }}</h5>
                 <p class="card-text">{{ product.shortDescription }}</p>
             </div>
-        <b-modal :id="`modal-center-${product.title}`" centered title="Upenda">
+        <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" >
             <div class="col-lg-12">
             <div class="card mt-4">
                 <img class="card-img-top img-fluid" :src="product.modalImage" alt="upenda">

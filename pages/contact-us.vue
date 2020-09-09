@@ -1,7 +1,7 @@
 <template>
   <b-container class="mt-4">
-    <h1>Contáctanos</h1>
-    <div>
+    <h1 class="d-flex justify-content-center">Contáctanos</h1>
+    <!-- <div>
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-form-group
         id="input-group-1"
@@ -119,6 +119,10 @@
         </b-form-group>
         </b-form-group>
     </b-card>
+    </div> -->
+    <div class="d-flex justify-content-center">
+      <p>Contacta con nosotras mandando un mail:</p>
+      <p>umamicottons@gmail.com</p>
     </div>
   </b-container>
 </template>
