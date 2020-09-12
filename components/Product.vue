@@ -9,7 +9,7 @@
                     <h5>{{ product.price }}</h5>
                     <p class="card-text">{{ product.shortDescription }}</p>
                 </div>
-            <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" >
+            <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" hide-footer>
                 <div class="col-lg-12">
                 <div class="card mt-4">
                     <img class="card-img-top img-fluid" :src="product.modalImage" :alt="product.modalImage">
@@ -40,5 +40,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+::v-deep .btn-primary {
+    background-color:$umami-pink;
+    border-color: unset;
+}
+::v-deep .btn-secondary {
+    background-color: $grey;
+}
+.modal-backdrop {
+    background-color: rgba(0,0,0,.0001) !important;
+}
 </style>

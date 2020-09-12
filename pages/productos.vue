@@ -86,16 +86,16 @@ export default {
 }
 .btn-secondary {
     color: $white;
-    background-color: #d6d8da;
-    border-color: #d6d8da;
+    background-color: $grey;
+    border-color: $grey;
     height: 100%;
 }
 a {
-    color: #2c292f;
+    color: $dark-grey;
 }
 
 .mascarilla {
-  border: 15px solid white;
+  border: 15px solid $white;
 }
 
 /* demo css */
@@ -134,9 +134,11 @@ font-size:16pt
 }
 
 .filter:hover {
-    background:lightgray;
+    background:$light-grey;
 } 
-
+.btn-secondary:hover{
+  opacity:0.8;
+}
 .projects {
     margin-bottom:50px;
     margin-top:25px;
@@ -180,7 +182,7 @@ font-size:16pt
 .project {
     transition: all .35s ease-in-out;
     margin:10px;
-    box-shadow:0px 2px 8px lightgrey;
+    box-shadow:0px 2px 8px $light-grey;
     border-radius:3px;
     width:180px;
     height:200px;

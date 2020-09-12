@@ -23,19 +23,19 @@
     <div class="d-flex justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-1>
         <b-img class="image-bottom" src="/images/11.png" alt="Hecho a mano"></b-img>
-        <b-modal id="modal-center-1" centered title="Hecho a mano">
+        <b-modal id="modal-center-1" centered title="Hecho a mano" hide-footer>
           <p class="py-4">Hecho a mano</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-2>
         <b-img class="image-bottom" src="/images/cierre.jpg" alt="vida sencilla"></b-img>
-        <b-modal id="modal-center-2" centered title="Si, un snap nos cambió la vida">
+        <b-modal id="modal-center-2" hide-footer centered title="Si, un snap nos cambió la vida">
           <p class="py-4">Nuestros diseños están pensados para hacerte la vida más sencilla</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-3>
         <b-img class="image-bottom" src="/images/2.png" alt="telas de algodón"></b-img>
-        <b-modal id="modal-center-3" centered title="Telas 100% algodón">
+        <b-modal id="modal-center-3" hide-footer centered title="Telas 100% algodón">
           <p class="py-4">Telas 100% algodón, tanto el popelín como la tela de toalla</p>
         </b-modal>
       </b-button>
@@ -43,19 +43,19 @@
     <div class="d-flex justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-4>
         <b-img class="image-bottom" src="/images/19.png" alt="fiesta"></b-img>
-        <b-modal id="modal-center-4" centered title="Vive la vida">
+        <b-modal id="modal-center-4" hide-footer centered title="Vive la vida">
           <p class="py-4">Y así empieza todo, con una fiesta!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-5>
         <b-img class="image-bottom" src="/images/productos.jpg" alt="muselina"></b-img>
-        <b-modal id="modal-center-5" centered title="Muselina">
+        <b-modal id="modal-center-5" hide-footer centered title="Muselina">
           <p class="py-4">Hemos incorporado tela muselina para tocar el cielo!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-6>
         <b-img class="image-bottom" src="/images/5.png" alt="packs"></b-img>
-        <b-modal id="modal-center-6" centered title="Un pack lo arregla todo">
+        <b-modal id="modal-center-6" hide-footer centered title="Un pack lo arregla todo">
           <p class="py-4">A veces no sabes qué tienes que comprar o regalar. Un pack te cambia la vida! mira las posibles combinaciones</p>
         </b-modal>
       </b-button>
@@ -63,19 +63,19 @@
     <div class="d-flex justify-content-center pb-4 mobile-grid">
       <b-button v-b-modal.modal-center-7>
         <b-img class="image-bottom" src="/images/3.png" alt="sobres de muda"></b-img>
-        <b-modal id="modal-center" centered title="Sobre de muda">
+        <b-modal id="modal-center" hide-footer centered title="Sobre de muda">
           <p class="py-4">Producto estrella. Ten todo organizado. Uno sabe lo ordenado con lo que sale, pero no como llega. Con los sobres de muda, la organización está garantizada!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-8>
         <b-img class="image-bottom" src="/images/upenda/upenda-12.jpg" alt="upenda"></b-img>
-        <b-modal id="modal-center" centered title="Upenda">
+        <b-modal id="modal-center" hide-footer centered title="Upenda">
           <p class="py-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-9>
         <b-img class="image-bottom" src="/images/4.png" alt="disfruta con umami"></b-img>
-        <b-modal id="modal-center" centered title="Disfrutar con umami">
+        <b-modal id="modal-center" hide-footer centered title="Disfrutar con umami">
           <p class="py-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
         </b-modal>
       </b-button>
