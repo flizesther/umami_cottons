@@ -68,7 +68,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-8>
-        <b-img class="image-bottom" src="/images/upenda/upenda-12.jpg" alt="upenda"></b-img>
+        <b-img class="image-bottom" src="/images/Upenda/upenda-12.jpg" alt="upenda"></b-img>
         <b-modal id="modal-center" hide-footer centered title="Upenda">
           <p class="py-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
         </b-modal>
@@ -280,8 +280,9 @@ export default {
   display:flex;
   justify-content: center;
   background-color: $umami-pink;
-  color: $white;
+  color: white;
 }
+
 .shipping-section {
   max-width: 400px;
 }
