@@ -1,6 +1,7 @@
 export const state = () => ({
     posts: [],
     products: [],
+    fabrics: [],
     test: ''
 });
 
@@ -13,6 +14,9 @@ export const mutations = {
     },
     test(state, test) {
         state.test = test
+    },
+    setFabrics(state, fabrics) {
+        state.fabrics = fabrics
     }
 };
 
@@ -39,5 +43,10 @@ export const actions = {
         const response = await fetch('https://umami-a6083.firebaseio.com/test.json')
         const data = await response.json()
         commit('test', data)
-    }
+    },
+    async getFabrics({ commit }) {
+        const response = await fetch('https://umami-a6083.firebaseio.com/telas.json')
+        const fabricsJson = await response.json()
+        commit('setFabrics', fabricsJson)
+    },
 };
