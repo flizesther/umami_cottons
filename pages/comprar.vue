@@ -8,7 +8,7 @@
         <b-card
           class="first-box"
           title="Cóntactanos"
-          img-src="/images/telefono.png"
+          img-src="/images/telefono.jpg"
           img-alt="Image"
           img-top
         > 
@@ -27,7 +27,7 @@
         </b-card>
         <b-card
           title="Tela"
-          img-src="/images/21.png"
+          img-src="/images/21.jpg"
           img-alt="Image"
           img-top
         >
@@ -37,7 +37,7 @@
         <b-card
           class="first-box"
           title="Packaging"
-          img-src="/images/22.png"
+          img-src="/images/22.jpg"
           img-alt="Image"
           img-top
         > 

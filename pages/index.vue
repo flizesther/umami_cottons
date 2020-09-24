@@ -22,7 +22,7 @@
       </div>    
     <div class="d-flex justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-1>
-        <b-img class="image-bottom" src="/images/11.png" alt="Hecho a mano"></b-img>
+        <b-img class="image-bottom" src="/images/11.jpg" alt="Hecho a mano"></b-img>
         <b-modal id="modal-center-1" centered title="Hecho a mano" hide-footer>
           <p class="py-4">Hecho a mano</p>
         </b-modal>
@@ -34,7 +34,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-3>
-        <b-img class="image-bottom" src="/images/2.png" alt="telas de algodón"></b-img>
+        <b-img class="image-bottom" src="/images/2.jpg" alt="telas de algodón"></b-img>
         <b-modal id="modal-center-3" hide-footer centered title="Telas 100% algodón">
           <p class="py-4">Telas 100% algodón, tanto el popelín como la tela de toalla</p>
         </b-modal>
@@ -42,7 +42,7 @@
     </div>
     <div class="d-flex justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-4>
-        <b-img class="image-bottom" src="/images/19.png" alt="fiesta"></b-img>
+        <b-img class="image-bottom" src="/images/19.jpg" alt="fiesta"></b-img>
         <b-modal id="modal-center-4" hide-footer centered title="Vive la vida">
           <p class="py-4">Y así empieza todo, con una fiesta!</p>
         </b-modal>
@@ -54,7 +54,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-6>
-        <b-img class="image-bottom" src="/images/5.png" alt="packs"></b-img>
+        <b-img class="image-bottom" src="/images/5.jpg" alt="packs"></b-img>
         <b-modal id="modal-center-6" hide-footer centered title="Un pack lo arregla todo">
           <p class="py-4">A veces no sabes qué tienes que comprar o regalar. Un pack te cambia la vida! mira las posibles combinaciones</p>
         </b-modal>
@@ -62,7 +62,7 @@
     </div>
     <div class="d-flex justify-content-center pb-4 mobile-grid">
       <b-button v-b-modal.modal-center-7>
-        <b-img class="image-bottom" src="/images/3.png" alt="sobres de muda"></b-img>
+        <b-img class="image-bottom" src="/images/3.jpg" alt="sobres de muda"></b-img>
         <b-modal id="modal-center" hide-footer centered title="Sobre de muda">
           <p class="py-4">Producto estrella. Ten todo organizado. Uno sabe lo ordenado con lo que sale, pero no como llega. Con los sobres de muda, la organización está garantizada!</p>
         </b-modal>
@@ -74,7 +74,7 @@
         </b-modal>
       </b-button>
       <b-button v-b-modal.modal-center-9>
-        <b-img class="image-bottom" src="/images/4.png" alt="disfruta con umami"></b-img>
+        <b-img class="image-bottom" src="/images/4.jpg" alt="disfruta con umami"></b-img>
         <b-modal id="modal-center" hide-footer centered title="Disfrutar con umami">
           <p class="py-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
         </b-modal>
@@ -94,7 +94,7 @@
         <b-card
           class="first-box"
           title="Cóntactanos"
-          img-src="/images/telefono.png"
+          img-src="/images/telefono.jpg"
           img-alt="Image"
           img-top
         > 
@@ -113,7 +113,7 @@
         </b-card>
         <b-card
           title="Tela"
-          img-src="/images/21.png"
+          img-src="/images/21.jpg"
           img-alt="Image"
           img-top
         >
@@ -123,7 +123,7 @@
         <b-card
           class="first-box"
           title="Packaging"
-          img-src="/images/22.png"
+          img-src="/images/22.jpg"
           img-alt="Image"
           img-top
         > 
@@ -143,7 +143,7 @@
       class="image-slide"
       style="text-shadow: 1px 1px 2px #333;"
     >
-    <b-img src="/images/24.png" class="w-100 borders" fluid alt="Responsive image"></b-img>
+    <b-img src="/images/24.jpg" class="w-100 borders" fluid alt="Responsive image"></b-img>
     </b-carousel>
     <b-carousel
       id="carousel-1"
@@ -188,16 +188,16 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-img src="/images/25.png" class="w-100 borders" fluid alt="Responsive image"></b-img>
+      <b-img src="/images/25.jpg" class="w-100 borders" fluid alt="Responsive image"></b-img>
     </b-carousel>
     </div>
     <div class="d-flex justify-content-center subtitle-section">SIGUE A UMAMI_COTTONS EN INSTAGRAM</div>
     <div class="d-flex justify-content-center several-images mobile-grid">
-      <b-img class="image-bottom" src="/images/13.png" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/15.png" alt="Named color image (black)"></b-img>
-      <b-img class="image-bottom" src="/images/16.png" alt="HEX color image"></b-img>
-      <b-img class="image-bottom" src="/images/17.png" alt="RGBa color image"></b-img>
-      <b-img class="image-bottom" src="/images/18.png" alt="HEX shorthand color (#88f)"></b-img>
+      <b-img class="image-bottom" src="/images/13.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/15.jpg" alt="Named color image (black)"></b-img>
+      <b-img class="image-bottom" src="/images/16.jpg" alt="HEX color image"></b-img>
+      <b-img class="image-bottom" src="/images/17.jpg" alt="RGBa color image"></b-img>
+      <b-img class="image-bottom" src="/images/18.jpg" alt="HEX shorthand color (#88f)"></b-img>
     </div>
   </b-container-fluid>
 </template>
