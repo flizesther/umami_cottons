@@ -2,7 +2,9 @@
   <b-navbar toggleable="sm" type="light" variant="light">
     <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
     <b-navbar-brand>
-      <b-img src="/images/logoUC.jpg" class="brand-image" fluid alt="Responsive image"></b-img>
+      <a href="/">
+        <b-img src="/images/logoUC.jpg" class="brand-image" fluid alt="Responsive image" />
+      </a>
     </b-navbar-brand>
     <b-collapse id="nav-text-collapse" is-nav>
       <b-navbar-nav class="nav-titles">

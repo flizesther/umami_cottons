@@ -33,11 +33,11 @@
           <p class="py-4">Nuestros diseños están pensados para hacerte la vida más sencilla</p>
         </b-modal>
       </b-button>
-      <b-button v-b-modal.modal-center-3>
+      <b-button v-b-modal.modal-center-3 to="/nuestras-telas">
         <b-img class="image-bottom" src="/images/2.jpg" alt="telas de algodón"></b-img>
-        <b-modal id="modal-center-3" hide-footer centered title="Telas 100% algodón">
+        <!-- <b-modal id="modal-center-3" hide-footer centered title="Telas 100% algodón">
           <p class="py-4">Telas 100% algodón, tanto el popelín como la tela de toalla</p>
-        </b-modal>
+        </b-modal> -->
       </b-button>
     </div>
     <div class="d-flex justify-content-center mobile-grid">
@@ -157,7 +157,6 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <!-- Text slides with image -->
       <b-carousel-slide
         caption="Alta Calidad"
         text="Todas nuestras telas son de alta calidad tanto en diseño como en el tejido en sí."
