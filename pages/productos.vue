@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PromotionalBanner />
+    <PromotionalBanner class="py-2 d-flex justify-content-center" />
     <b-container class="mt-lg-5">
       <div class="container product-list">
         <b-row>

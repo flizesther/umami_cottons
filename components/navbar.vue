@@ -35,7 +35,7 @@ export default {};
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   z-index: 10;
   width:100%;
-  @media (max-height:800px){
+  @media (min-height:800px){
     padding: 1.5em 3em 1.5em 3em;
   }
 }

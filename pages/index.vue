@@ -7,7 +7,7 @@
     <h1 class="d-flex justify-content-center">Umami Cottons</h1>
     <b-img
       src="/images/um.png"
-      class="w-lg-25 w-75 d-flex mx-auto justify-content-center"
+      class="banner-umm d-flex mx-auto justify-content-center"
       fluid
       alt="Responsive image"
     ></b-img>
@@ -80,7 +80,7 @@
         </b-modal>
       </b-button>
     </div>
-    <div class="pb-4 d-flex justify-content-center">
+    <div class="pb-4 d-lg-flex d-none justify-content-center">
       <div class="py-2 shipping-section d-flex flex-column">
         <div class="py-2 shipping-section d-flex flex-column">Gastos de envío:
           <div class="">Gratis Pedidos Nacionales superiores a 50 euros</div>
@@ -135,7 +135,7 @@
           </b-card-text>
         </b-card>
       </b-card-group>
-      <div class="promotional-slider py-4 d-none d-lg-block">
+      <div class="promotional-slider py-4 d-lg-flex d-none">
         Pedidos de más de 50 euros, los gastos de envío son gratuitos!
       </div>
     <div class="d-flex grid-slider mobile-grid justify-content-center py-4">
@@ -211,6 +211,15 @@
       <b-img class="image-bottom" src="/images/17.jpg" alt="RGBa color image"></b-img>
       <b-img class="image-bottom" src="/images/18.jpg" alt="HEX shorthand color (#88f)"></b-img>
     </div>
+    <div class="pb-4 d-lg-none d-flex justify-content-center">
+      <div class="py-2 shipping-section d-flex flex-column">
+        <div class="py-2 shipping-section d-flex flex-column">Gastos de envío:
+          <div class="">Gratis Pedidos Nacionales superiores a 50 euros</div>
+          <div class="">5 Euros - Pedidos nacionales inferiores a 50 euros</div>
+          <div class="">15 Euros - Pedidos internacionales.</div>
+        </div>
+      </div>
+    </div> 
     <b-carousel
       id="carousel-1"
       :interval="4000"
@@ -366,5 +375,11 @@ export default {
   border-color: transparent;
   box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
   font-size:30px;
+}
+.banner-umm {
+  width:25%;
+  @media (max-width: 880px) { 
+    width:75%;
+  }
 }
 </style>

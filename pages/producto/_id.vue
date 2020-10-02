@@ -1,6 +1,6 @@
 <template>
   <b-row class="mx-auto">
-    <b-col cols="12" md="5" offset-lg="1" class="d-flex">
+    <b-col cols="12" md="5" offset-lg="1" class="d-flex mobile-arrow">
     <b-button href="/productos" class="button-height">
       <fa class="arrow" :icon="['fas', 'chevron-left']" />
     </b-button>
@@ -54,7 +54,15 @@ export default {
   border-color: transparent;
   box-shadow:unset;
 }
+.mobile-arrow {
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
+}
 .arrow {
   color: pink;
+  @media (max-width: 800px){
+    margin-bottom:40px;
+  }
 }
 </style>
