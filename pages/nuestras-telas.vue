@@ -30,7 +30,6 @@ export default {
     imageTelas () {
       let telas = fabrics.map(f => f.id).map(i => i.image)
       return telas
-      console.log(telas)
     }
   }
 };

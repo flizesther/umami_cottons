@@ -1,7 +1,7 @@
 <template>
   <div>
     <PromotionalBanner />
-    <b-container>
+    <b-container class="mt-lg-5">
       <div class="container product-list">
         <b-row>
           <b-col lg="3">
@@ -10,14 +10,14 @@
             <span class="list-group-item background d-lg-block d-none" @click="showAllProducts()">
                 {{ allProducts }}
             </span>
-            <div class="list-group d-lg-block d-none" v-for="product in products" :key="product">
+            <div class="list-group d-lg-block d-none" v-for="product in products" :key="product.id">
               <span v-if="product" class="list-group-item" @click="setFilter(product.category)">
                 {{ product.category }}
               </span>
             </div>
           </b-col>
           <b-col lg="9" cols="12" class="products-row">
-            <b-row class="products">
+            <b-row class="products desktop">
               <b-col cols="12" lg="4" class="pb-4" v-for="product in filteredProducts" :key="product.category">
                 <product :product="product" />
               </b-col>
@@ -71,10 +71,12 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .products {
-  @media (min-height:800px){
-    margin-top: 98px;
+  &.desktop {
+    @media (max-height:800px){
+    margin-top: 102px;
+  }
   }
 }
 @font-face {
@@ -101,7 +103,7 @@ a {
 /* demo css */
 html,body {
     margin:0;
-    font-family: 'Dawning of a New Day', cursive;
+    font-family: sans-serif;
 }
 
 .title-container {
@@ -112,7 +114,7 @@ html,body {
 }
 
 .title {
-    font-family: 'Dawning of a New Day', cursive;
+    font-family: sans-serif;
     font-size:30pt;
     font-weight:normal;
 }
@@ -237,11 +239,24 @@ font-size:16pt
   display:flex;
   justify-content: center;
   background-color: $umami-pink;
+  color: white;
   @media (min-height:800px){
     font-size: 18px;
     text-align: center;
     padding: 10px 5px;
     color: white;
   }
+}
+.card {
+  box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
+  border: 0;
+}
+::v-deep a:hover {
+  color: #8498af;
+  text-decoration: none;
+  cursor:pointer;
+}
+.list-group-item {
+  cursor: pointer;
 }
 </style>

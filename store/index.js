@@ -21,7 +21,7 @@ export const mutations = {
 };
 
 export const actions = {
-    async nuxtServerInit({ commit }) {
+    async nuxtServerInit({ commit, dispatch }) {
         const files = await require.context(
             "@/assets/content/blog/",
             false,
@@ -33,11 +33,14 @@ export const actions = {
             return res;
         });
         commit("posts", posts);
+        await dispatch('getProducts')
+        await dispatch('getFabrics')
+        await dispatch('getTest')
     },
     async getProducts({ commit }) {
         const response = await fetch('https://umami-a6083.firebaseio.com/products.json')
         const productsJson = await response.json()
-        commit('setProducts', productsJson)
+        commit('setProducts', productsJson.filter(p => p))
     },
     async getTest({ commit }) {
         const response = await fetch('https://umami-a6083.firebaseio.com/test.json')
@@ -48,5 +51,8 @@ export const actions = {
         const response = await fetch('https://umami-a6083.firebaseio.com/telas.json')
         const fabricsJson = await response.json()
         commit('setFabrics', fabricsJson)
-    },
+    }
 };
+export const getters = {
+    getProductById: state => paramsName => state.products.find(p => p.title === paramsName)
+}

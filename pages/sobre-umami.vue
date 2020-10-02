@@ -1,6 +1,5 @@
 <template>
   <b-container class="contain-width">
-    <div>hola</div>
     <h1 class="d-flex justify-content-center py-4">Nuestro equipo</h1>
     <p class="d-flex justify-content-center text-center">
       El responsable de esta aventura tiene un nombre, Simón.

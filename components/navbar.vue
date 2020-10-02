@@ -23,11 +23,20 @@
 export default {};
 </script>
 
-<style>
+<style lang="scss">
 .brand-image {
   height:50px;
 }
 .nav-titles{
   font-size:20px;
+}
+.navbar {
+  box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  z-index: 10;
+  width:100%;
+  @media (max-height:800px){
+    padding: 1.5em 3em 1.5em 3em;
+  }
 }
 </style>

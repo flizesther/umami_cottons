@@ -1,7 +1,8 @@
 <template>
     <div class="card h-100">
-        <b-button v-b-modal="`modal-center-${product.title}`">
-            <a href="#"><img class="card-img-top" :src="product.image" :alt="product.image"></a>
+        <!-- <b-button> -->
+        <a :href="`/producto/${product.title}`">
+            <a><img class="card-img-top" :src="product.image" :alt="product.image"></a>
                 <div class="card-body">
                     <h4 class="card-title">
                     <a href="#">{{ product.title }}</a>
@@ -9,7 +10,7 @@
                     <h5>{{ product.price }}</h5>
                     <p class="card-text">{{ product.shortDescription }}</p>
                 </div>
-            <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" hide-footer>
+            <!-- <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" hide-footer>
                 <div class="col-lg-12">
                 <div class="card mt-4">
                     <img class="card-img-top img-fluid" :src="product.modalImage" :alt="product.modalImage">
@@ -18,9 +19,9 @@
                     <h4>{{ product.price }}</h4>
                     <p class="card-text">{{ product.modalDescriptionOne }}</p>
                     </div>
-                </div>
+                </div> -->
             <!-- /.card -->
-                <div class="card card-outline-secondary py-4">
+                <!-- <div class="card card-outline-secondary py-4">
                 <div class="card-body">
                     <p>{{ product.modalDescriptionTwo }}</p>
                     <hr>
@@ -28,8 +29,9 @@
                 </div>
                 </div>
             </div>
-            </b-modal>
-        </b-button>
+            </b-modal> -->
+        <!-- </b-button> -->
+        </a>
     </div>
 </template>
 
@@ -47,7 +49,10 @@ export default {
 ::v-deep .btn-secondary {
     background-color: $grey;
 }
-.modal-backdrop {
-    background-color: rgba(0,0,0,.0001) !important;
+// .modal-backdrop {
+//   background-color: rgba(0,0,0,.0001) !important;
+// }
+.card-body {
+  box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
 }
 </style>

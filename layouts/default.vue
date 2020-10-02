@@ -13,11 +13,6 @@ export default {
   components: {
     navbar,
     Footer
-  },
-  created () {
-    this.$store.dispatch('getProducts')
-    this.$store.dispatch('getFabrics')
-    this.$store.dispatch('getTest')
   }
 }
 </script>

@@ -7,7 +7,7 @@
     <b-card-group deck class="screen-width d-flex justify-content-center mx-auto">
         <b-card
           class="first-box"
-          title="Cóntactanos"
+          title="1.- Cóntactanos"
           img-src="/images/telefono.jpg"
           img-alt="Image"
           img-top
@@ -17,7 +17,8 @@
           </b-card-text>
         </b-card>
         <b-card
-          title="Producto"
+          title="2.- Producto"
+          class="first-box"
           img-src="/images/productos.jpg"
           img-alt="Image"
           img-top
@@ -26,7 +27,8 @@
           </b-card-text>
         </b-card>
         <b-card
-          title="Tela"
+          title="3.- Tela"
+          class="first-box"
           img-src="/images/21.jpg"
           img-alt="Image"
           img-top
@@ -36,7 +38,7 @@
         </b-card>
         <b-card
           class="first-box"
-          title="Packaging"
+          title="4.- Packaging"
           img-src="/images/22.jpg"
           img-alt="Image"
           img-top
@@ -85,5 +87,7 @@ export default {
     flex-direction: column;
   }
 }
-
+.first-box {
+  box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
+}
 </style>
