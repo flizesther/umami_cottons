@@ -1,18 +1,18 @@
 <template>
   <b-row class="mx-auto">
     <b-col cols="12" md="5" offset-lg="1" class="d-flex mobile-arrow">
-      <div class="d-flex d-lg-none align-items-center">
-        <b-button href="/productos" class="button-height">
-          <fa class="arrow my-auto" :icon="['fas', 'chevron-left']" />
-        </b-button>
-        <b-button href="/productos" class="mt-3 button-go-back">
-        VOLVER
-        </b-button>
-      </div>
     <b-button href="/productos" class="button-height d-none d-lg-block">
       <fa class="arrow" :icon="['fas', 'chevron-left']" />
     </b-button>
         <img class="card-img-top h-100 img-fluid" :src="product.modalImage" :alt="product.modalImage">
+    </b-col>
+    <b-col cols="12" md="5">
+        <div class="d-flex d-lg-none align-items-center">
+        <b-button href="/productos" class="button-height">
+          <fa class="arrow my-auto" :icon="['fas', 'chevron-left']"/>
+          <span style="color: black">VOLVER</span>
+        </b-button>
+      </div>
     </b-col>
     <b-col cols="12" md="5">
       <div class="card-body">

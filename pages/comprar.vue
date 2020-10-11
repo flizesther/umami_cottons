@@ -23,7 +23,7 @@
           img-alt="Image"
           img-top
         >
-          <b-card-text>una upenda, un meraki, un sobre cambiador, una bandana, un pack...
+          <b-card-text>Una upenda, un meraki, un sobre cambiador, una bandana, un pack...
           </b-card-text>
         </b-card>
         <b-card
