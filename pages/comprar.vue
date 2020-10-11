@@ -39,7 +39,7 @@
         <b-card
           class="first-box"
           title="4.- Packaging"
-          img-src="/images/22.jpg"
+          img-src="/images/car.jpg"
           img-alt="Image"
           img-top
         > 
@@ -76,6 +76,7 @@ export default {
   max-width: 700px;
   margin: auto;
   padding: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 .screen-width {
   max-width:1000px;
@@ -89,5 +90,8 @@ export default {
 }
 .first-box {
   box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
+}
+.card-text {
+  font-family: 'Montserrat', sans-serif;
 }
 </style>

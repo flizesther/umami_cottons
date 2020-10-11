@@ -32,6 +32,7 @@
 <script>
 import { mapState } from 'vuex'
 import Product from '../components/Product'
+import PromotionalBanner from '../components/PromotionalBanner'
 
 export default {
   head() {
@@ -40,7 +41,8 @@ export default {
     };
   },
   components: {
-    Product
+    Product,
+    PromotionalBanner
   },
   data () {
     return {

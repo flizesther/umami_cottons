@@ -1,6 +1,6 @@
 <template>
   <b-container class="contain-width">
-    <h1 class="d-flex justify-content-center py-4">Nuestro equipo</h1>
+    <h1 class="d-flex justify-content-center py-4 title">Nuestro equipo</h1>
     <p class="d-flex justify-content-center text-center">
       El responsable de esta aventura tiene un nombre, Simón.
       Como mamá primeriza había mil cosas que han sido un auténtico descubrimiento.
@@ -39,15 +39,19 @@ export default {
   font-family: "merlodAutre";
   src: url("../assets/fonts/MerlodAutre-Regular.otf");
 }
-* {
+.title {
   font-family: "merlodAutre";
 }
-
+p {
+  font-family: 'Montserrat', sans-serif;
+}
 .contain-width {
   max-width: 800px;
   font-size: 20px;
   @media (max-width: 800px) {
     font-size: 18px;
+    padding-right: 20px;
+    padding-left: 20px;
   }
 }
 .text-bold {

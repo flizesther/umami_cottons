@@ -1,7 +1,14 @@
 <template>
   <b-row class="mx-auto">
     <b-col cols="12" md="5" offset-lg="1" class="d-flex mobile-arrow">
-    <b-button href="/productos" class="button-height">
+      <div class="d-flex d-lg-none align-items-center"><b-button href="/productos" class="button-height">
+      <fa class="arrow" :icon="['fas', 'chevron-left']" />
+    </b-button>
+    <b-button href="/productos" class="mt-3 button-go-back">
+    VOLVER
+    </b-button>
+    </div>
+    <b-button href="/productos" class="button-height d-none d-lg-block">
       <fa class="arrow" :icon="['fas', 'chevron-left']" />
     </b-button>
         <img class="card-img-top img-fluid" :src="product.modalImage" :alt="product.modalImage">
@@ -64,5 +71,13 @@ export default {
   @media (max-width: 800px){
     margin-bottom:40px;
   }
+}
+.button-go-back {
+  border: 0;
+  color:black;
+  background-color: white;
+}
+.card-text {
+    font-family: 'Montserrat', sans-serif;
 }
 </style>

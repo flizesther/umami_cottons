@@ -4,7 +4,7 @@
       Pedidos de más de 50 euros, los gastos de envío son gratuitos!
     </div>
     <b-img src="/images/main-image.jpg" class="w-100" fluid alt="Responsive image"></b-img>
-    <h1 class="d-flex justify-content-center">Umami Cottons</h1>
+    <h1 class="d-flex py-2 justify-content-center">Catálogo Umami Cottons</h1>
     <b-img
       src="/images/um.png"
       class="banner-umm d-flex mx-auto justify-content-center"
@@ -82,10 +82,11 @@
     </div>
     <div class="pb-4 d-lg-flex d-none justify-content-center">
       <div class="py-2 shipping-section d-flex flex-column">
-        <div class="py-2 shipping-section d-flex flex-column">Gastos de envío:
-          <div class="">Gratis Pedidos Nacionales superiores a 50 euros</div>
-          <div class="">5 Euros - Pedidos nacionales inferiores a 50 euros</div>
-          <div class="">15 Euros - Pedidos internacionales.</div>
+        <div class="py-2 shipping-section d-flex flex-column">
+          <div class="shipping-section title font-weight-bold">{{shipping.title}}</div>
+          <div class="shipping-section">{{shipping.firstText}}</div>
+          <div class="shipping-section">{{shipping.secondText}}</div>
+          <div class="shipping-section">{{shipping.thirdText}}</div>
         </div>
       </div>
     </div> 
@@ -126,7 +127,7 @@
         <b-card
           class="first-box"
           title="Packaging"
-          img-src="/images/22.jpg"
+          img-src="/images/car.jpg"
           img-alt="Image"
           img-top
         > 
@@ -141,7 +142,7 @@
     <div class="d-flex grid-slider mobile-grid justify-content-center py-4">
     <b-carousel
       id="carousel-1"
-      :interval="4000"
+      :interval="0"
       background="#ababab"
       class="image-slide"
       style="text-shadow: 1px 1px 2px #333;"
@@ -151,7 +152,7 @@
     <b-carousel
       id="carousel-1"
       v-model="slide"
-      :interval="4000"
+      :interval="0"
       controls
       indicators
       background="#ababab"
@@ -160,11 +161,6 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-    <b-carousel-slide
-        caption="Quiero regalar algo de calidad"
-        text="Nuestras telas 100% algodón son de alta calidad"
-        img-src="/images/24.jpg"
-      ></b-carousel-slide>
       <b-carousel-slide
         caption="Alta Calidad"
         text="Todas nuestras telas son de alta calidad tanto en diseño como en el tejido en sí."
@@ -185,15 +181,10 @@
         text="Una prenda única, hecha a mano con todo nuestro cariño y amor."
         img-src="/images/upenda-abrazo.jpg"
       ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Quiero sorprender como se sorprende un niñ@"
-        text="100% asegurado el éxito con productos umami"
-        img-src="/images/25.jpg"
-      ></b-carousel-slide>
     </b-carousel>
     <b-carousel
       id="carousel-1"
-      :interval="4000"
+      :interval="0"
       background="#ababab"
       class="image-slide d-none d-lg-block"
       style="text-shadow: 1px 1px 2px #333;"
@@ -212,11 +203,12 @@
       <b-img class="image-bottom" src="/images/18.jpg" alt="HEX shorthand color (#88f)"></b-img>
     </div>
     <div class="pb-4 d-lg-none d-flex justify-content-center">
-      <div class="py-2 shipping-section d-flex flex-column">
-        <div class="py-2 shipping-section d-flex flex-column">Gastos de envío:
-          <div class="">Gratis Pedidos Nacionales superiores a 50 euros</div>
-          <div class="">5 Euros - Pedidos nacionales inferiores a 50 euros</div>
-          <div class="">15 Euros - Pedidos internacionales.</div>
+      <div class="py-2 pl-2 shipping-section d-flex flex-column">
+        <div class="py-2 pl-2 shipping-section d-flex flex-column">
+          <div class="shipping-section title font-weight-bold">{{shipping.title}}</div>
+          <div class="shipping-section">{{shipping.firstText}}</div>
+          <div class="shipping-section">{{shipping.secondText}}</div>
+          <div class="shipping-section">{{shipping.thirdText}}</div>
         </div>
       </div>
     </div> 
@@ -253,7 +245,13 @@ export default {
     return {
       mainProps: { blank: true, width: 75, height: 75, class: "m1" },
       slide: 0,
-      sliding: null
+      sliding: null,
+      shipping: {
+        title: 'Gastos de envío:',
+        firstText: 'Gratis Pedidos Nacionales superiores a 50 euros',
+        secondText: '5 Euros - Pedidos nacionales inferiores a 50 euros',
+        thirdText: '15 Euros - Pedidos internacionales.'
+      }
     }
   },
   methods: {
@@ -280,7 +278,8 @@ export default {
 }
 .text-section {
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
 }
 .borders {
   padding: 40px;
@@ -335,6 +334,13 @@ export default {
 .shipping-section {
   font-size: 20px;
   max-width: 500px;
+  font-family: 'Montserrat', sans-serif;
+  @media (max-width: 880px) { 
+    font-size: 16px;
+  }
+  &.title{
+    text-decoration: underline;
+  }
 }
 ::v-deep .carousel-indicators {
   display: none;
@@ -382,4 +388,8 @@ export default {
     width:75%;
   }
 }
+.card-text {
+  font-family: 'Montserrat', sans-serif;
+}
+
 </style>
