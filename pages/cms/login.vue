@@ -10,7 +10,7 @@
 
 <script>
   import Login from '~/components/cms/Login.vue'
-  import { mapGetters } from  'Vuex'
+  import { mapGetters } from  'vuex'
 
   export default {
     components: { Login }

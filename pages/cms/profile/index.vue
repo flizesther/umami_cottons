@@ -8,7 +8,7 @@
 </template>
 
 <script>
-  import { mapGetters } from  'Vuex'
+  import { mapGetters } from  'vuex'
   import { User } from '~/infrastructure/domain/User'
   import DebugData from "~/components/cms/DebugData";
 
