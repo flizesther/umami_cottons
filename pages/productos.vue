@@ -76,7 +76,7 @@ export default {
 <style lang="scss" scoped>
 .products {
   &.desktop {
-    @media (max-height:800px){
+    @media (min-width:800px){
     margin-top: 102px;
   }
   }
@@ -242,7 +242,7 @@ font-size:16pt
   justify-content: center;
   background-color: $umami-pink;
   color: white;
-  @media (min-height:800px){
+  @media (max-width:800px){
     font-size: 18px;
     text-align: center;
     padding: 10px 5px;

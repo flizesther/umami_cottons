@@ -12,7 +12,7 @@
         </div>
         <div class="footer-center">
             <div class="d-flex justify-content-center">
-                <img class="d-none d-lg-block w-25" src="/images/logoUC.jpg">
+                <img class="d-none d-lg-block logo-desktop" src="/images/logoUC.jpg">
             </div>
         <div class="d-lg-flex justify-content-center mx-auto py-4 d-none">Síguenos en:</div>
             <div class="footer-icons d-flex justify-content-center mx-auto">
@@ -48,6 +48,7 @@ export default {
   font-family: "merlodAutre";
   src: url("../assets/fonts/MerlodAutre-Regular.otf");
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
 * {
   font-family: "merlodAutre";
 }
@@ -71,7 +72,9 @@ footer{
 	footer { position: static; }
 	header { padding-top:40px; }
 }
- 
+.logo-desktop {
+    height: 180px;
+}
  
 .footer-distributed {
 	box-sizing: border-box;
