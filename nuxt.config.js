@@ -1,5 +1,5 @@
 export default {
-    target: 'static',
+    target: 'server',
     /*
      ** Headers of the page
      */
@@ -47,10 +47,14 @@ export default {
     modules: [
         // Doc: https://bootstrap-vue.js.org/docs/
         "bootstrap-vue/nuxt",
-        "@nuxtjs/style-resources"
+        "@nuxtjs/style-resources",
+        "@nuxt/http"
     ],
     styleResources: {
         scss: ["@/assets/scss/variables.scss"]
+    },
+    http: {
+        // proxyHeaders: false
     },
     /*
      ** Build configuration

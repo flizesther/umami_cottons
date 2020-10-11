@@ -34,6 +34,7 @@ import { mapState } from 'vuex'
 import Product from '../components/Product'
 
 export default {
+  layout: 'app',
   head() {
     return {
       title: "Nuestros productos"
@@ -79,21 +80,12 @@ export default {
   }
   }
 }
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
-}
+
 .btn-secondary {
     color: $white;
     background-color: $grey;
     border-color: $grey;
     height: 100%;
-}
-a {
-    color: $dark-grey;
 }
 
 .mascarilla {

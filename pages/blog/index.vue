@@ -1,8 +1,7 @@
 <template>
   <div>
-    <div v-for="post in posts" :key="post.slug">
-      <h2>{{ post.title }}</h2>
-      <nuxt-link :to="`/blog/${post.slug}`">ver post</nuxt-link>
+    <div v-for="post in posts" :key="post.code">
+      <nuxt-link :to="`/blog/${post.code}`">{{ post.title }}</nuxt-link>
     </div>
   </div>
 </template>
@@ -11,6 +10,7 @@
 import { mapState } from "vuex";
 
 export default {
+  layout: 'app',
   computed: {
     ...mapState({
       posts: state => state.posts
@@ -18,13 +18,3 @@ export default {
   }
 };
 </script>
-
-<style>
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
-}
-</style>

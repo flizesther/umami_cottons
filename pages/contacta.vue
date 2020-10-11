@@ -122,44 +122,48 @@
     </div> -->
     <div class="d-flex justify-content-center contact-us">
       <p class="text">Contacta con nosotras mandando un mail: </p>
-      <p class="text mail">umamicottons@gmail.com</p>
+      <p class="text mail">{{ contactEmail }}</p>
     </div>
   </b-container>
 </template>
 
 <script>
+import { Email } from  '~/infrastructure/util/Email'
+
 export default {
-    data() {
-      return {
-        form: {
-          email: '',
-          name: '',
-          prenda: null,
-          checked: []
-        },
-        prendas: [{ text: 'Selecciona una', value: null }, 'Upenda', 'Meraki', 'Paquete', 'Bandana', 'Muselina', 'Corona', 'Banderolas de cumpleaños', 'Chupetero', 'Prefiero escribir todo lo que quiero en el mail'],
-        show: true
-      }
-    },
-    methods: {
-      onSubmit(evt) {
-        evt.preventDefault()
-        alert(JSON.stringify(this.form))
+  layout: 'app',
+  data() {
+    return {
+      form: {
+        email: '',
+        name: '',
+        prenda: null,
+        checked: []
       },
-      onReset(evt) {
-        evt.preventDefault()
-        // Reset our form values
-        this.form.email = ''
-        this.form.name = ''
-        this.form.food = null
-        this.form.checked = []
-        // Trick to reset/clear native browser form validation state
-        this.show = false
-        this.$nextTick(() => {
-          this.show = true
-        })
-      }
+      prendas: [{ text: 'Selecciona una', value: null }, 'Upenda', 'Meraki', 'Paquete', 'Bandana', 'Muselina', 'Corona', 'Banderolas de cumpleaños', 'Chupetero', 'Prefiero escribir todo lo que quiero en el mail'],
+      show: true,
+      contactEmail: Email.mask('umamicottons@gmail.com')
+    }
+  },
+  methods: {
+    onSubmit(evt) {
+      evt.preventDefault()
+      alert(JSON.stringify(this.form))
     },
+    onReset(evt) {
+      evt.preventDefault()
+      // Reset our form values
+      this.form.email = ''
+      this.form.name = ''
+      this.form.food = null
+      this.form.checked = []
+      // Trick to reset/clear native browser form validation state
+      this.show = false
+      this.$nextTick(() => {
+        this.show = true
+      })
+    }
+  },
   head() {
     return {
       title: "Contacta con umami_cottons"
@@ -169,14 +173,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
-}
 
 ::v-deep .btn-secondary {
   background-color: $umami-pink!important;

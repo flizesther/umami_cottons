@@ -244,6 +244,7 @@
 
 <script>
 export default {
+  layout: 'app',
   head() {
     return {
       title: "Umami Cottons"
@@ -269,15 +270,6 @@ export default {
 
 <style lang="scss" scoped>
 
-//import personal font
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
-  background-color: $light-grey;
-}
 .text-section {
   font-size: 16px;
   font-family: sans-serif;

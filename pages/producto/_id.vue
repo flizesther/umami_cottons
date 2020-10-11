@@ -21,8 +21,8 @@
 <script>
 import { mapGetters } from  'Vuex'
 export default {
+  layout: 'app',
   mounted() {
-    console.log('route:', this.$route.params.id)
     const productName = this.$route.params.id
     this.product = this.getProductById(productName)
   },

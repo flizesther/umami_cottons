@@ -1,22 +1,11 @@
 <template>
-  <div>
-    <navbar />
-    <nuxt />
-    <Footer />
-  </div>
+  <nuxt />
 </template>
 
 <script>
-import navbar from '@/components/navbar'
-import Footer from '@/components/Footer'
-export default {
-  components: {
-    navbar,
-    Footer
-  }
-}
+
 </script>
 
-<style lang="scss">
+<style scoped>
 
 </style>

@@ -1,16 +1,23 @@
 <template>
-  <div>{{ post }}</div>
+  <div>
+    <h2>{{ post.title }}</h2>
+    <span v-html="post.body"></span>
+  </div>
 </template>
 
 <script>
+import { mapGetters } from  'Vuex'
 export default {
-  async asyncData({ params, payload }) {
-    if (payload) return { post: payload };
-    else
-      return {
-        post: await require(`~/assets/content/blog/${params.slug}.json`)
-      };
-  }
+  layout: 'app',
+  mounted() {
+    this.post = this.getPostByCode(this.$route.params.slug)
+  },
+  computed: {
+    ...mapGetters(['getPostByCode'])
+  },
+  data: () => ({
+    post: {}
+  })
 };
 </script>
 

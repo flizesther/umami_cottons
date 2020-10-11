@@ -20,6 +20,7 @@
 import { mapState } from 'vuex'
 
 export default {
+  layout: 'app',
   head() {
     return {
       title: "Nuestras Telas"
@@ -43,12 +44,5 @@ export default {
     max-width:250px;
     display:flex;
   }
-}
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
 }
 </style>

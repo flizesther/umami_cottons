@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  layout: 'app',
   head() {
     return {
       title: "Sobre nosotros"
@@ -34,14 +35,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
-}
 
 .contain-width {
   max-width: 800px;

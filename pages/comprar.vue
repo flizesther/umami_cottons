@@ -53,6 +53,7 @@
 
 <script>
 export default {
+  layout: 'app',
   head() {
     return {
       title: "¿Cómo comprar?"
@@ -62,13 +63,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
-}
+
 .text {
   display:flex;
   justify-content: center;

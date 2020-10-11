@@ -31,33 +31,31 @@
             <p class="d-none d-lg-block"> Síguenos en:</p>
         <div>
                 <i class="fa fa-envelope"></i>
-                <p><a href="mailto:umamicottons@gmail.com">umamicottons@gmail.com</a></p>
+                <p><a :href="`${mailto}${contactEmail}`">{{ contactEmail }}</a></p>
             </div>
         </div>
     </footer>
 </template>
 
 <script>
-export default {
+import { Email } from  '~/infrastructure/util/Email'
 
+export default {
+    data() {
+      return {
+          mailto: 'mailto:',
+          contactEmail: Email.mask('umamicottons@gmail.com')
+      }
+    }
 }
 </script>
 
 <style lang="scss">
-@font-face {
-  font-family: "merlodAutre";
-  src: url("../assets/fonts/MerlodAutre-Regular.otf");
-}
-* {
-  font-family: "merlodAutre";
-}
+
 .btn-secondary {
     color: $white;
     background-color: $light-grey;
     border-color: $grey;
-}
-a {
-    color: $dark-grey;
 }
 
 .mascarilla {
