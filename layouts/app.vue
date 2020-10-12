@@ -28,7 +28,6 @@ export default {
 
 .app * {
   font-family: "merlodAutre";
-  background-color: $light-grey;
 }
 
 .app a {
