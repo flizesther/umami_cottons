@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card class="mt-3" header="Debug Data">
+    <b-card v-if="enable" class="mt-3" header="Debug Data">
       <pre class="m-0">{{ data }}</pre>
     </b-card>
   </div>
@@ -9,10 +9,13 @@
 <script>
   export default {
     props: ['data'],
-    methods: {
-      isEnable(){
-        return this.$config.DEBUG_ENABLE;
+    data: () => {
+      return {
+        enable: false
       }
+    },
+    async fetch() {
+      this.enable = this.$config.DEBUG_ENABLE
     }
   }
 </script>

@@ -16,7 +16,7 @@
       }
     },
     async asyncData({store, params}) {
-      const product = new Product(await store.dispatch('cms/getProduct', {code: params.product_id}))
+      const product = new Product(await store.dispatch('cms/getProduct', {code: params.id}))
       return { product }
     }
   }

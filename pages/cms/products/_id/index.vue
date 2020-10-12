@@ -23,7 +23,7 @@
       }
     },
     async asyncData({store, params}) {
-      const product = await store.dispatch('cms/getProduct', {code: params.product_id})
+      const product = await store.dispatch('cms/getProduct', {code: params.id})
       return { product }
     }
   }

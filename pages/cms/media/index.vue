@@ -1,7 +1,7 @@
 <template>
-  <section class="container">
-    <div>Media</div>
-  </section>
+  <div>
+    <h2>Media</h2>
+  </div>
 </template>
 
 <script>
@@ -9,14 +9,3 @@ export default {
   layout: 'cms'
 }
 </script>
-
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-</style>
-
