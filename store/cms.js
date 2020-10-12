@@ -1,6 +1,7 @@
-import { ProductsService } from '../infrastructure/services/ProductsService';
 import { AuthService } from '../infrastructure/services/AuthService';
 import { User } from '../infrastructure/domain/User';
+
+const PATH_PRODUCTS_SERVICE = 'products';
 
 export const state = () => ({
     user: new User({})
@@ -14,23 +15,24 @@ export const mutations = {
 
 export const actions = {
 
+    // Products
     async getProducts({ commit }) {
-        return ProductsService.getProducts(this.$http);
+        return this.$cms.getAll(PATH_PRODUCTS_SERVICE);
     },
     async getProduct({ commit }, params) {
-        return ProductsService.getProduct(this.$http, params.code);
+        return this.$cms.get(PATH_PRODUCTS_SERVICE, params.code);
     },
     async createProduct({ commit }, params) {
-        return ProductsService.createProduct(this.$http, params);
+        return this.$cms.create(PATH_PRODUCTS_SERVICE, params);
     },
     async updateProduct({ commit }, params) {
-        return ProductsService.updateProduct(this.$http, params);
+        return this.$cms.update(PATH_PRODUCTS_SERVICE, params);
     },
     async deleteProduct({ commit }, params) {
-        return ProductsService.deleteProduct(this.$http, params.code);
+        return this.$cms.delete(PATH_PRODUCTS_SERVICE, params.code);
     },
 
-
+    // Auth
     async login({ commit }, params) {
         const user = await AuthService.login(this.$http, params);
         commit('setUser', new User(user));

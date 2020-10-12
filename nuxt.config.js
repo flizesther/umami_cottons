@@ -27,7 +27,7 @@ export default {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: [],
+    plugins: ['~/plugins/cms.js'],
     /*
      ** Nuxt.js dev-modules
      */
@@ -69,5 +69,14 @@ export default {
 
     router: {
         linkActiveClass: "active"
-    }
+    },
+    /*
+     ** Nuxt.js runtime-config
+     */
+    publicRuntimeConfig: {
+        API_BASE_URL_V1: 'https://umami-a6083.firebaseio.com',
+        API_BASE_URL_V2: 'https://umami-a6083.firebaseio.com/v2',
+        DEBUG_ENABLE: process.env.DEBUG_ENABLE || false
+    },
+    privateRuntimeConfig: {}
 };

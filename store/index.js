@@ -1,5 +1,3 @@
-import { API_V1_URL_BASE, API_V2_URL_BASE } from '~/infrastructure/config'
-
 export const state = () => ({
     posts: [],
     products: [],
@@ -30,22 +28,22 @@ export const actions = {
         await dispatch('getTest')
     },
     async getProducts({ commit }) {
-        const response = await fetch(API_V1_URL_BASE + '/products.json')
+        const response = await fetch(this.$config.API_BASE_URL_V1 + '/products.json')
         const productsJson = await response.json()
         commit('setProducts', productsJson.filter(p => p))
     },
     async getFabrics({ commit }) {
-        const response = await fetch(API_V1_URL_BASE + '/telas.json')
+        const response = await fetch(this.$config.API_BASE_URL_V1 + '/telas.json')
         const fabricsJson = await response.json()
         commit('setFabrics', fabricsJson)
     },
     async getPosts({ commit }) {
-        const response = await fetch(API_V2_URL_BASE + '/posts.json')
+        const response = await fetch(this.$config.API_BASE_URL_V2 + '/posts.json')
         const data = await response.json()
         commit('setPosts', Object.values(data))
     },
     async getTest({ commit }) {
-        const response = await fetch(API_V2_URL_BASE + '/test.json')
+        const response = await fetch(this.$config.API_BASE_URL_V2 + '/test.json')
         const data = await response.json()
         commit('test', data)
     },

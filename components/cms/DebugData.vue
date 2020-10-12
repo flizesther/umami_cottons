@@ -7,13 +7,11 @@
 </template>
 
 <script>
-  import { DEBUG_ENABLE } from '~/infrastructure/config'
-
   export default {
     props: ['data'],
     methods: {
       isEnable(){
-        return DEBUG_ENABLE;
+        return this.$config.DEBUG_ENABLE;
       }
     }
   }
