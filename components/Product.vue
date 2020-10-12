@@ -36,6 +36,7 @@
 </template>
 
 <script>
+
 export default {
     props: ['product']
 }
@@ -54,5 +55,8 @@ export default {
 // }
 .card-body {
   box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
+}
+.card-text {
+    font-family: 'Montserrat', sans-serif;
 }
 </style>

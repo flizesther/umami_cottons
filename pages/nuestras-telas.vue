@@ -43,6 +43,9 @@ export default {
   .fabric-image {
     max-width:250px;
     display:flex;
+    @media (max-width: 880px) { 
+      max-width:320px;
+    }
   }
 }
 </style>

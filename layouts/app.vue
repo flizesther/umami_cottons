@@ -24,6 +24,8 @@ export default {
   src: url("../assets/fonts/MerlodAutre-Regular.otf");
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+
 .app * {
   font-family: "merlodAutre";
   background-color: $light-grey;
