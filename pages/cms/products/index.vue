@@ -17,8 +17,8 @@
         ],
         actions: {
           list: { enable: true, name: 'cms/getProducts' },
-          edit: { enable: true },
-          new: { enable: true },
+          edit: { enable: true, name: 'cms/updateProduct' },
+          new: { enable: true, name: 'cms/createProduct' },
           remove: { enable: true, name: 'cms/deleteProduct' }
         }
       }

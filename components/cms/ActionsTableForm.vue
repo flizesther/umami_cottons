@@ -1,7 +1,7 @@
 <template>
   <b-row>
     <b-col>
-      <b-btn variant="outline-success" class="mb-3" :to="`${path}/new`" v-if="actionNewEnable()">
+      <b-btn variant="outline-success" class="mb-3" @click="showNew" v-if="actionNewEnable()">
         New
       </b-btn>
       <b-btn variant="outline-secondary" class="mb-3" @click="getItems" v-if="actionListEnable()">
@@ -21,8 +21,8 @@
           {{data.item.mainDescription}}
         </template>
 
-        <template v-slot:cell(test)="data">
-          {{data.item.test}}
+        <template v-slot:cell(status)="data">
+          {{data.item.status}}
         </template>
 
         <template v-slot:cell(actions)="data">
@@ -46,9 +46,15 @@
 
       </b-table>
       
-      <b-modal id="confirmRemove" title="Remove" @ok="remove" v-if="actionRemoveEnable()">
+      <b-modal id="confirmRemove" title="Remove" @ok="remove" centered v-if="actionRemoveEnable()">
         remove data with code "{{ itemCodeToRemove }}" confirm?
       </b-modal>
+
+      <new-modal-form 
+        :show="newModalShow" 
+        @cancel="hideNew" 
+        @ok="okNew">
+      </new-modal-form>
 
       <debug-data :data="items"></debug-data>
 
@@ -57,7 +63,8 @@
 </template>
 
 <script>
-  import DebugData from "~/components/cms/DebugData";
+  import NewModalForm from "~/components/cms/NewModalForm"
+  import DebugData from "~/components/cms/DebugData"
 
   export default {
     layout: 'cms',
@@ -67,7 +74,8 @@
         path : this.$route.path,
         items: [],
         itemCodeToRemove: '',
-        isLoading: false
+        isLoading: false,
+        newModalShow: false
       }
     },
     async fetch() {
@@ -89,9 +97,16 @@
         }
         this.isLoading = false
       },
-      //refresh() {
-      //  this.$nuxt.refresh()
-      //},
+      async new(data) {
+        this.isLoading = true
+        if(this.actionNewEnable()){
+            await this.$store.dispatch(this.actions.new.name, data)
+            this.getItems()
+        }
+        this.isLoading = false
+      },
+
+
       actionListEnable(){
         return this.actions && this.actions.list && this.actions.list.enable && this.actions.list.name
       },
@@ -99,14 +114,26 @@
         return this.actions && this.actions.edit && this.actions.edit.enable
       },
       actionNewEnable(){
-        return this.actions && this.actions.new && this.actions.new.enable
+        return this.actions && this.actions.new && this.actions.new.enable && this.actions.new.name
       },
       actionRemoveEnable(){
         return this.actions && this.actions.remove && this.actions.remove.enable && this.actions.remove.name
       },
       totalItems(){
         return this.items.length
+      },
+
+
+      showNew(){
+        this.newModalShow = true
+      },
+      hideNew(){
+        this.newModalShow = false
+      },
+      okNew(event) {
+        this.new(event)
       }
+
     }
   }
 </script>

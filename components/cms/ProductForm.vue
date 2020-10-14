@@ -3,9 +3,9 @@
     <b-form @submit="onSubmit" @reset="onReset" v-if="show">
       <b-row align-h="end">
         <b-col class="text-right">
-          <b-link :to="'/cms/products'">
-            back
-          </b-link>
+          <b-btn variant="outline-secondary" class="mb-3" :to="'/cms/products'" >
+            Back
+          </b-btn>
         </b-col>
       </b-row>
 
