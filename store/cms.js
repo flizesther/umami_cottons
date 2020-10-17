@@ -1,14 +1,85 @@
 import { AuthService } from '../infrastructure/services/AuthService';
 import { User } from '../infrastructure/domain/User';
 
-const CATEGORIES_SERVICE_PATH = 'categories';
-const FABRICS_SERVICE_PATH = 'fabrics';
-const PACKS_SERVICE_PATH = 'packs';
-const POSTS_SERVICE_PATH = 'posts';
-const PRODUCTS_SERVICE_PATH = 'products';
-
 export const state = () => ({
-    user: new User({})
+    user: new User({}),
+    collections: {
+        product: {
+            fields: [
+                { key: 'code', label: 'Code', sortable: true },
+                { key: 'name', label: 'Name', sortable: true },
+                //{ key: 'mainDescription', label: 'Description', sortable: true },
+                { key: 'actions', label: 'Actions' }
+            ],
+            actions: {
+                list: { enable: true },
+                show: { enable: true },
+                edit: { enable: true },
+                new: { enable: true },
+                remove: { enable: true }
+            }
+        },
+        fabric: {
+            fields: [
+                { key: 'code', label: 'Code', sortable: true },
+                { key: 'name', label: 'Name', sortable: true },
+                //{ key: 'mainDescription', label: 'Description', sortable: true },
+                { key: 'actions', label: 'Actions' }
+            ],
+            actions: {
+                list: { enable: true },
+                show: { enable: true },
+                edit: { enable: false },
+                new: { enable: true },
+                remove: { enable: true }
+            }
+        },
+        category: {
+            fields: [
+                { key: 'code', label: 'Code', sortable: true },
+                { key: 'name', label: 'Name', sortable: true },
+                //{ key: 'mainDescription', label: 'Description', sortable: true },
+                { key: 'actions', label: 'Actions' }
+            ],
+            actions: {
+                list: { enable: true },
+                show: { enable: false },
+                edit: { enable: true },
+                new: { enable: true },
+                remove: { enable: true }
+            }
+        },
+        pack: {
+            fields: [
+                { key: 'code', label: 'Code', sortable: true },
+                { key: 'name', label: 'Name', sortable: true },
+                //{ key: 'mainDescription', label: 'Description', sortable: true },
+                { key: 'actions', label: 'Actions' }
+            ],
+            actions: {
+                list: { enable: true },
+                show: { enable: false },
+                edit: { enable: false },
+                new: { enable: true },
+                remove: { enable: false }
+            }
+        },
+        post: {
+            fields: [
+                { key: 'code', label: 'Code', sortable: true },
+                { key: 'name', label: 'Name', sortable: true },
+                //{ key: 'mainDescription', label: 'Description', sortable: true },
+                { key: 'actions', label: 'Actions' }
+            ],
+            actions: {
+                list: { enable: true },
+                show: { enable: true },
+                edit: { enable: true },
+                new: { enable: true },
+                remove: { enable: false }
+            }
+        }
+    }
 });
 
 export const mutations = {
@@ -19,42 +90,23 @@ export const mutations = {
 
 export const actions = {
 
-    // Categories
-    async getCategories({ commit }) {
-        return await this.$cms.getAll(CATEGORIES_SERVICE_PATH);
+    // Collection (product, fabric, category, pack and post)
+    async list({ commit }, params) {
+        return await this.$cms.getAll(params.collection);
+    },
+    async show({ commit }, params) {
+        return await this.$cms.get(params.collection, params.code);
+    },
+    async new({ commit }, params) {
+        return await this.$cms.create(params.collection, params.data);
+    },
+    async edit({ commit }, params) {
+        return await this.$cms.update(params.collection, params.data);
+    },
+    async remove({ commit }, params) {
+        return await this.$cms.delete(params.collection, params.code);
     },
 
-    // Products
-    async getFabrics({ commit }) {
-        return await this.$cms.getAll(FABRICS_SERVICE_PATH);
-    },
-
-    // Products
-    async getPacks({ commit }) {
-        return await this.$cms.getAll(PACKS_SERVICE_PATH);
-    },
-
-    // Products
-    async getPosts({ commit }) {
-        return await this.$cms.getAll(POSTS_SERVICE_PATH);
-    },
-
-    // Products
-    async getProducts({ commit }) {
-        return await this.$cms.getAll(PRODUCTS_SERVICE_PATH);
-    },
-    async getProduct({ commit }, params) {
-        return await this.$cms.get(PRODUCTS_SERVICE_PATH, params.code);
-    },
-    async createProduct({ commit }, params) {
-        return await this.$cms.create(PRODUCTS_SERVICE_PATH, params);
-    },
-    async updateProduct({ commit }, params) {
-        return await this.$cms.update(PRODUCTS_SERVICE_PATH, params);
-    },
-    async deleteProduct({ commit }, params) {
-        return await this.$cms.delete(PRODUCTS_SERVICE_PATH, params.code);
-    },
 
     // Auth
     async login({ commit }, params) {
@@ -73,5 +125,6 @@ export const actions = {
 
 export const getters = {
     userAuth: state => new User(state.user),
-    isAuth: state => state.user && (new User(state.user)).isAuth()
+    isAuth: state => state.user && (new User(state.user)).isAuth(),
+    collections: state => state.collections
 };

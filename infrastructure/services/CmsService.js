@@ -1,4 +1,5 @@
 import { DataService } from './DataService'
+import { Factory } from "../util/Factory";
 
 export class CmsService {
 
@@ -11,7 +12,8 @@ export class CmsService {
     }
 
     async get(path, code) {
-        return await this._get(path, { code: code })
+        const data = await this._get(path, { code: code })
+        return Factory.new(path, data)
     }
 
     async create(path, data) {
