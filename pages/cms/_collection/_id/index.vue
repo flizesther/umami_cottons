@@ -3,6 +3,7 @@
 </template>
 
 <script>
+  import { Factory } from "~/infrastructure/util/Factory";
   import CollectionForm from "~/components/cms/CollectionForm";
 
   export default {
@@ -21,7 +22,8 @@
       const collection = params.collection
       const collectionPath = '/cms/' + collection
       const edit = query && query.action == 'edit'
-      const item = await store.dispatch('cms/show', { collection: collection, code: params.id })
+      const result = await store.dispatch('cms/show', { collection: collection, code: params.id })
+      const item = Factory.new(collection, result.status == 200 ? result.data : {})
       return { collection, collectionPath, item, edit }
     },
     methods: {

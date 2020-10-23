@@ -27,7 +27,7 @@ export default {
     /*
      ** Plugins to load before mounting the App
      */
-    plugins: ['~/plugins/cms.js'],
+    plugins: ['~/plugins/api.js'],
     /*
      ** Nuxt.js dev-modules
      */
@@ -48,10 +48,13 @@ export default {
         // Doc: https://bootstrap-vue.js.org/docs/
         "bootstrap-vue/nuxt",
         "@nuxtjs/style-resources",
-        "@nuxt/http"
+        "@nuxtjs/axios"
     ],
     styleResources: {
         scss: ["@/assets/scss/variables.scss"]
+    },
+    axios: {
+        // proxy: true
     },
     http: {
         // proxyHeaders: false
@@ -70,13 +73,20 @@ export default {
     router: {
         linkActiveClass: "active"
     },
+
+    serverMiddleware: ['~/api/index.js'],
+
     /*
-     ** Nuxt.js runtime-config
+     ** Nuxt.js runtime-config 
      */
     publicRuntimeConfig: {
-        API_BASE_URL_V1: 'https://umami-a6083.firebaseio.com',
-        API_BASE_URL_V2: 'https://umami-a6083.firebaseio.com/v2',
+        API_BASE_URL_V1: process.env.API_URL_V1,
+        API_URL: process.env.API_URL,
+        API_CLIENT_URL: process.env.API_CLIENT_URL,
         DEBUG_ENABLE: process.env.DEBUG_ENABLE || false
     },
-    privateRuntimeConfig: {}
+    privateRuntimeConfig: {
+        API_KEY: process.env.API_KEY,
+        API_AUTH_URL: process.env.API_AUTH_URL
+    }
 };

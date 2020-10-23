@@ -1,4 +1,3 @@
-import { AuthService } from '../infrastructure/services/AuthService';
 import { User } from '../infrastructure/domain/User';
 
 export const state = () => ({
@@ -92,35 +91,41 @@ export const actions = {
 
     // Collection (product, fabric, category, pack and post)
     async list({ commit }, params) {
-        return await this.$cms.getAll(params.collection);
+        return await this.$api.collectionIndex(params.collection);
     },
     async show({ commit }, params) {
-        return await this.$cms.get(params.collection, params.code);
+        return await this.$api.collectionGet(params.collection, params.code);
     },
     async new({ commit }, params) {
-        return await this.$cms.create(params.collection, params.data);
+        return await this.$api.collectionCreate(params.collection, params.data);
     },
     async edit({ commit }, params) {
-        return await this.$cms.update(params.collection, params.data);
+        return await this.$api.collectionUpdate(params.collection, params.data);
     },
     async remove({ commit }, params) {
-        return await this.$cms.delete(params.collection, params.code);
+        return await this.$api.collectionDelete(params.collection, params.code);
     },
 
 
     // Auth
     async login({ commit }, params) {
-        const user = await AuthService.login(this.$http, params);
-        commit('setUser', new User(user));
+        const response = await this.$api.authLogin(params);
+        console.log(response)
+        commit('setUser', response.data ? new User(response.data) : new User({}));
     },
     async logout({ commit }, params) {
-        const user = await AuthService.logout(this.$http, params);
+        const response = await this.$api.authLogout(params);
         commit('setUser', new User({}));
     },
     async profile({ commit }, params) {
-        const user = await AuthService.profile(this.$http, params);
-        return new User(user);
-    }
+        const response = await this.$api.authProfile(params);
+        return response.data ? new User(response.data) : new User({});
+    },
+
+    // Backup
+    backup({ commit }, params) {
+        return this.$api.backupAll();
+    },
 };
 
 export const getters = {

@@ -126,7 +126,9 @@
       async getItems(){
         this.isLoading = true
         if(this.actionListEnable()){
-            this.items = await this.$store.dispatch('cms/list', { collection: this.collection })
+            const result = await this.$store.dispatch('cms/list', { collection: this.collection })
+            this.items = result.status == 200 ? result.data : []
+            // TODO mostrar algun error
         }
         this.isLoading = false
       },

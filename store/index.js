@@ -38,12 +38,12 @@ export const actions = {
         commit('setFabrics', fabricsJson)
     },
     async getPosts({ commit }) {
-        const response = await fetch(this.$config.API_BASE_URL_V2 + '/post.json')
+        const response = await fetch(this.$config.API_URL + '/post.json')
         const data = await response.json()
         commit('setPosts', Object.values(data))
     },
     async getTest({ commit }) {
-        const response = await fetch(this.$config.API_BASE_URL_V2 + '/health.json')
+        const response = await fetch(this.$config.API_URL + '/health.json')
         const data = await response.json()
         commit('test', data)
     },
