@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="sm" type="light" variant="light">
-    <b-navbar-toggle target="nav-text-collapse" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu" class="menu">
+    <b-navbar-toggle target="nav-text-collapse" @click="opened = !opened" :class="{'opened' : opened}" aria-label="Main Menu" class="menu">
       <svg width="50" height="50" viewBox="0 0 100 100">
         <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
         <path class="line line2" d="M 20,50 H 80" />
@@ -26,7 +26,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({
+    opened: false
+  })
+};
 </script>
 
 <style lang="scss">
