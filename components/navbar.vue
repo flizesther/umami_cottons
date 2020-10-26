@@ -1,6 +1,6 @@
 <template>
   <b-navbar toggleable="sm" type="light" variant="light">
-    <b-navbar-toggle target="nav-text-collapse" @click="opened = !opened" :class="{'opened' : opened}" aria-label="Main Menu" class="menu">
+    <b-navbar-toggle target="nav-text-collapse" @click="opened = !opened" :class="{'opened' : opened}" :aria-expanded="{true : opened}" aria-label="Main Menu" class="menu">
       <svg width="50" height="50" viewBox="0 0 100 100">
         <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
         <path class="line line2" d="M 20,50 H 80" />
@@ -12,14 +12,14 @@
         <b-img src="/images/logoUC.jpg" class="brand-image" fluid alt="Responsive image" />
       </a>
     </b-navbar-brand>
-    <b-collapse id="nav-text-collapse" is-nav>
+    <b-collapse id="nav-text-collapse" :class="{'opened collapse show d-block' : opened}" is-nav>
       <b-navbar-nav class="nav-titles">
-        <b-nav-item to="/" exact>Inicio</b-nav-item>
-        <b-nav-item to="/comprar">¿Cómo comprar?</b-nav-item>
-        <b-nav-item to="/productos">Nuestros Productos</b-nav-item>
-        <b-nav-item to="/nuestras-telas">Nuestras Telas</b-nav-item>
-        <b-nav-item to="/sobre-umami">Sobre Umami_cottons</b-nav-item>
-        <b-nav-item to="/contacta">Contáctanos</b-nav-item>
+        <b-nav-item @click="redirect('/')" to="" exact>Inicio</b-nav-item>
+        <b-nav-item @click="redirect('/comprar')" to="">¿Cómo comprar?</b-nav-item>
+        <b-nav-item @click="redirect('/productos')" to="">Nuestros Productos</b-nav-item>
+        <b-nav-item @click="redirect('/nuestras-telas')" to="">Nuestras Telas</b-nav-item>
+        <b-nav-item @click="redirect('/sobre-umami')" to="">Sobre Umami_cottons</b-nav-item>
+        <b-nav-item @click="redirect('/contacta')" to="">Contáctanos</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -29,7 +29,13 @@
 export default {
   data: () => ({
     opened: false
-  })
+  }),
+  methods: {
+    redirect (url) {
+      this.opened = !this.opened
+      return this.$router.push(url)
+    }
+  }
 };
 </script>
 
