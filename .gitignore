@@ -91,4 +91,12 @@ sw.*
 *.swp
 
 # Firebase
-.firebase/
+firebase/firebase-debug.log*
+firebase/firebase-debug.*.log*
+firebase/package.json
+firebase/package-lock.json
+firebase/functions/nuxt.config.js
+firebase/functions/.nuxt
+firebase/.firebase/
+firebase/node_modules/
+firebase/public

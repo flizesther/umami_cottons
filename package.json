@@ -12,12 +12,18 @@
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.12.2",
+        "@nuxtjs/firebase": "^6.1.1",
+        "@nuxtjs/moment": "^1.6.1",
         "@nuxtjs/style-resources": "^1.0.0",
         "axios": "^0.20.0",
         "bootstrap": "^4.5.0",
         "bootstrap-vue": "^2.15.0",
+        "firebase": "^8.0.0",
         "nuxt": "^2.14.0",
-        "vue-horizontal-list": "^1.0.7"
+        "nuxt-vue-select": "^0.1.4",
+        "vue-horizontal-list": "^1.0.7",
+        "xhr2": "^0.2.0",
+        "xmlhttprequest": "^1.8.0"
     },
     "devDependencies": {
         "@fortawesome/free-brands-svg-icons": "^5.13.1",

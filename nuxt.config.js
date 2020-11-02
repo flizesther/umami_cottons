@@ -1,4 +1,4 @@
-export default {
+module.exports = {
     target: 'server',
     /*
      ** Headers of the page
@@ -48,13 +48,14 @@ export default {
         // Doc: https://bootstrap-vue.js.org/docs/
         "bootstrap-vue/nuxt",
         "@nuxtjs/style-resources",
-        "@nuxtjs/axios"
+        "@nuxtjs/axios",
+        "nuxt-vue-select"
     ],
     styleResources: {
         scss: ["@/assets/scss/variables.scss"]
     },
     axios: {
-        // proxy: true
+        // proxy: true  
     },
     http: {
         // proxyHeaders: false

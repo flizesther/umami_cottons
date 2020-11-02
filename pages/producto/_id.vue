@@ -4,7 +4,7 @@
     <b-button href="/productos" class="button-height d-none d-lg-block">
       <fa class="arrow" :icon="['fas', 'chevron-left']" />
     </b-button>
-        <img class="card-img-top h-100 img-fluid" :src="product.modalImage" :alt="product.modalImage">
+        <img class="card-img-top h-100 img-fluid" :src="product.mainImage.url" :alt="product.mainImage.alt">
     </b-col>
     <b-col cols="12" md="5">
         <div class="d-flex d-lg-none align-items-center">
@@ -16,7 +16,7 @@
     </b-col>
     <b-col cols="12" md="5">
       <div class="card-body">
-          <h3 class="card-title"> {{ product.title }}</h3>
+          <h3 class="card-title"> {{ product.name }}</h3>
           <h4>{{ product.price }}</h4>
           <p class="card-text">{{ product.modalDescriptionOne }}</p>
           <p class="card-text">{{ product.modalDescriptionTwo }}</p>
@@ -30,16 +30,14 @@
 import { mapGetters } from  'vuex'
 export default {
   layout: 'app',
-  mounted() {
-    const productName = this.$route.params.id
-    this.product = this.getProductById(productName)
-  },
-  computed: {
-    ...mapGetters(['getProductById'])
-  },
   data: () => ({
     product: {}
-  })
+  }),
+  async asyncData({store, params}) {
+    const result = await store.dispatch('showProduct', { code: params.id })
+    const product = result.status == 200 ? result.data : {}
+    return { product }
+  }
 }
 </script>
 

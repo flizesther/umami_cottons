@@ -1,7 +1,6 @@
-import { User } from '../infrastructure/domain/User';
-
 export const state = () => ({
-    user: new User({}),
+    debug: false,
+    user: {},
     collections: {
         product: {
             fields: [
@@ -84,6 +83,9 @@ export const state = () => ({
 export const mutations = {
     setUser(state, user) {
         state.user = user;
+    },
+    setDebug(state, debug) {
+        state.debug = debug;
     }
 };
 
@@ -111,25 +113,36 @@ export const actions = {
     async login({ commit }, params) {
         const response = await this.$api.authLogin(params);
         console.log(response)
-        commit('setUser', response.data ? new User(response.data) : new User({}));
+        commit('setUser', response.data ? response.data : {});
     },
     async logout({ commit }, params) {
         const response = await this.$api.authLogout(params);
-        commit('setUser', new User({}));
+        commit('setUser', {});
     },
     async profile({ commit }, params) {
         const response = await this.$api.authProfile(params);
-        return response.data ? new User(response.data) : new User({});
+        return response.data ? response.data : {};
     },
 
     // Backup
     backup({ commit }, params) {
         return this.$api.backupAll();
     },
+
+    // Storage
+    async files({ commit }, params) {
+        return await this.$api.storageIndex();
+    },
+
+    // Debug
+    debug({ commit }, enable) {
+        commit('setDebug', enable);
+    }
 };
 
 export const getters = {
-    userAuth: state => new User(state.user),
-    isAuth: state => state.user && (new User(state.user)).isAuth(),
-    collections: state => state.collections
+    userAuth: state => state.user,
+    isAuth: state => state.user && state.user.token && state.user.token != '',
+    collections: state => state.collections,
+    isDebug: state => state.debug
 };

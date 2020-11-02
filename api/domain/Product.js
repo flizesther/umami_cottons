@@ -1,6 +1,8 @@
+import { Media } from './Media'
+
 export class Product {
 
-    constructor({ code = '', name = '', mainImage = '', gallery = [], mainDescription = '', descriptions = [], fabrics = [], sizes = [] }) {
+    constructor({ code = '', name = '', mainImage = new Media({}), gallery = [], mainDescription = '', descriptions = [], fabrics = [], sizes = [] }) {
         this.code = code;
         this.name = name;
         this.gallery = gallery;

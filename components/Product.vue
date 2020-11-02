@@ -1,14 +1,14 @@
 <template>
     <div class="card h-100">
         <!-- <b-button> -->
-        <a :href="`/producto/${product.title}`">
-            <a><img class="card-img-top" :src="product.image" :alt="product.image"></a>
+        <a :href="`/producto/${product.code}`">
+            <a><img class="card-img-top" :src="product.mainImage.url" :alt="product.mainImage.alt"></a>
                 <div class="card-body">
                     <h4 class="card-title">
-                    <a href="#">{{ product.title }}</a>
+                    <a href="#">{{ product.name }}</a>
                     </h4>
                     <h5>{{ product.price }}</h5>
-                    <p class="card-text">{{ product.shortDescription }}</p>
+                    <p class="card-text">{{ product.mainDescription }}</p>
                 </div>
             <!-- <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" hide-footer>
                 <div class="col-lg-12">

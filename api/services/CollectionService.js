@@ -1,6 +1,7 @@
 // CollectionService is realtime data service of Firebase
 
 import { BaseService } from './BaseService'
+import { Factory } from '../util/Factory'
 
 export class CollectionService {
 
@@ -19,11 +20,11 @@ export class CollectionService {
 
     // Firebase we need put to do a post
     async create(path, data) {
-        return await this.update(path, data)
+        return await this.update(path, Factory.new(path, data))
     }
 
     async update(path, data) {
-        return await this.httpService.put(this.buildPath(`${path}/${data.code}`), data)
+        return await this.httpService.put(this.buildPath(`${path}/${data.code}`), Factory.new(path, data))
     }
 
     async delete(path, code) {

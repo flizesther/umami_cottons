@@ -3,20 +3,18 @@
     <div>
       <div class="logo">
         <div class="d-flex justify-content-center">
-          <img class="d-none d-lg-block w-25" src="/images/logoUC.jpg">
+          <img class="d-none d-lg-block w-25" src="/images/logoUC.jpg" />
         </div>
       </div>
-      <h1 class="title">
-        Umami Cottons
-      </h1>
-      <h2 class="subtitle">
-        Content Management System
-      </h2>
+      <h1 class="title">Umami Cottons</h1>
+      <h2 class="subtitle">Content Management System</h2>
       <div class="links">
         <a
           href="https://umamicottons.com/"
           target="_blank"
-          class="button--green">umamicottons.com</a>
+          class="button--green"
+          >umamicottons.com</a
+        >
       </div>
     </div>
   </section>
@@ -24,8 +22,8 @@
 
 <script>
 export default {
-  layout: 'cms'
-}
+  layout: "cms",
+};
 </script>
 
 <style>

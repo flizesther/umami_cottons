@@ -10,15 +10,15 @@
             <span class="list-group-item background d-lg-block d-none" @click="showAllProducts()">
                 {{ allProducts }}
             </span>
-            <div class="list-group d-lg-block d-none" v-for="product in products" :key="product.id">
-              <span v-if="product" class="list-group-item" @click="setFilter(product.category)">
-                {{ product.category }}
+            <div class="list-group d-lg-block d-none" v-for="product in products" :key="product.code">
+              <span v-if="product" class="list-group-item" @click="setFilter(product.code)">
+                {{ product.name }}
               </span>
             </div>
           </b-col>
           <b-col lg="9" cols="12" class="products-row">
             <b-row class="products desktop">
-              <b-col cols="12" lg="4" class="pb-4" v-for="product in filteredProducts" :key="product.category">
+              <b-col cols="12" lg="4" class="pb-4" v-for="product in filteredProducts" :key="product.code">
                 <product :product="product" />
               </b-col>
             </b-row>
@@ -30,7 +30,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
 import Product from '../components/Product'
 import PromotionalBanner from '../components/PromotionalBanner'
 
@@ -47,8 +46,9 @@ export default {
   },
   data () {
     return {
-    currentFilter: 'todos',
-    allProducts: 'Mostrar Todos'
+      currentFilter: 'todos',
+      allProducts: 'Mostrar Todos',
+      products: {}
     }
   },
   computed: {
@@ -58,14 +58,18 @@ export default {
     if (this.currentFilter === 'todos') {
       return [...this.products]
       } else {
-        return [...this.products].filter(p => p.category.toLowerCase() === this.currentFilter.toLowerCase())
+        return [...this.products].filter(p => p.code === this.currentFilter)
       }
-    },
-    ...mapState(['products'])
+    }
+  },
+  async asyncData({store}) {
+    const result = await store.dispatch('listProducts')
+    const products = result.status == 200 ? result.data : []
+    return { products }
   },
   methods: {
-    setFilter(category) {
-      this.currentFilter = category;
+    setFilter(code) {
+      this.currentFilter = code;
     },
     showAllProducts () {
       this.currentFilter = 'todos'

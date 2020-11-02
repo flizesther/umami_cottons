@@ -17,8 +17,6 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   layout: 'app',
   head() {
@@ -26,13 +24,22 @@ export default {
       title: "Nuestras Telas"
     };
   },
+  data () {
+    return {
+      fabrics: {}
+    }
+  },
   computed: {
-    ...mapState(['fabrics']),
     imageTelas () {
-      let telas = fabrics.map(f => f.id).map(i => i.image)
+      let telas = this.fabrics.map(f => f.id).map(i => i.image)
       return telas
     }
-  }
+  },
+  async asyncData({store}) {
+    const result = await store.dispatch('listFabrics')
+    const fabrics = result.status == 200 ? result.data : []
+    return { fabrics }
+  },
 };
 </script>
 

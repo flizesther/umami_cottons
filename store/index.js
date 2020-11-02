@@ -1,55 +1,24 @@
-export const state = () => ({
-    posts: [],
-    products: [],
-    fabrics: [],
-    test: ''
-});
+export const state = () => ({});
 
-export const mutations = {
-    setPosts(state, posts) {
-        state.posts = posts;
-    },
-    setProducts(state, products) {
-        state.products = products
-    },
-    setFabrics(state, fabrics) {
-        state.fabrics = fabrics
-    },
-    test(state, test) {
-        state.test = test
-    }
-};
+export const mutations = {};
 
 export const actions = {
+
     async nuxtServerInit({ dispatch }) {
-        await dispatch('getProducts')
-        await dispatch('getFabrics')
-        await dispatch('getPosts')
-        await dispatch('getTest')
+        console.log('nuxtServerInit')
+        dispatch('cms/debug', this.$config.DEBUG_ENABLE)
     },
-    async getProducts({ commit }) {
-        const response = await fetch(this.$config.API_BASE_URL_V1 + '/products.json')
-        const productsJson = await response.json()
-        commit('setProducts', productsJson.filter(p => p))
+
+    async listProducts({ commit }, params) {
+        return await this.$api.collectionIndex('product');
     },
-    async getFabrics({ commit }) {
-        const response = await fetch(this.$config.API_BASE_URL_V1 + '/telas.json')
-        const fabricsJson = await response.json()
-        commit('setFabrics', fabricsJson)
+    async showProduct({ commit }, params) {
+        return await this.$api.collectionGet('product', params.code);
     },
-    async getPosts({ commit }) {
-        const response = await fetch(this.$config.API_URL + '/post.json')
-        const data = await response.json()
-        commit('setPosts', Object.values(data))
-    },
-    async getTest({ commit }) {
-        const response = await fetch(this.$config.API_URL + '/health.json')
-        const data = await response.json()
-        commit('test', data)
-    },
+    async listFabrics({ commit }, params) {
+        return await this.$api.collectionIndex('fabric');
+    }
+
 };
 
-export const getters = {
-    getProductById: state => paramsName => state.products.find(p => p.title === paramsName),
-    getPostByCode: state => code => state.posts.find(post => post.code === code)
-}
+export const getters = {}

@@ -6,6 +6,6 @@
 
 <script>
 export default {
-  layout: 'cms'
-}
+  layout: "cms",
+};
 </script>

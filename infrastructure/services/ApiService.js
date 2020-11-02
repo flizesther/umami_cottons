@@ -1,6 +1,6 @@
 // ApiService is a client service
 
-import { HttpService } from '../util/HttpService'
+import { HttpService } from './HttpService'
 
 export class ApiService {
 
@@ -41,6 +41,10 @@ export class ApiService {
 
     async authProfile(data) {
         return await this.httpService.post(this.buildPath('auth/profile'), data)
+    }
+
+    async storageIndex(path = '') {
+        return await this.httpService.get(this.buildPath(`storage/files?path=${path}`))
     }
 
     backupAll() {

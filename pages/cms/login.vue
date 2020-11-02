@@ -9,16 +9,15 @@
 </template>
 
 <script>
-  import Login from '~/components/cms/Login.vue'
-  import { mapGetters } from  'vuex'
+import Login from "~/components/cms/Login.vue";
 
-  export default {
-    components: { Login }
-  }
+export default {
+  components: { Login },
+};
 </script>
 
 <style scoped>
-  .h-60 {
-    height: 60vh;
-  }
+.h-60 {
+  height: 60vh;
+}
 </style>
