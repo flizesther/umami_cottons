@@ -107,7 +107,7 @@ export class StorageService {
         });
 
         const list = await Promise.all(folders.concat(files));
-        return list.flat();
+        return list && [].concat(...list)
     }
 
     _success(status, data) {

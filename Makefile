@@ -9,6 +9,14 @@ clean:
 build:
 	./build.sh
 
+.PHONY: serve
+serve:
+	cd ./firebase
+	firebase serve
+
 .PHONY: deploy
 deploy:
-	./dploy.sh
+	./build.sh
+	cd ./firebase
+	firebase deploy
+
