@@ -1,5 +1,5 @@
-import { StorageService } from './services/StorageService'
-import express from 'express'
+const StorageService = require('./services/StorageService');
+const express = require('express');
 
 module.exports = (config) => {
 

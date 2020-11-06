@@ -1,4 +1,4 @@
-export class Pack {
+module.exports =  class Pack {
 
     constructor({ code = '', name = '', mainImage = '', gallery = [], mainDescription = '', descriptions = [], products = [], price }) {
         this.code = code;

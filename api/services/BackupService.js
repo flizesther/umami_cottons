@@ -1,8 +1,8 @@
 // BackupService is data service of Firebase
 
-import { BaseService } from './BaseService'
+const BaseService = require('./BaseService');
 
-export class BackupService {
+module.exports = class BackupService {
 
     constructor(http, { url = '' }) {
         this.url = url

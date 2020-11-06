@@ -1,4 +1,4 @@
-export class Category {
+module.exports = class Category {
 
     constructor({ code = '', name = '' }) {
         this.code = code;

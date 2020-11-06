@@ -1,6 +1,6 @@
-import axios from 'axios'
-import { CollectionService } from './services/CollectionService'
-import express from 'express'
+const axios = require('axios');
+const CollectionService = require('./services/CollectionService');
+const express = require('express');
 
 module.exports = (config) => {
 

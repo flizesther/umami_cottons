@@ -1,6 +1,6 @@
-import axios from 'axios'
-import { AuthService } from './services/AuthService'
-import express from 'express'
+const axios = require('axios');
+const AuthService = require('./services/AuthService');
+const express = require('express');
 
 module.exports = (config) => {
 

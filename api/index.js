@@ -28,7 +28,4 @@ app.get('/health', async(req, res) => {
     res.json({ status: 200 })
 })
 
-export default {
-    path: '/api',
-    handler: app
-}
+module.exports = app

@@ -9,7 +9,7 @@ var firebase = require("firebase/app");
 // Add the Firebase products that you want to use
 require("firebase/storage");
 
-export class StorageService {
+module.exports = class StorageService {
 
     constructor(config) {
 

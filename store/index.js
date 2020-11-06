@@ -5,7 +5,7 @@ export const mutations = {};
 export const actions = {
 
     async nuxtServerInit({ dispatch }) {
-        console.log('nuxtServerInit')
+        console.log('nuxtServerInit', this.$config)
         dispatch('cms/debug', this.$config.DEBUG_ENABLE)
     },
 

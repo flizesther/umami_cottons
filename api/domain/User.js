@@ -1,4 +1,4 @@
-export class User {
+module.exports =  class User {
 
     constructor({ name = '', email = '', token = '' }) {
         this.name = name;

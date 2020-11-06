@@ -75,7 +75,7 @@ module.exports = {
         linkActiveClass: "active"
     },
 
-    serverMiddleware: ['~/api/index.js'],
+    serverMiddleware: [{ path: "/api", handler: "~/api/index.js" }],
 
     /*
      ** Nuxt.js runtime-config 

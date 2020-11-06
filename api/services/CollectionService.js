@@ -1,9 +1,9 @@
 // CollectionService is realtime data service of Firebase
 
-import { BaseService } from './BaseService'
-import { Factory } from '../util/Factory'
+const BaseService = require('./BaseService');
+const Factory = require('./../util/Factory');
 
-export class CollectionService {
+module.exports = class CollectionService {
 
     constructor(http, { url = '' }) {
         this.url = url

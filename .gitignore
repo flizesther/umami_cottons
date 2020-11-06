@@ -96,7 +96,10 @@ firebase/firebase-debug.*.log*
 firebase/package.json
 firebase/package-lock.json
 firebase/functions/nuxt.config.js
-firebase/functions/.nuxt
+firebase/functions/package.json
+firebase/functions/package-lock.json
+firebase/functions/nuxt
+firebase/functions/api
 firebase/.firebase/
 firebase/node_modules/
-firebase/public
+firebase/public/*

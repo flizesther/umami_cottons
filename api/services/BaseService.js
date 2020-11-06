@@ -1,4 +1,4 @@
-export class BaseService {
+module.exports = class BaseService {
 
     constructor(http) {
         this.http = http

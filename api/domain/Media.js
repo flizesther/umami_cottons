@@ -1,4 +1,4 @@
-export class Media {
+module.exports =  class Media {
 
     constructor({ url = '', alt = '' }) {
         this.url = url;

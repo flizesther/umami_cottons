@@ -1,6 +1,6 @@
-import { Media } from './Media'
+const Media = require('./Media');
 
-export class Product {
+module.exports =  class Product {
 
     constructor({ code = '', name = '', mainImage = new Media({}), gallery = [], mainDescription = '', descriptions = [], fabrics = [], sizes = [] }) {
         this.code = code;

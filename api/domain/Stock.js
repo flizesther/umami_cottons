@@ -1,4 +1,4 @@
-export class Stock {
+module.exports =  class Stock {
 
     constructor({ product = '', stock = '' }) {
         this.product = product;

@@ -1,4 +1,4 @@
-export class Size {
+module.exports =  class Size {
 
     constructor({ size = '', price = '' }) {
         this.size = size;

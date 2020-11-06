@@ -1,8 +1,9 @@
 // AuthService is auth service of Firebase
 
-import { BaseService } from './BaseService'
+const BaseService = require('./BaseService');
 
-export class AuthService {
+
+module.exports = class AuthService {
 
     constructor(http, { url = '', apiKey = '' }) {
         this.url = url

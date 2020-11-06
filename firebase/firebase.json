@@ -2,7 +2,11 @@
     "hosting": {
         "public": "public",
         "rewrites": [{
-            "source": "**",
+            "source": "/api/**",
+            "function": "api"
+          },
+          {
+            "source": "!/api/**",
             "function": "nuxtssr"
         }],
         "ignore": [
@@ -10,5 +14,8 @@
             "**/.*",
             "**/node_modules/**"
         ]
+    },
+    "functions": {
+        "source": "functions"
     }
 }

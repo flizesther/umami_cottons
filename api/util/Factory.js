@@ -1,13 +1,13 @@
-import { Category } from "../domain/Category";
-import { Fabric } from "../domain/Fabric";
-import { Media } from "../domain/Media";
-import { Pack } from "../domain/Pack";
-import { Product } from "../domain/Product";
-import { Size } from "../domain/Size";
-import { Stock } from "../domain/Stock";
-import { User } from "../domain/User";
+const Category = require('../domain/Category');
+const Fabric = require('../domain/Fabric');
+const Media = require('../domain/Media');
+const Pack = require('../domain/Pack');
+const Product = require('../domain/Product');
+const Size = require('../domain/Size');
+const Stock = require('../domain/Stock');
+const User = require('../domain/User');
 
-export const Factory = {
+module.exports = {
 
     new: function(domain, data) {
         return this[domain](data)
