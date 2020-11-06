@@ -1,3 +1,4 @@
+require('dotenv').config()
 const functions = require('firebase-functions');
 const { Nuxt } = require('nuxt-start');
 
@@ -6,6 +7,7 @@ const api = require('./api');
 const nuxtConfig = require('./nuxt.config.js');
 
 const config = {
+  ...nuxtConfig,
   dev: false,
   buildDir: 'nuxt',
 };

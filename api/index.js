@@ -18,12 +18,14 @@ var storage = require('./storage')(config)
 
 app.use(bodyParser.json());
 
-app.use('/auth', auth)
-app.use('/collection', collection)
-app.use('/backup', backup)
-app.use('/storage', storage)
+const apiPath = process.env.NODE_ENV == 'production' ? '/api' : ''
 
-app.get('/health', async(req, res) => {
+app.use(apiPath + '/auth', auth)
+app.use(apiPath + '/collection', collection)
+app.use(apiPath + '/backup', backup)
+app.use(apiPath + '/storage', storage)
+
+app.get(apiPath + '/health', async(req, res) => {
     res.status(200)
     res.json({ status: 200 })
 })
