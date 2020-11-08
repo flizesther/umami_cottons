@@ -32,7 +32,9 @@ module.exports = {
      ** Nuxt.js dev-modules
      */
     buildModules: [
-        '@nuxtjs/fontawesome'
+        '@nuxtjs/fontawesome',
+        // https://go.nuxtjs.dev/eslint
+        '@nuxtjs/eslint-module'
     ],
     fontawesome: {
         component: 'fa',
