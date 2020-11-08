@@ -1,11 +1,11 @@
-import { actions } from "@/store/cms.js"
+import { actions } from '@/store/cms.js'
 
-describe("debug", () => {
-  it("enable debug", () => {
+describe('debug', () => {
+  it('enable debug', () => {
     const commit = jest.fn()
 
     actions.debug({ commit }, true)
 
-    expect(commit).toHaveBeenCalledWith("setDebug", true)
+    expect(commit).toHaveBeenCalledWith('setDebug', true)
   })
 })

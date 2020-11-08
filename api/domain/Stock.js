@@ -1,12 +1,11 @@
-module.exports =  class Stock {
+module.exports = class Stock {
+  constructor({ product = '', stock = '' }) {
+    this.product = product
+    this.stock = stock
+  }
 
-    constructor({ product = '', stock = '' }) {
-        this.product = product;
-        this.stock = stock;
-    }
-
-    toJSON() {
-        let { product, stock } = this;
-        return { product, stock };
-    }
+  toJSON() {
+    const { product, stock } = this
+    return { product, stock }
+  }
 }

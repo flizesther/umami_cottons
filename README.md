@@ -4,19 +4,18 @@ Ummami Cottons is a web project for [https://umamicottons.com](https://umamicott
 
 ## Technology
 
-* Nuxt (frontend and backend)
-* Express (api)
-* Firebase
-	* Hosting
-	* Realtime Database (json)
-	* Storage
-	* Authentication
-	* Functions (api)
-
+- Nuxt (frontend and backend)
+- Express (api)
+- Firebase
+  - Hosting
+  - Realtime Database (json)
+  - Storage
+  - Authentication
+  - Functions (api)
 
 ## Local build and serve (nuxt)
 
-``` bash
+```bash
 # install dependencies
 $ npm run install
 
@@ -29,7 +28,8 @@ $ npm run start
 ```
 
 ## Build, serve and deploy with Firebase
-``` bash
+
+```bash
 # install dependencies
 $ make install
 
@@ -48,9 +48,9 @@ $ firebase deploy
 
 There are 3 configurations:
 
-* LOCAL (only nuxt): **.env.local** is necessary to change **.env** to local build and serve. It is used with ```make serve```.
-* EMULATION (with firebase): **.env.emulation** is used with ```make emulation```.
-* PROD: **.env.prod** is used with ```make deploy```.
+- LOCAL (only nuxt): **.env.local** is necessary to change **.env** to local build and serve. It is used with `make serve`.
+- EMULATION (with firebase): **.env.emulation** is used with `make emulation`.
+- PROD: **.env.prod** is used with `make deploy`.
 
 ```
 NODE_ENV = development or production
@@ -64,10 +64,30 @@ API_AUTH_URL = https://identitytoolkit.googleapis.com/v1
 API_CLIENT_URL = http://localhost:5000/api (3000 serve only nuxt, 5000 emulation with firebase or url of prod)
 ```
 
+## Test
+
+```bash
+# all
+$ npm run test
+
+# watch
+$ npm run test:watch
+
+# update snapshot
+$ npm run test:update-snapshot
+```
+
+## ESLint and Prettier
+
+```bash
+# ESLint
+$ npm run lint
+```
+
 ## FAQs
 
-*  Firebase auth command: ``` firebase login ```
+- Firebase auth command: `firebase login`
 
 ## Author
 
-Esther Rodriguez 
+Esther Rodriguez

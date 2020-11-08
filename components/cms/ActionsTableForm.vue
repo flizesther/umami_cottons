@@ -2,24 +2,25 @@
   <b-row>
     <b-col>
       <b-btn
+        v-if="actionNewEnable()"
         variant="outline-success"
         class="mb-3"
         @click="showNew"
-        v-if="actionNewEnable()"
       >
         New
       </b-btn>
 
       <b-btn
+        v-if="actionListEnable()"
         variant="outline-secondary"
         class="mb-3"
         @click="getItems"
-        v-if="actionListEnable()"
       >
         Refresh <strong>{{ totalItems() }}</strong>
       </b-btn>
 
       <b-table
+        v-if="actionListEnable()"
         id="table"
         striped
         hover
@@ -28,7 +29,6 @@
         :busy="isLoading"
         :per-page="perPage"
         :current-page="currentPage"
-        v-if="actionListEnable()"
       >
         <template v-slot:cell(code)="data">
           <router-link
@@ -52,28 +52,28 @@
         </template>
 
         <template v-slot:cell(actions)="data">
-          <b-btn variant="outline-primary" size="sm" v-if="actionEditEnable()">
+          <b-btn v-if="actionEditEnable()" variant="outline-primary" size="sm">
             <router-link :to="`${path}/${data.item.code}?action=edit`"
               >edit</router-link
             >
           </b-btn>
           &nbsp;
           <b-btn
+            v-if="actionRemoveEnable()"
+            v-b-modal.confirmRemove
             variant="outline-secondary"
             size="sm"
             @click="itemCodeToRemove = data.item.code"
-            v-b-modal.confirmRemove
-            v-if="actionRemoveEnable()"
           >
             remove
           </b-btn>
           <b-btn
             variant="outline-success"
             size="sm"
-            @click="data.toggleDetails"
             class="mr-2"
+            @click="data.toggleDetails"
           >
-            {{ data.detailsShowing ? "hide" : "show" }} details
+            {{ data.detailsShowing ? 'hide' : 'show' }} details
           </b-btn>
         </template>
 
@@ -107,11 +107,11 @@
       ></b-pagination>
 
       <b-modal
+        v-if="actionRemoveEnable()"
         id="confirmRemove"
         title="Remove"
-        @ok="remove"
         centered
-        v-if="actionRemoveEnable()"
+        @ok="remove"
       >
         remove data with code "{{ itemCodeToRemove }}" confirm?
       </b-modal>
@@ -125,94 +125,111 @@
 </template>
 
 <script>
-import NewModalForm from "~/components/cms/NewModalForm";
-import DebugData from "~/components/cms/DebugData";
+import NewModalForm from '~/components/cms/NewModalForm'
+import DebugData from '~/components/cms/DebugData'
 
 export default {
-  layout: "cms",
-  props: ["fields", "collection", "actions"],
+  layout: 'cms',
+  components: {
+    NewModalForm,
+    DebugData,
+  },
+  props: {
+    fields: {
+      type: Array,
+      default: () => [],
+    },
+    collection: {
+      type: Object,
+      default: () => {},
+    },
+    actions: {
+      type: Object,
+      default: () => {},
+    },
+  },
+  async fetch() {
+    await this.getItems()
+  },
   data() {
     return {
       path: this.$route.path,
       items: [],
-      itemCodeToRemove: "",
+      itemCodeToRemove: '',
       isLoading: false,
       newModalShow: false,
       perPage: 5,
       currentPage: 1,
-    };
+    }
   },
   computed: {
     rows() {
-      return this.items.length;
+      return this.items.length
     },
-  },
-  async fetch() {
-    await this.getItems();
   },
   methods: {
     async getItems() {
-      this.isLoading = true;
+      this.isLoading = true
       if (this.actionListEnable()) {
-        const result = await this.$store.dispatch("cms/list", {
+        const result = await this.$store.dispatch('cms/list', {
           collection: this.collection,
-        });
-        this.items = result.status == 200 ? result.data : [];
+        })
+        this.items = result.status === 200 ? result.data : []
         // TODO mostrar algun error
       }
-      this.isLoading = false;
+      this.isLoading = false
     },
     async remove() {
-      this.isLoading = true;
+      this.isLoading = true
       if (this.actionRemoveEnable()) {
-        await this.$store.dispatch("cms/remove", {
+        await this.$store.dispatch('cms/remove', {
           collection: this.collection,
           code: this.itemCodeToRemove,
-        });
-        this.getItems();
+        })
+        this.getItems()
       }
-      this.isLoading = false;
+      this.isLoading = false
     },
     async new(data) {
-      this.isLoading = true;
+      this.isLoading = true
       if (this.actionNewEnable()) {
-        await this.$store.dispatch("cms/new", {
+        await this.$store.dispatch('cms/new', {
           collection: this.collection,
-          data: data,
-        });
-        this.getItems();
+          data,
+        })
+        this.getItems()
       }
-      this.isLoading = false;
+      this.isLoading = false
     },
 
     actionListEnable() {
-      return this.actions && this.actions.list && this.actions.list.enable;
+      return this.actions?.list?.enable
     },
     actionShowEnable() {
-      return this.actions && this.actions.show && this.actions.show.enable;
+      return this.actions?.show?.enable
     },
     actionEditEnable() {
-      return this.actions && this.actions.edit && this.actions.edit.enable;
+      return this.actions?.edit?.enable
     },
     actionNewEnable() {
-      return this.actions && this.actions.new && this.actions.new.enable;
+      return this.actions?.new?.enable
     },
     actionRemoveEnable() {
-      return this.actions && this.actions.remove && this.actions.remove.enable;
+      return this.actions?.remove?.enable
     },
     totalItems() {
-      return this.items.length;
+      return this.items.length
     },
 
     showNew() {
-      this.newModalShow = true;
+      this.newModalShow = true
     },
     hideNew() {
-      this.newModalShow = false;
+      this.newModalShow = false
     },
     okNew(event) {
-      this.new(event);
+      this.new(event)
     },
   },
-};
+}
 </script>

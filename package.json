@@ -12,7 +12,7 @@
         "lint": "npm run lint:js",
         "test": "jest",
         "test:watch": "jest --watch",
-        "test:update": "jest --update-snapshot"
+        "test:update-snapshot": "jest --update-snapshot"
     },
     "dependencies": {
         "@nuxtjs/axios": "^5.12.2",

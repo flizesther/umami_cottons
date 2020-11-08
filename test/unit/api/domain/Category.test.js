@@ -1,19 +1,18 @@
-import Category from "@/api/domain/Category"
+import Category from '@/api/domain/Category'
 
-describe("Category", () => {
+describe('Category', () => {
+  it('new', () => {
+    const result = new Category({})
 
-    it("new", () => {
-        const result = new Category({})
+    expect(result).toEqual({ code: '', name: '' })
+  })
 
-        expect(result).toEqual({code: '', name: ''})
-    })
+  it('to json', () => {
+    const expected = { code: 'code', name: 'name' }
 
-    it("to json", () => {
-        const expected = {code: 'code', name: 'name'}
+    const category = new Category(expected)
+    const result = category.toJSON()
 
-        const category = new Category(expected)
-        const result = category.toJSON()
-
-        expect(result).toEqual(expected)
-    })
+    expect(result).toEqual(expected)
+  })
 })

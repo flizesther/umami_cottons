@@ -1,19 +1,30 @@
-import Fabric from "@/api/domain/Fabric"
+import Fabric from '@/api/domain/Fabric'
 
-describe("Fabric", () => {
+describe('Fabric', () => {
+  it('new', () => {
+    const result = new Fabric({})
 
-    it("new", () => {
-        const result = new Fabric({})
-
-        expect(result).toEqual({ code: '', name: '', image: '', categories: [], stock: [] })
+    expect(result).toEqual({
+      code: '',
+      name: '',
+      image: '',
+      categories: [],
+      stock: [],
     })
+  })
 
-    it("to json", () => {
-        const expected =  { code: 'code', name: 'name', image: 'image', categories: [], stock: [] }
+  it('to json', () => {
+    const expected = {
+      code: 'code',
+      name: 'name',
+      image: 'image',
+      categories: [],
+      stock: [],
+    }
 
-        const fabric = new Fabric(expected)
-        const result = fabric.toJSON()
+    const fabric = new Fabric(expected)
+    const result = fabric.toJSON()
 
-        expect(result).toEqual(expected)
-    })
+    expect(result).toEqual(expected)
+  })
 })

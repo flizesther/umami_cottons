@@ -1,16 +1,21 @@
 <template>
-    <div class="card h-100">
-        <!-- <b-button> -->
-        <a :href="`/producto/${product.code}`">
-            <a><img class="card-img-top" :src="product.mainImage.url" :alt="product.mainImage.alt"></a>
-                <div class="card-body">
-                    <h4 class="card-title">
-                    <a href="#">{{ product.name }}</a>
-                    </h4>
-                    <h5>{{ product.price }}</h5>
-                    <p class="card-text">{{ product.mainDescription }}</p>
-                </div>
-            <!-- <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" hide-footer>
+  <div class="card h-100">
+    <!-- <b-button> -->
+    <a :href="`/producto/${product.code}`">
+      <a
+        ><img
+          class="card-img-top"
+          :src="product.mainImage.url"
+          :alt="product.mainImage.alt"
+      /></a>
+      <div class="card-body">
+        <h4 class="card-title">
+          <a href="#">{{ product.name }}</a>
+        </h4>
+        <h5>{{ product.price }}</h5>
+        <p class="card-text">{{ product.mainDescription }}</p>
+      </div>
+      <!-- <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" hide-footer>
                 <div class="col-lg-12">
                 <div class="card mt-4">
                     <img class="card-img-top img-fluid" :src="product.modalImage" :alt="product.modalImage">
@@ -20,8 +25,8 @@
                     <p class="card-text">{{ product.modalDescriptionOne }}</p>
                     </div>
                 </div> -->
-            <!-- /.card -->
-                <!-- <div class="card card-outline-secondary py-4">
+      <!-- /.card -->
+      <!-- <div class="card card-outline-secondary py-4">
                 <div class="card-body">
                     <p>{{ product.modalDescriptionTwo }}</p>
                     <hr>
@@ -30,25 +35,29 @@
                 </div>
             </div>
             </b-modal> -->
-        <!-- </b-button> -->
-        </a>
-    </div>
+      <!-- </b-button> -->
+    </a>
+  </div>
 </template>
 
 <script>
-
 export default {
-    props: ['product']
+  props: {
+    product: {
+      type: Object,
+      default: () => {},
+    },
+  },
 }
 </script>
 
 <style lang="scss" scoped>
 ::v-deep .btn-primary {
-    background-color:$umami-pink;
-    border-color: unset;
+  background-color: $umami-pink;
+  border-color: unset;
 }
 ::v-deep .btn-secondary {
-    background-color: $grey;
+  background-color: $grey;
 }
 // .modal-backdrop {
 //   background-color: rgba(0,0,0,.0001) !important;
@@ -57,6 +66,6 @@ export default {
   box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
 }
 .card-text {
-    font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-card v-if="this.isDebug" class="mt-3" header="Debug Data">
+    <b-card v-if="isDebug" class="mt-3" header="Debug Data">
       <pre class="m-0">{{ data }}</pre>
     </b-card>
   </div>
@@ -14,11 +14,16 @@ export default {
   components: {
     BCard,
   },
-  props: ["data"],
-  computed: {
-    isDebug () {
-      return this.$store.state.cms.debug
-    }
+  props: {
+    data: {
+      type: Object,
+      default: () => {},
+    },
   },
-};
+  computed: {
+    isDebug() {
+      return this.$store.state.cms.debug
+    },
+  },
+}
 </script>

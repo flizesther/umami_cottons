@@ -1,13 +1,9 @@
 <template>
   <div>
-    <b-form @submit="onSubmit" @reset="onReset" v-if="show">
+    <b-form v-if="show" @submit="onSubmit" @reset="onReset">
       <b-row align-h="end">
         <b-col class="text-right">
-          <b-btn
-            variant="outline-secondary"
-            class="mb-3"
-            :to="this.collectionPath"
-          >
+          <b-btn variant="outline-secondary" class="mb-3" :to="collectionPath">
             Back
           </b-btn>
         </b-col>
@@ -103,8 +99,8 @@
         </b-form-group>
       </div>
 
-      <b-button type="submit" variant="primary" v-if="isEdit()">Save</b-button>
-      <b-button type="reset" variant="danger" v-if="isEdit()">Reset</b-button>
+      <b-button v-if="isEdit()" type="submit" variant="primary">Save</b-button>
+      <b-button v-if="isEdit()" type="reset" variant="danger">Reset</b-button>
     </b-form>
 
     <debug-data :data="itemDebug"></debug-data>
@@ -112,28 +108,43 @@
 </template>
 
 <script>
-import { DebugData } from "~/components/cms/DebugData";
+import DebugData from '~/components/cms/DebugData'
 
 export default {
+  components: {
+    DebugData,
+  },
   props: {
-    item: Object,
-    edit: Boolean,
-    collection: String,
-    collectionPath: String,
+    item: {
+      type: Object,
+      default: () => {},
+    },
+    edit: {
+      type: Boolean,
+      default: false,
+    },
+    collection: {
+      type: String,
+      default: '',
+    },
+    collectionPath: {
+      type: String,
+      default: '',
+    },
   },
   data() {
     return {
       show: true,
       selected: [], // Must be an array reference!
       options: [
-        { text: "Orange", value: "orange" },
-        { text: "Apple", value: "apple" },
-        { text: "Pineapple", value: "pineapple" },
-        { text: "Grape", value: "grape" },
+        { text: 'Orange', value: 'orange' },
+        { text: 'Apple', value: 'apple' },
+        { text: 'Pineapple', value: 'pineapple' },
+        { text: 'Grape', value: 'grape' },
       ],
       selectedMedia: null,
       files: [],
-    };
+    }
   },
   computed: {
     itemDebug() {
@@ -141,41 +152,41 @@ export default {
         ...this.item,
         categories: this.selected,
         media: this.selectedMedia,
-      };
+      }
     },
   },
   async mounted() {
-    await this.loadFiles();
+    await this.loadFiles()
   },
   methods: {
     async loadFiles() {
-      const result = await this.$store.dispatch("cms/files");
-      this.files = result.status == 200 ? result.data : [];
+      const result = await this.$store.dispatch('cms/files')
+      this.files = result.status === 200 ? result.data : []
     },
     isEdit() {
-      return this.edit;
+      return this.edit
     },
     async onSubmit(evt) {
-      evt.preventDefault();
+      evt.preventDefault()
 
-      await this.$store.dispatch("cms/edit", {
+      await this.$store.dispatch('cms/edit', {
         collection: this.collection,
         data: this.item,
-      });
-      this.$router.push(this.collectionPath);
+      })
+      this.$router.push(this.collectionPath)
     },
     onReset(evt) {
-      evt.preventDefault();
+      evt.preventDefault()
       // Reset our form values
-      this.item = { code: this.item.code };
+      this.item = { code: this.item.code }
       // Trick to reset/clear native browser form validation state
-      this.show = false;
+      this.show = false
       this.$nextTick(() => {
-        this.show = true;
-      });
+        this.show = true
+      })
     },
   },
-};
+}
 </script>
 
 <style scoped>

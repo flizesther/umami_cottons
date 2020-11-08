@@ -1,17 +1,16 @@
-module.exports =  class User {
+module.exports = class User {
+  constructor({ name = '', email = '', token = '' }) {
+    this.name = name
+    this.email = email
+    this.token = token
+  }
 
-    constructor({ name = '', email = '', token = '' }) {
-        this.name = name;
-        this.email = email;
-        this.token = token;
-    }
+  isAuth() {
+    return this.token !== ''
+  }
 
-    isAuth() {
-        return this.token != '';
-    }
-
-    toJSON() {
-        let { name, email, token } = this;
-        return { name, email, token };
-    }
+  toJSON() {
+    const { name, email, token } = this
+    return { name, email, token }
+  }
 }

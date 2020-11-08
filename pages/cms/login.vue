@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import Login from "~/components/cms/Login.vue";
+import Login from '~/components/cms/Login.vue'
 
 export default {
   components: { Login },
-};
+}
 </script>
 
 <style scoped>

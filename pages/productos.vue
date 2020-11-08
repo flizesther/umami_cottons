@@ -7,18 +7,35 @@
           <b-col lg="3">
             <h1 class="py-4">Productos Umami</h1>
             <!-- <fa :icon="['fas', 'chevron-left']" /> -->
-            <span class="list-group-item background d-lg-block d-none" @click="showAllProducts()">
-                {{ allProducts }}
+            <span
+              class="list-group-item background d-lg-block d-none"
+              @click="showAllProducts()"
+            >
+              {{ allProducts }}
             </span>
-            <div class="list-group d-lg-block d-none" v-for="product in products" :key="product.code">
-              <span v-if="product" class="list-group-item" @click="setFilter(product.code)">
+            <div
+              v-for="product in products"
+              :key="product.code"
+              class="list-group d-lg-block d-none"
+            >
+              <span
+                v-if="product"
+                class="list-group-item"
+                @click="setFilter(product.code)"
+              >
                 {{ product.name }}
               </span>
             </div>
           </b-col>
           <b-col lg="9" cols="12" class="products-row">
             <b-row class="products desktop">
-              <b-col cols="12" lg="4" class="pb-4" v-for="product in filteredProducts" :key="product.code">
+              <b-col
+                v-for="product in filteredProducts"
+                :key="product.code"
+                cols="12"
+                lg="4"
+                class="pb-4"
+              >
                 <product :product="product" />
               </b-col>
             </b-row>
@@ -35,63 +52,63 @@ import PromotionalBanner from '../components/PromotionalBanner'
 
 export default {
   layout: 'app',
-  head() {
-    return {
-      title: "Nuestros productos"
-    };
-  },
   components: {
     Product,
-    PromotionalBanner
+    PromotionalBanner,
   },
-  data () {
+  async asyncData({ store }) {
+    const result = await store.dispatch('listProducts')
+    const products = result.status === 200 ? result.data : []
+    return { products }
+  },
+  data() {
     return {
       currentFilter: 'todos',
       allProducts: 'Mostrar Todos',
-      products: {}
+      products: {},
     }
   },
   computed: {
-    filteredProducts () {
+    filteredProducts() {
       // comprobamos el valor current filter = a todos para mostrar todos los productos
-        // return this.products.filter(p => this.currentFilter === 'todos' || p.category.toLowerCase() === this.currentFilter.toLowerCase())
-    if (this.currentFilter === 'todos') {
-      return [...this.products]
+      // return this.products.filter(p => this.currentFilter === 'todos' || p.category.toLowerCase() === this.currentFilter.toLowerCase())
+      if (this.currentFilter === 'todos') {
+        return [...this.products]
       } else {
-        return [...this.products].filter(p => p.code === this.currentFilter)
+        return [...this.products].filter((p) => p.code === this.currentFilter)
       }
-    }
-  },
-  async asyncData({store}) {
-    const result = await store.dispatch('listProducts')
-    const products = result.status == 200 ? result.data : []
-    return { products }
+    },
   },
   methods: {
     setFilter(code) {
-      this.currentFilter = code;
+      this.currentFilter = code
     },
-    showAllProducts () {
+    showAllProducts() {
       this.currentFilter = 'todos'
+    },
+  },
+  head() {
+    return {
+      title: 'Nuestros productos',
     }
-  }
-};
+  },
+}
 </script>
 
 <style lang="scss" scoped>
 .products {
   &.desktop {
-    @media (min-width:800px){
-    margin-top: 102px;
-  }
+    @media (min-width: 800px) {
+      margin-top: 102px;
+    }
   }
 }
 
 .btn-secondary {
-    color: $white;
-    background-color: $grey;
-    border-color: $grey;
-    height: 100%;
+  color: $white;
+  background-color: $grey;
+  border-color: $grey;
+  height: 100%;
 }
 
 .mascarilla {
@@ -99,146 +116,156 @@ export default {
 }
 
 /* demo css */
-html,body {
-    margin:0;
-    font-family: sans-serif;
+html,
+body {
+  margin: 0;
+  font-family: sans-serif;
 }
 
 .title-container {
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
-    font-family: sans-serif;
-    font-size:30pt;
-    font-weight:normal;
+  font-family: sans-serif;
+  font-size: 30pt;
+  font-weight: normal;
 }
 
 .project-title {
-font-size:16pt  
+  font-size: 16pt;
 }
 
 .filter {
-    font-family:arial;
-    padding: 6px 6px;
-    cursor:pointer;
-    border-radius: 6px;
-    transition: all 0.35s;
+  font-family: arial;
+  padding: 6px 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.35s;
 }
 
 .filter.active {
-    box-shadow:0px 1px 3px 0px #00000026;
+  box-shadow: 0px 1px 3px 0px #00000026;
 }
 
 .filter:hover {
-    background:$light-grey;
-} 
-.btn-secondary:hover{
-  opacity:0.8;
+  background: $light-grey;
+}
+.btn-secondary:hover {
+  opacity: 0.8;
 }
 .projects {
-    margin-bottom:50px;
-    margin-top:25px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .projects-enter {
-    transform: scale(0.5) translatey(-80px);
-    opacity:0;
+  transform: scale(0.5) translatey(-80px);
+  opacity: 0;
 }
 
-.projects-leave-to{
-    transform: translatey(30px);
-    opacity:0;
+.projects-leave-to {
+  transform: translatey(30px);
+  opacity: 0;
 }
 
 .projects-leave-active {
-    position: absolute;
-    z-index:-1;
+  position: absolute;
+  z-index: -1;
 }
 
 .circle {
-    text-align:center;
-    position:absolute;
-    bottom:-38px;
-    left:40px;
-    width:100px;
-    height:100px;
-    border-radius:50px;
-/*  border:1px solid black; */
-    display:flex;
-    box-shadow: 0px -4px 3px 0px #494d3257;
-    justify-content:center;
-    align-items:center;
-    background-color:#fff;
-/*  box-shadow:0px -3px 3px #484848a6; */
+  text-align: center;
+  position: absolute;
+  bottom: -38px;
+  left: 40px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  /*  border:1px solid black; */
+  display: flex;
+  box-shadow: 0px -4px 3px 0px #494d3257;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  /*  box-shadow:0px -3px 3px #484848a6; */
 }
 
 .project {
-    transition: all .35s ease-in-out;
-    margin:10px;
-    box-shadow:0px 2px 8px $light-grey;
-    border-radius:3px;
-    width:180px;
-    height:200px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+  transition: all 0.35s ease-in-out;
+  margin: 10px;
+  box-shadow: 0px 2px 8px $light-grey;
+  border-radius: 3px;
+  width: 180px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .project-image-wrapper {
-    position:relative;
+  position: relative;
 }
 
 .gradient-overlay {
-    position:absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height:150px;
-    opacity:0.09;
-    background: 
-        linear-gradient(to bottom, rgba(0,210,247,0.65) 0%,rgba(0,210,247,0.64) 1%,rgba(0,0,0,0) 100%), 
-        linear-gradient(to top, rgba(247,0,156,0.65) 0%,rgba(247,0,156,0.64) 1%,rgba(0,0,0,0) 100%);
-    border-bottom-left-radius:10px;
-    border-bottom-right-radius:10px;
-    border-top-left-radius:3px;
-    border-top-right-radius:3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  opacity: 0.09;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 210, 247, 0.65) 0%,
+      rgba(0, 210, 247, 0.64) 1%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    linear-gradient(
+      to top,
+      rgba(247, 0, 156, 0.65) 0%,
+      rgba(247, 0, 156, 0.64) 1%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .project-image {
-    width:100%;
-    height:150px;
-    border-bottom-left-radius:5px;
-    border-bottom-right-radius:5px;
-    border-top-left-radius:3px;
-    border-top-right-radius:3px;
+  width: 100%;
+  height: 150px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 ::v-deep .btn-secondary {
   background-color: $umami-pink;
 }
 .selected {
-  background-color:red;
+  background-color: red;
 }
 .background {
   color: $umami-pink;
 }
 .promotional-banner {
-  width:100%;
-  height:50px;
-  font-size:22px;
+  width: 100%;
+  height: 50px;
+  font-size: 22px;
   align-items: center;
-  display:flex;
+  display: flex;
   justify-content: center;
   background-color: $umami-pink;
   color: white;
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     font-size: 18px;
     text-align: center;
     padding: 10px 5px;
@@ -252,7 +279,7 @@ font-size:16pt
 ::v-deep a:hover {
   color: #8498af;
   text-decoration: none;
-  cursor:pointer;
+  cursor: pointer;
 }
 .list-group-item {
   cursor: pointer;

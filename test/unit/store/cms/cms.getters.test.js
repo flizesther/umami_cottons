@@ -1,15 +1,13 @@
-import { getters } from "@/store/cms.js"
+import { getters } from '@/store/cms.js'
 
 const collections = {
-  product: {
-
-  }
+  product: {},
 }
 
 const state = { collections }
 
-describe("collections", () => {
-  it("returns collections", () => {
+describe('collections', () => {
+  it('returns collections', () => {
     const result = getters.collections(state)
 
     expect(result).toEqual(collections)

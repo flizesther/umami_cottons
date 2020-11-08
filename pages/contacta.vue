@@ -121,14 +121,14 @@
     </b-card>
     </div> -->
     <div class="d-flex justify-content-center contact-us">
-      <p class="text">Contacta con nosotras mandando un mail: </p>
+      <p class="text">Contacta con nosotras mandando un mail:</p>
       <p class="text mail">{{ contactEmail }}</p>
     </div>
   </b-container>
 </template>
 
 <script>
-import { Email } from  '~/infrastructure/util/Email'
+import { Email } from '~/infrastructure/util/Email'
 
 export default {
   layout: 'app',
@@ -138,11 +138,22 @@ export default {
         email: '',
         name: '',
         prenda: null,
-        checked: []
+        checked: [],
       },
-      prendas: [{ text: 'Selecciona una', value: null }, 'Upenda', 'Meraki', 'Paquete', 'Bandana', 'Muselina', 'Corona', 'Banderolas de cumpleaños', 'Chupetero', 'Prefiero escribir todo lo que quiero en el mail'],
+      prendas: [
+        { text: 'Selecciona una', value: null },
+        'Upenda',
+        'Meraki',
+        'Paquete',
+        'Bandana',
+        'Muselina',
+        'Corona',
+        'Banderolas de cumpleaños',
+        'Chupetero',
+        'Prefiero escribir todo lo que quiero en el mail',
+      ],
       show: true,
-      contactEmail: Email.mask('umamicottons@gmail.com')
+      contactEmail: Email.mask('umamicottons@gmail.com'),
     }
   },
   methods: {
@@ -162,26 +173,25 @@ export default {
       this.$nextTick(() => {
         this.show = true
       })
-    }
+    },
   },
   head() {
     return {
-      title: "Contacta con umami_cottons"
-    };
-  }
-};
+      title: 'Contacta con umami_cottons',
+    }
+  },
+}
 </script>
 
 <style lang="scss" scoped>
-
 ::v-deep .btn-secondary {
-  background-color: $umami-pink!important;
+  background-color: $umami-pink !important;
 }
 .contact-us {
-    flex-direction: column;
-    font-size: 20px;
+  flex-direction: column;
+  font-size: 20px;
   .text {
-      margin:auto;
+    margin: auto;
   }
   .mail {
     color: $umami-pink;

@@ -1,7 +1,10 @@
 <template>
   <div
     class="zoom-on-hover m-2"
-    :class="[aspectRatio ? 'aspect-ratio' : '', zoom < 2 ? 'zoomable' : 'not-zoomable']"
+    :class="[
+      aspectRatio ? 'aspect-ratio' : '',
+      zoom < 2 ? 'zoomable' : 'not-zoomable',
+    ]"
     :style="styleAspectRatio"
     @mousemove="move"
     @mouseleave="resetZoom"
@@ -29,74 +32,75 @@
 </template>
 
 <script>
-
 const MAX_ZOOM = 2
 
-function pageOffset (el) {
+function pageOffset(el) {
   const rect = el.getBoundingClientRect()
   const scrollLeft = window.pageXOffset || document.documentElement.scrollLeft
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop
   return {
     y: rect.top + scrollTop,
-    x: rect.left + scrollLeft
+    x: rect.left + scrollLeft,
   }
 }
 export default {
   props: {
     id: {
       type: String,
-      required: true
+      required: true,
     },
     src: {
       type: String,
-      required: true
+      required: true,
     },
     optimizedSrc: {
       type: String,
-      required: true
+      required: true,
     },
     aspectRatio: {
       type: Number,
-      default: undefined
+      default: undefined,
     },
     alt: {
       type: String,
-      required: true
+      required: true,
     },
     disabled: {
       type: Boolean,
-      default: false
+      default: false,
     },
     scale: {
       type: Number,
-      default: 1
+      default: 1,
     },
     noLazy: {
       type: Boolean,
-      default: false
+      default: false,
     },
     product: {
       type: Object,
-      default: () => {}
-    }
+      default: () => {},
+    },
   },
   data: () => ({
     zoom: 0,
-    zoomEvent: undefined
+    zoomEvent: undefined,
   }),
   computed: {
-    zoomStyle () {
+    zoomStyle() {
       return `width: ${100 * (this.zoom + 1)}%`
     },
-    normalStyle () {
+    normalStyle() {
       return `opacity: ${this.zoom === 0 ? 1 : 0}`
     },
-    styleAspectRatio () {
-      return this.aspectRatio ? `padding-bottom: calc(100% / ${this.aspectRatio})` : ''
-    }
+    styleAspectRatio() {
+      return this.aspectRatio
+        ? `padding-bottom: calc(100% / ${this.aspectRatio})`
+        : ''
+    },
   },
   methods: {
-    handleZoom (event) {
+    handleZoom(event) {
       if (this.zoom < MAX_ZOOM) {
         this.zoomEvent = event
         this.zoom++
@@ -109,17 +113,19 @@ export default {
       this.$services.tracking.eventGa({
         eventcategory: 'interaction',
         eventaction: 'zoom',
-        eventlabel: this.product.name
+        eventlabel: this.product.name,
       })
     },
-    load (e) {
+    load(e) {
       this.move(this.zoomEvent)
     },
-    resetZoom () {
+    resetZoom() {
       this.zoom = 0
     },
-    move (event) {
-      if (!this.$refs.zoom || !this.$refs.normal) { return }
+    move(event) {
+      if (!this.$refs.zoom || !this.$refs.normal) {
+        return
+      }
 
       const offset = pageOffset(this.$el)
       const zoom = this.$refs.zoom.$el
@@ -128,13 +134,20 @@ export default {
       const relativeY = event.clientY - offset.y + window.pageYOffset
       const normalFactorX = relativeX / normal.offsetWidth
       const normalFactorY = relativeY / normal.offsetHeight
-      const offsetEvent = (event.type === 'mousemove' || (event.type === 'click' && this.zoom === 1))
-      const x = normalFactorX * (zoom.offsetWidth * this.scale - (offsetEvent ? normal.offsetWidth : 0))
-      const y = normalFactorY * (zoom.offsetHeight * this.scale - (offsetEvent ? normal.offsetHeight : 0))
+      const offsetEvent =
+        event.type === 'mousemove' ||
+        (event.type === 'click' && this.zoom === 1)
+      const x =
+        normalFactorX *
+        (zoom.offsetWidth * this.scale - (offsetEvent ? normal.offsetWidth : 0))
+      const y =
+        normalFactorY *
+        (zoom.offsetHeight * this.scale -
+          (offsetEvent ? normal.offsetHeight : 0))
       zoom.style.left = -x + 'px'
       zoom.style.top = -y + 'px'
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -154,24 +167,24 @@ export default {
   position: relative;
   overflow: hidden;
 
-//   &.zoomable{
-//     &:hover {
-//       cursor: url("~assets/icons/svg/search.svg"), auto;
-//       cursor: -webkit-image-set(
-//         url('~assets/png/search.png') 1x,
-//         url('~assets/png/search@2x.png') 2x
-//       ), auto;
-//     }
-//   }
-//   &.not-zoomable {
-//     &:hover {
-//       cursor: url("~assets/icons/svg/search.svg"), auto;
-//       cursor: -webkit-image-set(
-//         url('~assets/png/search.png') 1x,
-//         url('~assets/png/search@2x.png') 2x
-//       ), auto;
-//     }
-//   }
+  //   &.zoomable{
+  //     &:hover {
+  //       cursor: url("~assets/icons/svg/search.svg"), auto;
+  //       cursor: -webkit-image-set(
+  //         url('~assets/png/search.png') 1x,
+  //         url('~assets/png/search@2x.png') 2x
+  //       ), auto;
+  //     }
+  //   }
+  //   &.not-zoomable {
+  //     &:hover {
+  //       cursor: url("~assets/icons/svg/search.svg"), auto;
+  //       cursor: -webkit-image-set(
+  //         url('~assets/png/search.png') 1x,
+  //         url('~assets/png/search@2x.png') 2x
+  //       ), auto;
+  //     }
+  //   }
   .normal {
     width: 100%;
     height: 100%;
@@ -183,12 +196,12 @@ export default {
 }
 
 ::v-deep .modal-body {
-    padding: 0;
+  padding: 0;
 }
 
 ::v-deep .modal-content {
-    height: 100vh;
-    border: none;
+  height: 100vh;
+  border: none;
 }
 
 .icon-close {
@@ -203,6 +216,6 @@ export default {
 }
 
 ::v-deep img {
-    width: 100%;
+  width: 100%;
 }
 </style>

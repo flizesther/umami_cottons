@@ -22,8 +22,8 @@
 
 <script>
 export default {
-  layout: "cms",
-};
+  layout: 'cms',
+}
 </script>
 
 <style>
@@ -60,4 +60,3 @@ export default {
   padding-top: 15px;
 }
 </style>
-

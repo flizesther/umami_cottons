@@ -5,7 +5,7 @@
         <b-navbar toggleable="md" type="dark" variant="dark">
           <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
           <b-navbar-brand :to="'/cms'">CMS - Umami Cottons</b-navbar-brand>
-          <b-collapse is-nav id="nav_collapse">
+          <b-collapse id="nav_collapse" is-nav>
             <b-navbar-nav>
               <b-nav-item class="text-white" :to="'/cms/product'"
                 >Products</b-nav-item
@@ -43,20 +43,20 @@
   </main>
 </template>
 <script>
-import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 
 export default {
-  middleware: ["auth"],
+  middleware: ['auth'],
   computed: {
-    ...mapGetters("cms", ["userAuth"]),
+    ...mapGetters('cms', ['userAuth']),
   },
   methods: {
     async logout() {
-      await this.$store.dispatch("cms/logout", this.userAuth);
-      this.$router.push("/cms");
+      await this.$store.dispatch('cms/logout', this.userAuth)
+      this.$router.push('/cms')
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

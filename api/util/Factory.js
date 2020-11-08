@@ -1,48 +1,46 @@
-const Category = require('../domain/Category');
-const Fabric = require('../domain/Fabric');
-const Media = require('../domain/Media');
-const Pack = require('../domain/Pack');
-const Product = require('../domain/Product');
-const Size = require('../domain/Size');
-const Stock = require('../domain/Stock');
-const User = require('../domain/User');
+const Category = require('../domain/Category')
+const Fabric = require('../domain/Fabric')
+const Media = require('../domain/Media')
+const Pack = require('../domain/Pack')
+const Product = require('../domain/Product')
+const Size = require('../domain/Size')
+const Stock = require('../domain/Stock')
+const User = require('../domain/User')
 
 module.exports = {
+  new(domain, data) {
+    return this[domain](data)
+  },
 
-    new: function(domain, data) {
-        return this[domain](data)
-    },
+  category(data) {
+    return new Category(data)
+  },
 
-    category: function(data) {
-        return new Category(data)
-    },
+  fabric(data) {
+    return new Fabric(data)
+  },
 
-    fabric: function(data) {
-        return new Fabric(data)
-    },
+  media(data) {
+    return new Media(data)
+  },
 
-    media: function(data) {
-        return new Media(data)
-    },
+  pack(data) {
+    return new Pack(data)
+  },
 
-    pack: function(data) {
-        return new Pack(data)
-    },
+  product(data) {
+    return new Product(data)
+  },
 
-    product: function(data) {
-        return new Product(data)
-    },
+  size(data) {
+    return new Size(data)
+  },
 
-    size: function(data) {
-        return new Size(data)
-    },
+  stock(data) {
+    return new Stock(data)
+  },
 
-    stock: function(data) {
-        return new Stock(data)
-    },
-
-    user: function(data) {
-        return new User(data)
-    }
-
+  user(data) {
+    return new User(data)
+  },
 }

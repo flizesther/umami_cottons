@@ -1,6 +1,5 @@
 export const Email = {
-
-    mask: function(email) {
-        return email
-    }
+  mask(email) {
+    return email
+  },
 }

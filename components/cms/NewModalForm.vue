@@ -3,12 +3,12 @@
     <b-modal
       :id="name"
       ref="modal"
-      title="New"
       v-model="localShow"
+      title="New"
+      centered
       @show="reset"
       @hidden="cancel"
       @ok="process"
-      centered
     >
       <form ref="form" @submit.stop.prevent="handleSubmit">
         <b-form-group
@@ -42,65 +42,69 @@
   </div>
 </template>
 
-
 <script>
 export default {
-  layout: "cms",
-  props: ["show"],
+  layout: 'cms',
+  props: {
+    show: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
-      name: "new-item",
+      name: 'new-item',
       localShow: this.show,
       itemToNew: {
-        code: "",
-        name: "",
+        code: '',
+        name: '',
       },
       itemToNewState: {
         code: null,
         name: null,
       },
-    };
+    }
   },
   watch: {
     show(newValue) {
-      this.localShow = newValue;
+      this.localShow = newValue
     },
   },
   methods: {
     checkFormValidity() {
-      this.itemToNewState.code = this.$refs.form[0].checkValidity();
-      this.itemToNewState.name = this.$refs.form[1].checkValidity();
-      return this.itemToNewState.code && this.itemToNewState.name;
+      this.itemToNewState.code = this.$refs.form[0].checkValidity()
+      this.itemToNewState.name = this.$refs.form[1].checkValidity()
+      return this.itemToNewState.code && this.itemToNewState.name
     },
     reset() {
       this.itemToNew = {
-        code: "",
-        name: "",
-      };
+        code: '',
+        name: '',
+      }
       this.itemToNewState = {
         code: null,
         name: null,
-      };
+      }
     },
     cancel() {
-      this.reset();
-      this.$emit("cancel");
+      this.reset()
+      this.$emit('cancel')
     },
     process(bvModalEvt) {
       // Prevent modal from closing
-      bvModalEvt.preventDefault();
+      bvModalEvt.preventDefault()
 
       // Exit when the form isn't valid
       if (!this.checkFormValidity()) {
-        return;
+        return
       }
       // New
-      this.$emit("ok", this.itemToNew);
+      this.$emit('ok', this.itemToNew)
 
       this.$nextTick(() => {
-        this.$bvModal.hide(this.name);
-      });
+        this.$bvModal.hide(this.name)
+      })
     },
   },
-};
+}
 </script>
