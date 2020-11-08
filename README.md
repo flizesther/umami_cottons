@@ -46,7 +46,7 @@ $ firebase deploy
 
 ## Configurations
 
-There are a 3 configurations:
+There are 3 configurations:
 
 * LOCAL (only nuxt): **.env.local** is necessary to change **.env** to local build and serve. It is used with ```make serve```.
 * EMULATION (with firebase): **.env.emulation** is used with ```make emulation```.
@@ -67,7 +67,6 @@ API_CLIENT_URL = http://localhost:5000/api (3000 serve only nuxt, 5000 emulation
 ## FAQs
 
 *  Firebase auth command: ``` firebase login ```
-*  
 
 ## Author
 

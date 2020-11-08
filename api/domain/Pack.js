@@ -1,6 +1,6 @@
 module.exports =  class Pack {
 
-    constructor({ code = '', name = '', mainImage = '', gallery = [], mainDescription = '', descriptions = [], products = [], price }) {
+    constructor({ code = '', name = '', mainImage = '', gallery = [], mainDescription = '', descriptions = [], products = [], price = '' }) {
         this.code = code;
         this.name = name;
         this.gallery = gallery;

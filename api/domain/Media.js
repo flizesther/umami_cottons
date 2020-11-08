@@ -1,12 +1,13 @@
 module.exports =  class Media {
 
-    constructor({ url = '', alt = '' }) {
+    constructor({ code = '', url = '', alt = '' }) {
+        this.code = code;
         this.url = url;
         this.alt = alt;
     }
 
     toJSON() {
-        let { url, alt } = this;
-        return { url, alt };
+        let { code, url, alt } = this;
+        return { code, url, alt };
     }
 }

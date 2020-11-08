@@ -144,5 +144,4 @@ export const getters = {
     userAuth: state => state.user,
     isAuth: state => state.user && state.user.token && state.user.token != '',
     collections: state => state.collections,
-    isDebug: state => state.debug
 };

@@ -7,12 +7,18 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex";
+import { BCard } from 'bootstrap-vue'
 
 export default {
+  name: 'DebugData',
+  components: {
+    BCard,
+  },
   props: ["data"],
   computed: {
-    ...mapGetters("cms", ["isDebug"]),
+    isDebug () {
+      return this.$store.state.cms.debug
+    }
   },
 };
 </script>
