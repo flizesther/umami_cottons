@@ -22,16 +22,7 @@ module.exports = class Product {
   }
 
   toJSON() {
-    const {
-      code,
-      name,
-      mainImage,
-      gallery,
-      mainDescription,
-      descriptions,
-      fabrics,
-      sizes,
-    } = this
+    const { code, name, mainImage, gallery, mainDescription, descriptions, fabrics, sizes } = this
     return {
       code,
       name,

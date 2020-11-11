@@ -1,19 +1,16 @@
 // AuthService is auth service of Firebase
 
-const BaseService = require('./BaseService')
+import BaseService from './BaseService'
 
-module.exports = class AuthService {
-  constructor(http, { url = '', apiKey = '' }) {
+export default class AuthService {
+  constructor(http, { url, apiKey }) {
     this.url = url
     this.apiKey = apiKey
     this.httpService = new BaseService(http)
   }
 
-  async login({ email = '', password = '' }) {
-    const response = await this.httpService.post(
-      this.buildPath('accounts:signInWithPassword'),
-      { email, password }
-    )
+  async login({ email, password }) {
+    const response = await this.httpService.post(this._buildPath('accounts:signInWithPassword'), { email, password })
     if (response.status === 200) {
       return {
         status: response.status,
@@ -24,14 +21,11 @@ module.exports = class AuthService {
         },
       }
     }
-    return this.error(response)
+    return this._error(response)
   }
 
-  async profile({ token = '' }) {
-    const response = await this.httpService.post(
-      this.buildPath('accounts:lookup'),
-      { idToken: token }
-    )
+  async profile({ token }) {
+    const response = await this.httpService.post(this._buildPath('accounts:lookup'), { idToken: token })
     if (response.status === 200) {
       return {
         status: response.status,
@@ -41,17 +35,20 @@ module.exports = class AuthService {
         },
       }
     }
-    return this.error(response)
+    return this._error(response)
   }
 
-  buildPath(path) {
+  _buildPath(path) {
     return this.url + '/' + path + '?key=' + this.apiKey
   }
 
-  error(response) {
+  _error(response) {
     return {
       status: response.status,
-      ...response.error.message,
+      error: {
+        code: response.error.code,
+        message: response.error.message?.error?.message || response.error.message,
+      },
     }
   }
 }

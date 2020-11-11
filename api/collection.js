@@ -1,6 +1,7 @@
+import CollectionService from './services/CollectionService'
+
 const axios = require('axios')
 const express = require('express')
-const CollectionService = require('./services/CollectionService')
 
 module.exports = (config) => {
   const service = new CollectionService(axios, { url: config.API_URL })

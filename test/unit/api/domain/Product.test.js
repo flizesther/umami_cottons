@@ -1,5 +1,6 @@
 import Product from '@/api/domain/Product'
 import Media from '@/api/domain/Media'
+import Size from '~/api/domain/Size'
 
 describe('Product', () => {
   it('new', () => {
@@ -24,11 +25,11 @@ describe('Product', () => {
       code: 'code',
       name: 'name',
       mainImage: new Media({}),
-      gallery: [],
+      gallery: [new Media({})],
       mainDescription: 'mainDescription',
-      descriptions: [],
-      fabrics: [],
-      sizes: [],
+      descriptions: ['description'],
+      fabrics: ['fabric'],
+      sizes: [new Size({})],
     }
 
     const product = new Product(expected)

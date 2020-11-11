@@ -203,19 +203,24 @@ export default {
     },
 
     actionListEnable() {
-      return this.actions?.list?.enable
+      // return this.actions?.list?.enable
+      return true
     },
     actionShowEnable() {
-      return this.actions?.show?.enable
+      // return this.actions?.show?.enable
+      return true
     },
     actionEditEnable() {
-      return this.actions?.edit?.enable
+      // return this.actions?.edit?.enable
+      return true
     },
     actionNewEnable() {
-      return this.actions?.new?.enable
+      // return this.actions?.new?.enable
+      return true
     },
     actionRemoveEnable() {
-      return this.actions?.remove?.enable
+      // return this.actions?.remove?.enable
+      return true
     },
     totalItems() {
       return this.items.length

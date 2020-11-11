@@ -1,8 +1,10 @@
+const Media = require('./Media')
+
 module.exports = class Pack {
   constructor({
     code = '',
     name = '',
-    mainImage = '',
+    mainImage = new Media({}),
     gallery = [],
     mainDescription = '',
     descriptions = [],

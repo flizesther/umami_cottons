@@ -1,4 +1,4 @@
-module.exports = class BaseService {
+export default class BaseService {
   constructor(http) {
     this.http = http
   }
@@ -6,63 +6,69 @@ module.exports = class BaseService {
   async get(url) {
     try {
       const res = await this.http.get(url)
-      return this.success(res)
+      return this._success(res)
     } catch (err) {
-      return this.error(err)
+      return this._error(err)
     }
   }
 
   async post(url, data) {
     try {
       const res = await this.http.post(url, data)
-      return this.success(res)
+      return this._success(res)
     } catch (err) {
-      return this.error(err)
+      return this._error(err)
     }
   }
 
   async put(url, data) {
     try {
       const res = await this.http.put(url, data)
-      return this.success(res)
+      return this._success(res)
     } catch (err) {
-      return this.error(err)
+      return this._error(err)
     }
   }
 
   async delete(url) {
     try {
       const res = await this.http.delete(url)
-      return this.success(res)
+      return this._success(res)
     } catch (err) {
-      return this.error(err)
+      return this._error(err)
     }
   }
 
-  success(res) {
+  _success(res) {
     return {
       status: res.status,
       data: res.data,
     }
   }
 
-  error(error) {
-    if (error.response) {
-      return {
-        status: error.response.status,
-        error: {
-          code: error.response.status,
-          message: error.response.data || 'Error',
-        },
-      }
+  _error(error) {
+    let code = 500
+    let message = 'Error'
+
+    if (error?.response) {
+      // Request made and server responded 4xx or 5xx
+      code = error.response.status
+      message = error.response?.data || message
+    } else if (error?.request) {
+      // The request was made but no response was received
+      // eslint-disable-next-line no-console
+      message = error.request
     } else {
-      return {
-        status: error.status,
-        error: {
-          code: 500,
-          message: error.message || 'Error',
-        },
-      }
+      // Something happened in setting up the request that triggered an Error
+      message = error?.message || message
+    }
+
+    return {
+      status: code,
+      error: {
+        code,
+        message,
+      },
     }
   }
 }

@@ -2,7 +2,7 @@ import Size from '@/api/domain/Size'
 
 describe('Size', () => {
   it('new', () => {
-    const result = new Size({})
+    const result = new Size({ size: '', price: '' })
 
     expect(result).toEqual({ size: '', price: '' })
   })

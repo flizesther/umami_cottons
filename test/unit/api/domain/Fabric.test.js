@@ -1,4 +1,5 @@
 import Fabric from '@/api/domain/Fabric'
+import Stock from '~/api/domain/Stock'
 
 describe('Fabric', () => {
   it('new', () => {
@@ -18,8 +19,8 @@ describe('Fabric', () => {
       code: 'code',
       name: 'name',
       image: 'image',
-      categories: [],
-      stock: [],
+      categories: ['category'],
+      stock: [new Stock({})],
     }
 
     const fabric = new Fabric(expected)

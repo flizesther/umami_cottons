@@ -1,6 +1,6 @@
 const axios = require('axios')
 const express = require('express')
-const BackupService = require('./services/BackupService')
+const BackupService = require('./services/BackupService').default
 
 module.exports = (config) => {
   const service = new BackupService(axios, { url: config.API_URL })

@@ -2,7 +2,7 @@ import Category from '@/api/domain/Category'
 
 describe('Category', () => {
   it('new', () => {
-    const result = new Category({})
+    const result = new Category({ code: '', name: '' })
 
     expect(result).toEqual({ code: '', name: '' })
   })

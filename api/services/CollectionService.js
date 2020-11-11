@@ -1,10 +1,10 @@
 // CollectionService is realtime data service of Firebase
 
-const BaseService = require('./BaseService')
-const Factory = require('./../util/Factory')
+import BaseService from './BaseService'
+import Factory from './../util/Factory'
 
-module.exports = class CollectionService {
-  constructor(http, { url = '' }) {
+export default class CollectionService {
+  constructor(http, { url }) {
     this.url = url
     this.httpService = new BaseService(http)
   }
@@ -23,26 +23,29 @@ module.exports = class CollectionService {
   }
 
   async update(path, data) {
-    return await this.httpService.put(
-      this.buildPath(`${path}/${data.code}`),
-      Factory.new(path, data)
-    )
+    return await this.httpService.put(this.buildPath(`${path}/${data.code}`), Factory.new(path, data))
   }
 
   async delete(path, code) {
-    return await this.httpService.delete(this.buildPath(`${path}/${code}`))
+    const response = await this.httpService.delete(this.buildPath(`${path}/${code}`))
+
+    if (response.status === 200) {
+      return {
+        ...response,
+        data: {
+          code,
+        },
+      }
+    }
+
+    return this._error(response)
   }
 
   async _get(path, code = '') {
-    const response = await this.httpService.get(
-      this.buildPath(code !== '' ? `${path}/${code}` : path)
-    )
+    const response = await this.httpService.get(this.buildPath(code !== '' ? `${path}/${code}` : path))
 
     // Fix return null text firebase when no exit path item with status 200 -> changed with 404
-    if (
-      response.status === 200 &&
-      (response.data === 'null' || response.data == null)
-    ) {
+    if (response.status === 200 && (response.data === 'null' || response.data == null)) {
       return {
         status: 404,
         error: {
@@ -52,10 +55,24 @@ module.exports = class CollectionService {
       }
     }
 
-    return response
+    if (response.status === 200) {
+      return response
+    }
+
+    return this._error(response)
   }
 
   buildPath(path) {
     return this.url + '/' + path + '.json'
+  }
+
+  _error(response) {
+    return {
+      status: response.status,
+      error: {
+        code: response.error.code,
+        message: response.error.message?.error || response.error.message,
+      },
+    }
   }
 }

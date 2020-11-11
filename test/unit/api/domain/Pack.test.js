@@ -1,11 +1,12 @@
 import Pack from '@/api/domain/Pack'
+import Media from '@/api/domain/Media'
 
 describe('Pack', () => {
   it('new', () => {
     const expected = {
       code: '',
       name: '',
-      mainImage: '',
+      mainImage: new Media({}),
       gallery: [],
       mainDescription: '',
       descriptions: [],
@@ -22,7 +23,7 @@ describe('Pack', () => {
     const expected = {
       code: 'code',
       name: 'name',
-      mainImage: 'mainImage',
+      mainImage: new Media({}),
       gallery: [],
       mainDescription: 'mainDescription',
       descriptions: [],
