@@ -105,7 +105,7 @@ Esther Rodriguez
 - [Vue Test Utils](https://vue-test-utils.vuejs.org/)
 - [Jest Docs](https://jestjs.io/docs/en/getting-started)
 - [Google Cloud Identity Plaform Docs](https://cloud.google.com/identity-platform/docs/use-rest-api)
-- [Prettier Docs](hhttps://prettier.io/docs/en/index.html)
+- [Prettier Docs](https://prettier.io/docs/en/index.html)
 - [Babel JS - Optional Chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
 - [Axios Docs](https://github.com/axios/axios)
 - [Firebase Docs](https://firebase.google.com/docs/)
