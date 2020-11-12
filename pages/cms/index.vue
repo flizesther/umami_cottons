@@ -9,12 +9,7 @@
       <h1 class="title">Umami Cottons</h1>
       <h2 class="subtitle">Content Management System</h2>
       <div class="links">
-        <a
-          href="https://umamicottons.com/"
-          target="_blank"
-          class="button--green"
-          >umamicottons.com</a
-        >
+        <a href="https://umamicottons.com/" target="_blank" class="button--green">umamicottons.com</a>
       </div>
     </div>
   </section>

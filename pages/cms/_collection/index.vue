@@ -1,9 +1,5 @@
 <template>
-  <actions-table-form
-    :fields="fields()"
-    :collection="collection"
-    :actions="actions()"
-  ></actions-table-form>
+  <actions-table-form :fields="fields()" :collection="collection" :actions="actions()"></actions-table-form>
 </template>
 
 <script>

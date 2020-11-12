@@ -17,12 +17,7 @@
           label-for="code-input"
           invalid-feedback="Code is required"
         >
-          <b-form-input
-            id="code-input"
-            v-model="itemToNew.code"
-            :state="itemToNewState.code"
-            required
-          ></b-form-input>
+          <b-form-input id="code-input" v-model="itemToNew.code" :state="itemToNewState.code" required></b-form-input>
         </b-form-group>
         <b-form-group
           :state="itemToNewState.name"
@@ -30,12 +25,7 @@
           label-for="name-input"
           invalid-feedback="Name is required"
         >
-          <b-form-input
-            id="name-input"
-            v-model="itemToNew.name"
-            :state="itemToNewState.name"
-            required
-          ></b-form-input>
+          <b-form-input id="name-input" v-model="itemToNew.name" :state="itemToNewState.name" required></b-form-input>
         </b-form-group>
       </form>
     </b-modal>

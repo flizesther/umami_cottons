@@ -9,37 +9,25 @@ export class ApiService {
   }
 
   async collectionIndex(path) {
-    const response = await this.httpService.get(
-      this.buildPath(`collection/${path}`)
-    )
+    const response = await this.httpService.get(this.buildPath(`collection/${path}`))
     const data = response.data ? Object.values(response.data) : response.data
     return { ...response, data }
   }
 
   async collectionGet(path, code) {
-    return await this.httpService.get(
-      this.buildPath(`collection/${path}/${code}`)
-    )
+    return await this.httpService.get(this.buildPath(`collection/${path}/${code}`))
   }
 
   async collectionCreate(path, data) {
-    return await this.httpService.post(
-      this.buildPath(`collection/${path}/${data.code}`),
-      data
-    )
+    return await this.httpService.post(this.buildPath(`collection/${path}/${data.code}`), data)
   }
 
   async collectionUpdate(path, data) {
-    return await this.httpService.put(
-      this.buildPath(`collection/${path}/${data.code}`),
-      data
-    )
+    return await this.httpService.put(this.buildPath(`collection/${path}/${data.code}`), data)
   }
 
   async collectionDelete(path, code) {
-    return await this.httpService.delete(
-      this.buildPath(`collection/${path}/${code}`)
-    )
+    return await this.httpService.delete(this.buildPath(`collection/${path}/${code}`))
   }
 
   async authLogin(data) {
@@ -55,9 +43,7 @@ export class ApiService {
   }
 
   async storageIndex(path = '') {
-    return await this.httpService.get(
-      this.buildPath(`storage/files?path=${path}`)
-    )
+    return await this.httpService.get(this.buildPath(`storage/files?path=${path}`))
   }
 
   backupAll() {

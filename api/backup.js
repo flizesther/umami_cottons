@@ -14,9 +14,7 @@ module.exports = (config) => {
       'Content-Type': 'application/octet-stream',
       'Content-disposition': 'attachment; filename=data.json',
     })
-    res.end(
-      JSON.stringify(response.status === 200 ? response.data : response.error)
-    )
+    res.end(JSON.stringify(response.status === 200 ? response.data : response.error))
   })
 
   return router

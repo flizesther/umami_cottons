@@ -4,11 +4,7 @@
       <b-button href="/productos" class="button-height d-none d-lg-block">
         <fa class="arrow" :icon="['fas', 'chevron-left']" />
       </b-button>
-      <img
-        class="card-img-top h-100 img-fluid"
-        :src="product.mainImage.url"
-        :alt="product.mainImage.alt"
-      />
+      <img class="card-img-top h-100 img-fluid" :src="product.mainImage.url" :alt="product.mainImage.alt" />
     </b-col>
     <b-col cols="12" md="5">
       <div class="d-flex d-lg-none align-items-center">

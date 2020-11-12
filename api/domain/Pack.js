@@ -22,16 +22,7 @@ module.exports = class Pack {
   }
 
   toJSON() {
-    const {
-      code,
-      name,
-      mainImage,
-      gallery,
-      mainDescription,
-      descriptions,
-      products,
-      price,
-    } = this
+    const { code, name, mainImage, gallery, mainDescription, descriptions, products, price } = this
     return {
       code,
       name,

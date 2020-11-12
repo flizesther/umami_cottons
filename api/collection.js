@@ -41,10 +41,7 @@ module.exports = (config) => {
   })
 
   router.delete('/:collection/:item', async (req, res) => {
-    const response = await service.delete(
-      req.params.collection,
-      req.params.item
-    )
+    const response = await service.delete(req.params.collection, req.params.item)
     res.status(response.status)
     res.json({
       ...response,

@@ -7,30 +7,18 @@
           <b-navbar-brand :to="'/cms'">CMS - Umami Cottons</b-navbar-brand>
           <b-collapse id="nav_collapse" is-nav>
             <b-navbar-nav>
-              <b-nav-item class="text-white" :to="'/cms/product'"
-                >Products</b-nav-item
-              >
-              <b-nav-item class="text-white" :to="'/cms/pack'"
-                >Packs</b-nav-item
-              >
-              <b-nav-item class="text-white" :to="'/cms/fabric'"
-                >Fabrics</b-nav-item
-              >
-              <b-nav-item class="text-white" :to="'/cms/category'"
-                >Categories</b-nav-item
-              >
+              <b-nav-item class="text-white" :to="'/cms/product'">Products</b-nav-item>
+              <b-nav-item class="text-white" :to="'/cms/pack'">Packs</b-nav-item>
+              <b-nav-item class="text-white" :to="'/cms/fabric'">Fabrics</b-nav-item>
+              <b-nav-item class="text-white" :to="'/cms/category'">Categories</b-nav-item>
               <b-nav-item class="text-white" :to="'/cms/post'">Blog</b-nav-item>
-              <b-nav-item class="text-white" :to="'/cms/media'"
-                >Media</b-nav-item
-              >
+              <b-nav-item class="text-white" :to="'/cms/media'">Media</b-nav-item>
             </b-navbar-nav>
             <b-navbar-nav class="ml-auto">
               <b-nav-item class="text-white" :to="'/cms/profile'"
                 >{{ userAuth.name }} ({{ userAuth.email }})</b-nav-item
               >
-              <b-nav-item class="text-white" :to="'/cms/settings'"
-                >Settings</b-nav-item
-              >
+              <b-nav-item class="text-white" :to="'/cms/settings'">Settings</b-nav-item>
               <b-nav-item class="text-white" @click="logout">Logout</b-nav-item>
             </b-navbar-nav>
           </b-collapse>

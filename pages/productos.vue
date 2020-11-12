@@ -7,35 +7,18 @@
           <b-col lg="3">
             <h1 class="py-4">Productos Umami</h1>
             <!-- <fa :icon="['fas', 'chevron-left']" /> -->
-            <span
-              class="list-group-item background d-lg-block d-none"
-              @click="showAllProducts()"
-            >
+            <span class="list-group-item background d-lg-block d-none" @click="showAllProducts()">
               {{ allProducts }}
             </span>
-            <div
-              v-for="product in products"
-              :key="product.code"
-              class="list-group d-lg-block d-none"
-            >
-              <span
-                v-if="product"
-                class="list-group-item"
-                @click="setFilter(product.code)"
-              >
+            <div v-for="product in products" :key="product.code" class="list-group d-lg-block d-none">
+              <span v-if="product" class="list-group-item" @click="setFilter(product.code)">
                 {{ product.name }}
               </span>
             </div>
           </b-col>
           <b-col lg="9" cols="12" class="products-row">
             <b-row class="products desktop">
-              <b-col
-                v-for="product in filteredProducts"
-                :key="product.code"
-                cols="12"
-                lg="4"
-                class="pb-4"
-              >
+              <b-col v-for="product in filteredProducts" :key="product.code" cols="12" lg="4" class="pb-4">
                 <product :product="product" />
               </b-col>
             </b-row>
@@ -220,18 +203,8 @@ body {
   width: 100%;
   height: 150px;
   opacity: 0.09;
-  background: linear-gradient(
-      to bottom,
-      rgba(0, 210, 247, 0.65) 0%,
-      rgba(0, 210, 247, 0.64) 1%,
-      rgba(0, 0, 0, 0) 100%
-    ),
-    linear-gradient(
-      to top,
-      rgba(247, 0, 156, 0.65) 0%,
-      rgba(247, 0, 156, 0.64) 1%,
-      rgba(0, 0, 0, 0) 100%
-    );
+  background: linear-gradient(to bottom, rgba(0, 210, 247, 0.65) 0%, rgba(0, 210, 247, 0.64) 1%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(to top, rgba(247, 0, 156, 0.65) 0%, rgba(247, 0, 156, 0.64) 1%, rgba(0, 0, 0, 0) 100%);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-top-left-radius: 3px;

@@ -1,24 +1,12 @@
 <template>
   <div>
-    <b-form-checkbox
-      v-model="checked"
-      name="check-button"
-      switch
-      @change="change"
-    >
+    <b-form-checkbox v-model="checked" name="check-button" switch @change="change">
       Debug enable <b>({{ checked }})</b>
     </b-form-checkbox>
 
     <b-row>
       <b-col>
-        <a
-          variant="btn btn-block outline-secondary"
-          class="mb-3"
-          :href="url"
-          target="_blank"
-        >
-          Download all
-        </a>
+        <a variant="btn btn-block outline-secondary" class="mb-3" :href="url" target="_blank"> Download all </a>
       </b-col>
     </b-row>
 

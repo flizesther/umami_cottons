@@ -1,11 +1,5 @@
 module.exports = class Fabric {
-  constructor({
-    code = '',
-    name = '',
-    image = '',
-    categories = [],
-    stock = [],
-  }) {
+  constructor({ code = '', name = '', image = '', categories = [], stock = [] }) {
     this.code = code
     this.name = name
     this.image = image

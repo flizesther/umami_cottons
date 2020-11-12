@@ -15,8 +15,7 @@ module.exports = (config) => {
   router.get('/files', async (req, res) => {
     const path = req.query.path || ''
 
-    const response =
-      path === '' ? await service.getAll() : await service.getFile(path)
+    const response = path === '' ? await service.getAll() : await service.getFile(path)
 
     res.status(response.status)
     res.json({

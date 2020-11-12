@@ -1,10 +1,7 @@
 <template>
   <div
     class="zoom-on-hover m-2"
-    :class="[
-      aspectRatio ? 'aspect-ratio' : '',
-      zoom < 2 ? 'zoomable' : 'not-zoomable',
-    ]"
+    :class="[aspectRatio ? 'aspect-ratio' : '', zoom < 2 ? 'zoomable' : 'not-zoomable']"
     :style="styleAspectRatio"
     @mousemove="move"
     @mouseleave="resetZoom"
@@ -94,9 +91,7 @@ export default {
       return `opacity: ${this.zoom === 0 ? 1 : 0}`
     },
     styleAspectRatio() {
-      return this.aspectRatio
-        ? `padding-bottom: calc(100% / ${this.aspectRatio})`
-        : ''
+      return this.aspectRatio ? `padding-bottom: calc(100% / ${this.aspectRatio})` : ''
     },
   },
   methods: {
@@ -134,16 +129,9 @@ export default {
       const relativeY = event.clientY - offset.y + window.pageYOffset
       const normalFactorX = relativeX / normal.offsetWidth
       const normalFactorY = relativeY / normal.offsetHeight
-      const offsetEvent =
-        event.type === 'mousemove' ||
-        (event.type === 'click' && this.zoom === 1)
-      const x =
-        normalFactorX *
-        (zoom.offsetWidth * this.scale - (offsetEvent ? normal.offsetWidth : 0))
-      const y =
-        normalFactorY *
-        (zoom.offsetHeight * this.scale -
-          (offsetEvent ? normal.offsetHeight : 0))
+      const offsetEvent = event.type === 'mousemove' || (event.type === 'click' && this.zoom === 1)
+      const x = normalFactorX * (zoom.offsetWidth * this.scale - (offsetEvent ? normal.offsetWidth : 0))
+      const y = normalFactorY * (zoom.offsetHeight * this.scale - (offsetEvent ? normal.offsetHeight : 0))
       zoom.style.left = -x + 'px'
       zoom.style.top = -y + 'px'
     },

@@ -2,12 +2,7 @@
   <div class="card h-100">
     <!-- <b-button> -->
     <a :href="`/producto/${product.code}`">
-      <a
-        ><img
-          class="card-img-top"
-          :src="product.mainImage.url"
-          :alt="product.mainImage.alt"
-      /></a>
+      <a><img class="card-img-top" :src="product.mainImage.url" :alt="product.mainImage.alt" /></a>
       <div class="card-body">
         <h4 class="card-title">
           <a href="#">{{ product.name }}</a>

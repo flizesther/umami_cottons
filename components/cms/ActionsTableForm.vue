@@ -1,21 +1,9 @@
 <template>
   <b-row>
     <b-col>
-      <b-btn
-        v-if="actionNewEnable()"
-        variant="outline-success"
-        class="mb-3"
-        @click="showNew"
-      >
-        New
-      </b-btn>
+      <b-btn v-if="actionNewEnable()" variant="outline-success" class="mb-3" @click="showNew"> New </b-btn>
 
-      <b-btn
-        v-if="actionListEnable()"
-        variant="outline-secondary"
-        class="mb-3"
-        @click="getItems"
-      >
+      <b-btn v-if="actionListEnable()" variant="outline-secondary" class="mb-3" @click="getItems">
         Refresh <strong>{{ totalItems() }}</strong>
       </b-btn>
 
@@ -31,11 +19,7 @@
         :current-page="currentPage"
       >
         <template v-slot:cell(code)="data">
-          <router-link
-            v-if="actionShowEnable()"
-            :to="`${path}/${data.item.code}`"
-            >{{ data.item.code }}</router-link
-          >
+          <router-link v-if="actionShowEnable()" :to="`${path}/${data.item.code}`">{{ data.item.code }}</router-link>
           <span v-else>{{ data.item.code }}</span>
         </template>
 
@@ -53,9 +37,7 @@
 
         <template v-slot:cell(actions)="data">
           <b-btn v-if="actionEditEnable()" variant="outline-primary" size="sm">
-            <router-link :to="`${path}/${data.item.code}?action=edit`"
-              >edit</router-link
-            >
+            <router-link :to="`${path}/${data.item.code}?action=edit`">edit</router-link>
           </b-btn>
           &nbsp;
           <b-btn
@@ -67,12 +49,7 @@
           >
             remove
           </b-btn>
-          <b-btn
-            variant="outline-success"
-            size="sm"
-            class="mr-2"
-            @click="data.toggleDetails"
-          >
+          <b-btn variant="outline-success" size="sm" class="mr-2" @click="data.toggleDetails">
             {{ data.detailsShowing ? 'hide' : 'show' }} details
           </b-btn>
         </template>
@@ -99,25 +76,13 @@
         </template>
       </b-table>
 
-      <b-pagination
-        v-model="currentPage"
-        :total-rows="rows"
-        :per-page="perPage"
-        aria-controls="table"
-      ></b-pagination>
+      <b-pagination v-model="currentPage" :total-rows="rows" :per-page="perPage" aria-controls="table"></b-pagination>
 
-      <b-modal
-        v-if="actionRemoveEnable()"
-        id="confirmRemove"
-        title="Remove"
-        centered
-        @ok="remove"
-      >
+      <b-modal v-if="actionRemoveEnable()" id="confirmRemove" title="Remove" centered @ok="remove">
         remove data with code "{{ itemCodeToRemove }}" confirm?
       </b-modal>
 
-      <new-modal-form :show="newModalShow" @cancel="hideNew" @ok="okNew">
-      </new-modal-form>
+      <new-modal-form :show="newModalShow" @cancel="hideNew" @ok="okNew"> </new-modal-form>
 
       <debug-data :data="items"></debug-data>
     </b-col>

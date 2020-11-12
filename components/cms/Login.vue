@@ -13,11 +13,7 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group
-        id="passwordGroup"
-        label="Password"
-        label-for="passwordInput"
-      >
+      <b-form-group id="passwordGroup" label="Password" label-for="passwordInput">
         <b-form-input
           id="passwordInput"
           v-model="password"

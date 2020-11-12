@@ -1,7 +1,6 @@
 <template>
   <b-container fluid class="fluid promotional-banner"
-    >Pedidos de más de 50 euros, los gastos de envíos son
-    gratuitos!</b-container
+    >Pedidos de más de 50 euros, los gastos de envíos son gratuitos!</b-container
   >
 </template>
 

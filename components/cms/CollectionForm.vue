@@ -3,9 +3,7 @@
     <b-form v-if="show" @submit="onSubmit" @reset="onReset">
       <b-row align-h="end">
         <b-col class="text-right">
-          <b-btn variant="outline-secondary" class="mb-3" :to="collectionPath">
-            Back
-          </b-btn>
+          <b-btn variant="outline-secondary" class="mb-3" :to="collectionPath"> Back </b-btn>
         </b-col>
       </b-row>
 
@@ -29,11 +27,7 @@
         ></b-form-input>
       </b-form-group>
 
-      <b-form-group
-        id="input-group-3"
-        label="Description (main):"
-        label-for="input-3"
-      >
+      <b-form-group id="input-group-3" label="Description (main):" label-for="input-3">
         <b-form-input
           id="input-3"
           v-model="item.mainDescription"
@@ -54,22 +48,11 @@
 
       <div id="select-media">
         <b-form-group label="Autocomplte select:">
-          <v-select
-            v-model="selectedMedia"
-            :options="files"
-            label="fullPath"
-            multiple
-          >
+          <v-select v-model="selectedMedia" :options="files" label="fullPath" multiple>
             <template v-slot:option="option">
               <div class="row">
                 <div class="col-1">
-                  <b-img-lazy
-                    :src="option.url"
-                    width="60"
-                    height="60"
-                    rounded
-                    alt="Responsive image"
-                  ></b-img-lazy>
+                  <b-img-lazy :src="option.url" width="60" height="60" rounded alt="Responsive image"></b-img-lazy>
                 </div>
                 <div class="col-11" style="margin: 0">
                   <h3>{{ option.name }}</h3>
@@ -81,13 +64,7 @@
             <template v-slot:selected-option="option">
               <div class="row">
                 <div class="col-1 selected">
-                  <b-img-lazy
-                    :src="option.url"
-                    width="60"
-                    height="60"
-                    rounded
-                    alt="Responsive image"
-                  ></b-img-lazy>
+                  <b-img-lazy :src="option.url" width="60" height="60" rounded alt="Responsive image"></b-img-lazy>
                 </div>
                 <div class="col-11" style="margin: 0">
                   <h3>{{ option.name }}</h3>

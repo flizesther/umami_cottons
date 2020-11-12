@@ -2,10 +2,7 @@
   <footer class="footer-distributed d-flex justify-content-center">
     <div class="footer-left">
       <h3>Umami Cottons</h3>
-      <img
-        class="d-lg-none d-block w-25 mx-auto pt-3"
-        src="/images/logoUC.jpg"
-      />
+      <img class="d-lg-none d-block w-25 mx-auto pt-3" src="/images/logoUC.jpg" />
       <p class="footer-links">
         <a href="/productos">Nuestros Productos</a>
         <a href="/sobre-umami">Sobre Umami</a>
@@ -17,22 +14,16 @@
       <div class="d-flex justify-content-center">
         <img class="d-none d-lg-block logo-desktop" src="/images/logoUC.jpg" />
       </div>
-      <div class="d-lg-flex justify-content-center mx-auto py-4 d-none">
-        Síguenos en:
-      </div>
+      <div class="d-lg-flex justify-content-center mx-auto py-4 d-none">Síguenos en:</div>
       <div class="footer-icons d-flex justify-content-center mx-auto">
-        <a
-          href="https://www.facebook.com/pg/umamicottons/community/?mt_nav=0&msite_tab_async=0"
-        >
+        <a href="https://www.facebook.com/pg/umamicottons/community/?mt_nav=0&msite_tab_async=0">
           <fa :icon="['fab', 'facebook-square']" />
         </a>
         <a href="https://www.instagram.com/umami_cottons/?hl=es">
           <fa :icon="['fab', 'instagram']" />
         </a>
       </div>
-      <p class="footer-company-name d-flex justify-content-center">
-        © 2020 Umami Cottons Company.
-      </p>
+      <p class="footer-company-name d-flex justify-content-center">© 2020 Umami Cottons Company.</p>
     </div>
     <div class="footer-right d-none d-lg-block">
       <p class="footer-company-about">
@@ -354,12 +345,7 @@ body {
   width: 100%;
   height: 150px;
   opacity: 0.09;
-  background: linear-gradient(
-      to bottom,
-      $umami-pink 0%,
-      $umami-pink 1%,
-      $black 100%
-    ),
+  background: linear-gradient(to bottom, $umami-pink 0%, $umami-pink 1%, $black 100%),
     linear-gradient(to top, $umami-pink 0%, $umami-pink 1%, $black 100%);
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
