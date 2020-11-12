@@ -51,6 +51,7 @@ There are 3 configurations:
 - LOCAL (only nuxt): **.env.local** is necessary to change **.env** to local build and serve. It is used with `make serve`.
 - EMULATION (with firebase): **.env.emulation** is used with `make emulation`.
 - PROD: **.env.prod** is used with `make deploy`.
+- TEST: **.env.test** is used with run test.
 
 ```
 NODE_ENV = development or production
@@ -62,6 +63,9 @@ PROJECT_ID = example
 STORAGE_BUCKET = example.appspot.com
 API_AUTH_URL = https://identitytoolkit.googleapis.com/v1
 API_CLIENT_URL = http://localhost:5000/api (3000 serve only nuxt, 5000 emulation with firebase or url of prod)
+
+TEST_USER_EMAIL = test@umamicottons.com
+TEST_USER_PASSWORD = 1234
 ```
 
 ## Test
@@ -91,3 +95,28 @@ $ npm run lint
 ## Author
 
 Esther Rodriguez
+
+## Docs
+
+- [Nuxt JS Docs](https://es.nuxtjs.org/)
+- [BootStrap Vue Docs](https://bootstrap-vue.org/docs/)
+- [Vue Testing Handbook](https://lmiller1990.github.io/vue-testing-handbook/)
+- [Vue JS Docs](https://vuejs.org/)
+- [Vue Test Utils](https://vue-test-utils.vuejs.org/)
+- [Jest Docs](https://jestjs.io/docs/en/getting-started)
+- [Google Cloud Identity Plaform Docs](https://cloud.google.com/identity-platform/docs/use-rest-api)
+- [Prettier Docs](hhttps://prettier.io/docs/en/index.html)
+- [Babel JS - Optional Chaining](https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining)
+- [Axios Docs](https://github.com/axios/axios)
+- [Firebase Docs](https://firebase.google.com/docs/)
+
+
+
+
+
+
+
+
+
+
+
