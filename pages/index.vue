@@ -69,7 +69,7 @@
     </div>
     <div class="d-flex justify-content-center mobile-grid modulo-imagenes">
       <b-button v-b-modal.modal-center-7 class="d-none d-lg-block">
-        <b-img class="image-bottom" src="/images/19.jpg" alt="sobres de muda"></b-img>
+        <b-img class="image-bottom" src="/images/leo-portada.jpg" alt="sobres de muda"></b-img>
         <!-- <b-modal id="modal-center" hide-footer centered title="Sobre de muda">
           <p class="py-4">Producto estrella. Ten todo organizado. Uno sabe lo ordenado con lo que sale, pero no como llega. Con los sobres de muda, la organización está garantizada!</p>
         </b-modal> -->
@@ -87,7 +87,7 @@
         </b-modal> -->
       </b-button>
     </div>
-      <b-row class="d-lg-none umami-lovers">
+      <div class="d-lg-none umami-lovers">
         <b-col cols="12" class="d-flex justify-content-center flex-column">
           <p class="telas-umami-lovers">
           #telasUMAMIlovers
@@ -97,8 +97,8 @@
             <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
           </b-button>
         </b-col>
-      </b-row>
-      <b-row class="pb-1 d-lg-none">
+      </div>
+      <div class="pb-1 d-lg-none d-flex">
         <b-col cols="4" class="pl-0 pr-1">
           <b-img class="image-bottom" src="/images/leo-peque.jpg" alt="telas de algodón"></b-img>
         </b-col>
@@ -108,8 +108,8 @@
         <b-col cols="4" class="pl-0 pr-1">
           <b-img class="image-bottom" src="/images/helados.jpg" alt="telas de algodón"></b-img>
         </b-col>
-      </b-row>
-      <b-row class="d-lg-none umami-second-lovers">
+      </div>
+      <div class="d-lg-none d-flex umami-second-lovers">
         <b-col cols="4" class="pl-0 pr-1">
           <b-img class="image-bottom" src="/images/got.jpg" alt="telas de algodón"></b-img>
         </b-col>
@@ -119,7 +119,7 @@
         <b-col cols="4" class="pl-0 pr-1">
           <b-img class="image-bottom" src="/images/chupetero.jpg" alt="telas de algodón"></b-img>
         </b-col>
-      </b-row>
+      </div>
     <div class="py-4 d-none d-lg-flex justify-content-center subtitle-section">
       ¿Cómo realizar tu pedido?
     </div>
