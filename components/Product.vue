@@ -4,7 +4,7 @@
         <a :href="`/producto/${product.title}`">
             <a><img class="card-img-top" :src="product.image" :alt="product.image"></a>
                 <div class="card-body">
-                    <h4 class="card-title">
+                    <h4 class="card-title font-weight-bold">
                     <a href="#">{{ product.title }}</a>
                     </h4>
                     <h5>{{ product.price }}</h5>
