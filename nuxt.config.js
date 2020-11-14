@@ -37,7 +37,7 @@ export default {
     fontawesome: {
         component: 'fa',
         icons: {
-            solid: ['faCog', 'faChevronLeft'],
+            solid: ['faCog', 'faChevronLeft', 'faChevronRight', 'faUserEdit', 'faHandPointer', 'faTruck', 'faGift'],
             brands: ['faFacebookSquare', 'faInstagram']
         }
     },

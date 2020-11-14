@@ -2,7 +2,9 @@
     <footer class="footer-distributed d-flex justify-content-center">
         <div class="footer-left">
             <h3>Umami Cottons</h3>
-            <img class="d-lg-none d-block w-25 mx-auto pt-3" src="/images/logoUC.jpg">
+            <a href="/">
+                <img class="d-lg-none d-block w-25 mx-auto pt-3" src="/images/logoUC.jpg">
+            </a>
             <p class="footer-links">
                 <a href="/productos">Nuestros Productos</a>
                 <a href="/sobre-umami">Sobre Umami</a>
@@ -12,7 +14,9 @@
         </div>
         <div class="footer-center">
             <div class="d-flex justify-content-center">
+                <a href="/">
                 <img class="d-none d-lg-block logo-desktop" src="/images/logoUC.jpg">
+                </a>
             </div>
         <div class="d-lg-flex justify-content-center mx-auto py-4 d-none">Síguenos en:</div>
             <div class="footer-icons d-flex justify-content-center mx-auto">
