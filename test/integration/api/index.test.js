@@ -1,7 +1,7 @@
 import { config } from '../../config'
 const request = require('supertest')
 
-const app = require('../../../api/index')(config)
+const app = require('../../../api/index')
 
 describe('Api', () => {
   test('GET health', async () => {

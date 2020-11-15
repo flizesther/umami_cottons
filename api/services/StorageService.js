@@ -9,7 +9,7 @@ const firebase = require('firebase/app')
 // Add the Firebase products that you want to use
 require('firebase/storage')
 
-export default class StorageService {
+class StorageService {
   constructor(config) {
     if (!firebase.apps.length) {
       firebase.initializeApp(config)
@@ -117,3 +117,5 @@ export default class StorageService {
     }
   }
 }
+
+module.exports = StorageService

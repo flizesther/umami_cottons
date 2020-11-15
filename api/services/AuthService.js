@@ -1,8 +1,8 @@
 // AuthService is auth service of Firebase
+const Optional = require('./../util/Optional')
+const BaseService = require('./BaseService')
 
-import BaseService from './BaseService'
-
-export default class AuthService {
+class AuthService {
   constructor(http, { url, apiKey }) {
     this.url = url
     this.apiKey = apiKey
@@ -47,8 +47,14 @@ export default class AuthService {
       status: response.status,
       error: {
         code: response.error.code,
-        message: response.error.message?.error?.message || response.error.message,
+        message:
+          (Optional.value(response.error.message) &&
+            Optional.value(response.error.message.error) &&
+            Optional.value(response.error.message.error.message)) ||
+          response.error.message,
       },
     }
   }
 }
+
+module.exports = AuthService

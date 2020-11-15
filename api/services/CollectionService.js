@@ -1,9 +1,10 @@
 // CollectionService is realtime data service of Firebase
 
-import BaseService from './BaseService'
-import Factory from './../util/Factory'
+const Factory = require('./../util/Factory')
+const Optional = require('./../util/Optional')
+const BaseService = require('./BaseService')
 
-export default class CollectionService {
+class CollectionService {
   constructor(http, { url }) {
     this.url = url
     this.httpService = new BaseService(http)
@@ -71,8 +72,12 @@ export default class CollectionService {
       status: response.status,
       error: {
         code: response.error.code,
-        message: response.error.message?.error || response.error.message,
+        message:
+          (Optional.value(response.error.message) && Optional.value(response.error.message.error)) ||
+          response.error.message,
       },
     }
   }
 }
+
+module.exports = CollectionService

@@ -1,4 +1,6 @@
-export default class BaseService {
+const Optional = require('./../util/Optional')
+
+class BaseService {
   constructor(http) {
     this.http = http
   }
@@ -50,17 +52,17 @@ export default class BaseService {
     let code = 500
     let message = 'Error'
 
-    if (error?.response) {
+    if (Optional.value(error) && Optional.value(error.response)) {
       // Request made and server responded 4xx or 5xx
       code = error.response.status
-      message = error.response?.data || message
-    } else if (error?.request) {
+      message = Optional.value(error.response.data) || message
+    } else if (Optional.value(error) && Optional.value(error.request)) {
       // The request was made but no response was received
       // eslint-disable-next-line no-console
       message = error.request
     } else {
       // Something happened in setting up the request that triggered an Error
-      message = error?.message || message
+      message = (Optional.value(error) && Optional.value(error.message)) || message
     }
 
     return {
@@ -72,3 +74,5 @@ export default class BaseService {
     }
   }
 }
+
+module.exports = BaseService

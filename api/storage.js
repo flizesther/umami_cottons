@@ -1,5 +1,5 @@
-import StorageService from './services/StorageService'
 const express = require('express')
+const StorageService = require('./services/StorageService')
 
 module.exports = (config) => {
   const configStorage = {
