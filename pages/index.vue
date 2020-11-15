@@ -19,11 +19,25 @@
           <p class="py-2 mb-0 d-flex justify-content-center text-section text-center">Todos nuestros productos están cosidos a mano, además todas nuestras cajas están estampadas a mano. Todo está hecho con grandes dosis de amor</p>
           <p class="d-lg-flex d-none mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
         <div>
-          <b-img src="/images/19.jpg" class="circle-image left-image" fluid alt="Responsive image"></b-img>
-          <b-img src="/images/27.jpg" class="circle-image" fluid alt="Responsive image"></b-img>
-          <b-img src="/images/25.jpg" class="circle-image" fluid alt="Responsive image"></b-img>
-          <b-img src="/images/26.jpg" class="circle-image right-image" fluid alt="Responsive image"></b-img>
+          <a href="/producto/Upenda">
+            <b-img src="/images/19.jpg" class="circle-image left-image" fluid alt="Responsive image"/>
+          </a>
+          <a href="/producto/Meraki">
+            <b-img src="/images/27.jpg" class="circle-image" fluid alt="Responsive image"/>
+          </a>
+          <a href="/producto/Sobres">
+            <b-img src="/images/25.jpg" class="circle-image" fluid alt="Responsive image"/>
+          </a>
+          <a href="/producto/Babero">
+            <b-img src="/images/26.jpg" class="circle-image right-image" fluid alt="Responsive image"></b-img>
+          </a>
         </div>
+        <!-- <div class="d-lg-flex">
+            <p class="circle-image left-image">ver packs</p>
+            <p class="circle-image">ver packs</p>
+            <p class="circle-image">ver packs</p>
+            <p class="circle-image right-image">ver packs</p>
+        </div> -->
         </div>
       </div> 
     <div class="d-lg-flex d-none justify-content-center mobile-grid">
@@ -49,7 +63,7 @@
     <div class="d-flex justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-4 class="mobile">
         <b-img class="image-bottom" src="/images/nina-con-upendas.jpg" alt="fiesta" />
-        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/productos">Ver todos los productos<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
+        <b-button class="d-lg-none d-flex mb-0 justify-content-center see-products text-center" href="/productos">Ver todos los productos<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
 </b-button>
         <!-- <b-modal id="modal-center-4" hide-footer centered title="Vive la vida">
           <p class="py-4">Y así empieza todo, con una fiesta!</p>
@@ -80,7 +94,7 @@
         <!-- <b-modal id="modal-center" hide-footer centered title="Upenda">
           <p class="py-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
         </b-modal> -->
-        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/nuestras-telas">Ver todas las telas<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
+        <b-button class="d-lg-none d-flex mb-0 justify-content-center see-products text-center" href="/nuestras-telas">Ver todas las telas<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
       </b-button>
       </b-button>
       <b-button v-b-modal.modal-center-9>
@@ -88,7 +102,7 @@
         <!-- <b-modal id="modal-center" hide-footer centered title="Disfrutar con umami">
           <p class="py-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
         </b-modal> -->
-        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/">Ver todos nuestros packs<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/> </b-button>
+        <b-button class="d-lg-none d-flex mb-0 justify-content-center see-products text-center" href="/">Ver todos nuestros packs<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/> </b-button>
       </b-button>
     </div>
       <div class="d-lg-none umami-lovers">
@@ -271,8 +285,10 @@
     </div>
     <div class="d-flex justify-content-center subtitle-section instagram">
       <a href="https://www.instagram.com/umami_cottons/?hl=es">
-        SIGUE A UMAMI_COTTONS EN INSTAGRAM 
+      <p>SIGUE A UMAMI_COTTONS</p>
+      <p>EN INSTAGRAM
         <fa class="arrow mb-1 ml-1" :icon="['fas', 'chevron-right']"/>
+      </p>
       </a>
     </div>
     <div class="d-lg-flex justify-content-center several-images mobile-grid d-none">

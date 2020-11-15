@@ -2,7 +2,7 @@
   <b-container-fluid class="comprar">
     <div class="d-flex flex-column py-4">
       <h1 class="d-flex justify-content-center">¿Cómo comprar?</h1>
-      <div class="text">No queremos que tu compra sea con un carrito y chin pum, queremos que contactes con nosotras, que nos digas qué es lo que quieras, que elijas tu tela, que nos digas que nombre poner en la caja y así poder hacer un trato más cercano. Sí, compras por internet, pero no nos olvidemos de lo qué es umami no es comprar por comprar, es comprar calidad, arte y cositas hechas con mucho amor.</div> 
+      <div class="text">No queremos que tu compra sea con un carrito y chin pum, queremos que contactes con nosotras, que nos digas qué es lo que quieres, que elijas tu tela, que nos digas que nombre poner en la caja y así poder hacer un trato más cercano. Sí, compras por internet, pero no nos olvidemos de lo qué es umami no es comprar por comprar, es comprar calidad, arte y cositas hechas con mucho amor.</div> 
     </div>
     <b-card-group deck class="screen-width d-flex justify-content-center mx-auto">
         <b-card
@@ -123,5 +123,10 @@ export default {
 }
 .card-text {
   font-family: 'Montserrat', sans-serif;
+}
+.text-section {
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 20px;
 }
 </style>
