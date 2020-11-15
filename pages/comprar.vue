@@ -11,24 +11,59 @@
     </div>
     <b-card-group deck class="screen-width d-flex justify-content-center mx-auto">
       <b-card class="first-box" title="1.- Cóntactanos" img-src="/images/telefono.jpg" img-alt="Image" img-top>
-        <b-card-text> Indícanos la fecha que quieres recibir tu pedido </b-card-text>
+        <b-card-text>
+          Contáctanos por instagram umami_cottons o por mail
+          <a class="text-section font-weight-bold p-0" href="mailto:umamicottons@gmail.com">umamicottons@gmail.com</a>
+          (nuestro horario es de lunes a viernes de 9:00 a 18:00)
+        </b-card-text>
       </b-card>
       <b-card title="2.- Producto" class="first-box" img-src="/images/productos.jpg" img-alt="Image" img-top>
-        <b-card-text>Una upenda, un meraki, un sobre cambiador, una bandana, un pack... </b-card-text>
+        <b-card-text>
+          Elige tu producto: una upenda, un meraki, un sobre cambiador, una bandana, un pack...
+        </b-card-text>
       </b-card>
       <b-card title="3.- Tela" class="first-box" img-src="/images/21.jpg" img-alt="Image" img-top>
-        <b-card-text> Elige la tela que mas te guste, recuerda que todas son 100% algodón</b-card-text>
+        <b-card-text>
+          Elige la tela que mas te guste, recuerda que todas son 100% algodón las puedes ver
+          <a class="text-section p-0 font-weight-bold" href="/nuestras-telas"> aquí</a>
+        </b-card-text>
       </b-card>
       <b-card class="first-box" title="4.- Packaging" img-src="/images/car.jpg" img-alt="Image" img-top>
-        <b-card-text> Escríbenos la dirección de tu pedido + el nombre de la personita especial </b-card-text>
+        <b-card-text>
+          Indícanos la fecha que quieres recibir tu pedido. Escríbenos la dirección de tu pedido + el nombre de la
+          personita especial
+        </b-card-text>
       </b-card>
     </b-card-group>
+    <div class="pb-4 d-lg-flex d-none justify-content-center">
+      <div class="py-2 shipping-section d-flex flex-column">
+        <div class="py-2 shipping-section d-flex flex-column">
+          <div class="shipping-section title font-weight-bold">{{ shipping.title }}</div>
+          <div class="shipping-section">{{ shipping.firstText }}</div>
+          <div class="shipping-section">{{ shipping.secondText }}</div>
+          <div class="shipping-section">{{ shipping.thirdText }}</div>
+        </div>
+      </div>
+    </div>
   </b-container-fluid>
 </template>
 
 <script>
 export default {
   layout: 'app',
+  data() {
+    return {
+      mainProps: { blank: true, width: 75, height: 75, class: 'm1' },
+      slide: 0,
+      sliding: null,
+      shipping: {
+        title: 'Gastos de envío:',
+        firstText: 'Gratis Pedidos Nacionales superiores a 50 euros',
+        secondText: '5 Euros - Pedidos nacionales inferiores a 50 euros',
+        thirdText: '15 Euros - Pedidos internacionales.',
+      },
+    }
+  },
   head() {
     return {
       title: '¿Cómo comprar?',

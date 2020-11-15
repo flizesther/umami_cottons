@@ -14,16 +14,14 @@ module.exports = {
         content: process.env.npm_package_description || '',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    fontawesome: {
+      component: 'fa',
+      icons: {
+        solid: ['faCog', 'faChevronLeft', 'faChevronRight', 'faUserEdit', 'faHandPointer', 'faTruck', 'faGift'],
+        brands: ['faFacebookSquare', 'faInstagram'],
+      },
+    },
   },
-  /*
-   ** Customize the progress-bar color
-   */
-  loading: { color: '#fff' },
-  /*
-   ** Global CSS
-   */
-  css: [],
   /*
    ** Plugins to load before mounting the App
    */
@@ -36,13 +34,6 @@ module.exports = {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
   ],
-  fontawesome: {
-    component: 'fa',
-    icons: {
-      solid: ['faCog', 'faChevronLeft'],
-      brands: ['faFacebookSquare', 'faInstagram'],
-    },
-  },
   /*
    ** Nuxt.js modules
    */

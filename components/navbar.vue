@@ -3,6 +3,7 @@
     <b-navbar-toggle
       target="nav-text-collapse"
       :class="{ opened: opened }"
+      :aria-expanded="{ true: opened }"
       aria-label="Main Menu"
       class="menu"
       @click="opened = !opened"
@@ -24,14 +25,14 @@
         <b-img src="/images/logoUC.jpg" class="brand-image" fluid alt="Responsive image" />
       </a>
     </b-navbar-brand>
-    <b-collapse id="nav-text-collapse" is-nav>
+    <b-collapse id="nav-text-collapse" :class="{ 'opened collapse show d-block': opened }" is-nav>
       <b-navbar-nav class="nav-titles">
-        <b-nav-item to="/" exact>Inicio</b-nav-item>
-        <b-nav-item to="/comprar">¿Cómo comprar?</b-nav-item>
-        <b-nav-item to="/productos">Nuestros Productos</b-nav-item>
-        <b-nav-item to="/nuestras-telas">Nuestras Telas</b-nav-item>
-        <b-nav-item to="/sobre-umami">Sobre Umami_cottons</b-nav-item>
-        <b-nav-item to="/contacta">Contáctanos</b-nav-item>
+        <b-nav-item to="" exact @click="redirect('/')">Inicio</b-nav-item>
+        <b-nav-item to="" @click="redirect('/comprar')">¿Cómo comprar?</b-nav-item>
+        <b-nav-item to="" @click="redirect('/productos')">Nuestros Productos</b-nav-item>
+        <b-nav-item to="" @click="redirect('/nuestras-telas')">Nuestras Telas</b-nav-item>
+        <b-nav-item to="" @click="redirect('/sobre-umami')">Sobre Umami_cottons</b-nav-item>
+        <b-nav-item to="" @click="redirect('/contacta')">Contáctanos</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -42,6 +43,12 @@ export default {
   data: () => ({
     opened: false,
   }),
+  methods: {
+    redirect(url) {
+      this.opened = !this.opened
+      return this.$router.push(url)
+    },
+  },
 }
 </script>
 
