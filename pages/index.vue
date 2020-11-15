@@ -16,15 +16,14 @@
     </div>
       <div class="pb-4 d-flex justify-content-center">
         <div class="py-2 shipping-section d-flex flex-column">
-          <p class="py-2 mb-0 d-flex justify-content-center text-section text-center">Todos productos están cosidos a mano, todos nuestras cajas están estampadas a mano, todo está hecho con grandes dosis de amor</p>
-          <p class="d-flex mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
+          <p class="py-2 mb-0 d-flex justify-content-center text-section text-center">Todos nuestros productos están cosidos a mano, además todas nuestras cajas están estampadas a mano. Todo está hecho con grandes dosis de amor</p>
+          <p class="d-lg-flex d-none mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
         <div>
           <b-img src="/images/19.jpg" class="circle-image left-image" fluid alt="Responsive image"></b-img>
           <b-img src="/images/27.jpg" class="circle-image" fluid alt="Responsive image"></b-img>
           <b-img src="/images/25.jpg" class="circle-image" fluid alt="Responsive image"></b-img>
           <b-img src="/images/26.jpg" class="circle-image right-image" fluid alt="Responsive image"></b-img>
         </div>
-        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/productos">Quiero ver todos los productos! ></b-button>
         </div>
       </div> 
     <div class="d-lg-flex d-none justify-content-center mobile-grid">
@@ -48,20 +47,22 @@
       </b-button>
     </div>
     <div class="d-flex justify-content-center mobile-grid">
-      <b-button v-b-modal.modal-center-4>
-        <b-img class="image-bottom" src="/images/nina-con-upendas.jpg" alt="fiesta"></b-img>
+      <b-button v-b-modal.modal-center-4 class="mobile">
+        <b-img class="image-bottom" src="/images/nina-con-upendas.jpg" alt="fiesta" />
+        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/productos">Ver todos los productos<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
+</b-button>
         <!-- <b-modal id="modal-center-4" hide-footer centered title="Vive la vida">
           <p class="py-4">Y así empieza todo, con una fiesta!</p>
         </b-modal> -->
       </b-button>
       <b-button v-b-modal.modal-center-5 class="d-none d-lg-block">
-        <b-img class="image-bottom" src="/images/productos.jpg" alt="muselina"></b-img>
+        <b-img class="image-bottom mobile" src="/images/productos.jpg" alt="muselina"></b-img>
         <!-- <b-modal id="modal-center-5" hide-footer centered title="Muselina">
           <p class="py-4">Hemos incorporado tela muselina para tocar el cielo!</p>
         </b-modal> -->
       </b-button>
       <b-button v-b-modal.modal-center-6 class="d-none d-lg-block">
-        <b-img class="image-bottom" src="/images/banderola.jpg" alt="packs"></b-img>
+        <b-img class="image-bottom mobile" src="/images/banderola.jpg" alt="packs"></b-img>
         <!-- <b-modal id="modal-center-6" hide-footer centered title="Un pack lo arregla todo">
           <p class="py-4">A veces no sabes qué tienes que comprar o regalar. Un pack te cambia la vida! mira las posibles combinaciones</p>
         </b-modal> -->
@@ -79,21 +80,24 @@
         <!-- <b-modal id="modal-center" hide-footer centered title="Upenda">
           <p class="py-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
         </b-modal> -->
+        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/nuestras-telas">Ver todas las telas<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
+      </b-button>
       </b-button>
       <b-button v-b-modal.modal-center-9>
         <b-img class="image-bottom" src="/images/upendas-colgadas.jpg" alt="disfruta con umami"></b-img>
         <!-- <b-modal id="modal-center" hide-footer centered title="Disfrutar con umami">
           <p class="py-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
         </b-modal> -->
+        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/">Ver todos nuestros packs<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/> </b-button>
       </b-button>
     </div>
       <div class="d-lg-none umami-lovers">
         <b-col cols="12" class="d-flex justify-content-center flex-column">
           <p class="telas-umami-lovers">
-          #telasUMAMIlovers
+          #UMAMIlovers
           </p>
           <b-button class="d-flex mb-0 justify-content-center inspirate text-center" href="/nuestras-telas">
-          Inspírate con nuestras telas
+          Inspírate con nuestro packaging
             <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
           </b-button>
         </b-col>
@@ -123,12 +127,13 @@
     <div class="py-4 d-none d-lg-flex justify-content-center subtitle-section">
       ¿Cómo realizar tu pedido?
     </div>
-    <b-button href="/comprar" class="py-4 w-100 d-lg-none d-flex justify-content-center buy-section">
-    <div></div>
+    <b-button href="/comprar" class="py-4 w-100 d-lg-none d-flex flex-column justify-content-center buy-section">
     ¿Cómo realizar tu pedido? 
+    <p class="know">SABER MÁS
       <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
+      </p>
     </b-button>
-    <div class="d-flex background-icons">
+    <!-- <div class="d-flex background-icons">
       <b-button href="/contacta" class="py-4 w-25 d-lg-none d-flex justify-content-center buy-icons">
           <fa class="icon my-auto ml-1" :icon="['fas', 'user-edit']"/>
       </b-button>
@@ -141,7 +146,7 @@
       <b-button href="/productos" class="w-25 d-lg-none d-flex justify-content-center buy-icons">
           <fa class="icon my-auto ml-1" :icon="['fas', 'truck']"/>
       </b-button>
-    </div>
+    </div> -->
       <b-card-group deck class="screen-width  mobile-grid d-lg-flex justify-content-center d-none py-4 mx-auto">
         <b-card
           class="first-box"
@@ -264,7 +269,12 @@
       <b-img src="/images/25.jpg" class="w-100 borders" fluid alt="Responsive image"></b-img>
     </b-carousel>
     </div>
-    <div class="d-flex justify-content-center subtitle-section instagram">SIGUE A UMAMI_COTTONS EN INSTAGRAM</div>
+    <div class="d-flex justify-content-center subtitle-section instagram">
+      <a href="https://www.instagram.com/umami_cottons/?hl=es">
+        SIGUE A UMAMI_COTTONS EN INSTAGRAM 
+        <fa class="arrow mb-1 ml-1" :icon="['fas', 'chevron-right']"/>
+      </a>
+    </div>
     <div class="d-lg-flex justify-content-center several-images mobile-grid d-none">
       <b-img class="image-bottom" src="/images/13.jpg" alt="Named color image (red)"></b-img>
       <b-img class="image-bottom" src="/images/15.jpg" alt="Named color image (black)"></b-img>
@@ -466,7 +476,6 @@ export default {
   color: black;
   border-color: transparent;
   font-size: 20px;
-  color: $umami-pink;
   
   ::v-deep &.btn-secondary {
     border-color:none;
@@ -521,9 +530,10 @@ export default {
 }
 .arrow {
   ::v-deep &.svg-inline--fa.fa-chevron-right{
-    color: $pink;
+    color: $umami-pink;
     background-color:transparent;
-    width:10px;
+    width:20px;
+    height:20px;
   }
 }
 .umami-lovers {
@@ -540,7 +550,7 @@ export default {
     color: black;
     border-color: transparent;
     font-size: 20px;
-    
+    align-items: center;
     ::v-deep &.btn-secondary {
       border-color:none;
     }
@@ -570,5 +580,16 @@ export default {
     padding-bottom:140px !important;
     padding-top:140px!important;
   }
+}
+.know {
+  background-color: transparent;
+  font-family: Montserrat;
+  font-size:16px;
+  align-items: center;
+  display:flex;
+  justify-content:center;
+}
+::v-deep .btn-secondary:focus{
+  box-shadow: none;
 }
 </style>
