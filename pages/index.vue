@@ -1,8 +1,6 @@
 <template>
   <b-container-fluid class="home">
-    <div class="promotional-slider">
-      Haciendo + fácil la vida de mamás & papás
-    </div>
+    <div class="promotional-slider">Haciendo + fácil la vida de mamás & papás</div>
     <b-img src="/images/main-image.jpg" class="w-100" fluid alt="Responsive image"></b-img>
     <h1 class="d-flex py-2 justify-content-center catalogo">Catálogo Umami Cottons</h1>
     <b-img
@@ -11,22 +9,27 @@
       fluid
       alt="Responsive image"
     ></b-img>
-    <div class="py-4 d-flex justify-content-center subtitle-section nuestros-productos">
-      Nuestros productos
-    </div>
-      <div class="pb-4 d-flex justify-content-center">
-        <div class="py-2 shipping-section d-flex flex-column">
-          <p class="py-2 mb-0 d-flex justify-content-center text-section text-center">Todos productos están cosidos a mano, todos nuestras cajas están estampadas a mano, todo está hecho con grandes dosis de amor</p>
-          <p class="d-flex mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
+    <div class="py-4 d-flex justify-content-center subtitle-section nuestros-productos">Nuestros productos</div>
+    <div class="pb-4 d-flex justify-content-center">
+      <div class="py-2 shipping-section d-flex flex-column">
+        <p class="py-2 mb-0 d-flex justify-content-center text-section text-center">
+          Todos productos están cosidos a mano, todos nuestras cajas están estampadas a mano, todo está hecho con
+          grandes dosis de amor
+        </p>
+        <p class="d-flex mb-0 justify-content-center text-section text-center">
+          Tu pedido se puede enviar a cualquier destino, nacional o internacional.
+        </p>
         <div>
           <b-img src="/images/19.jpg" class="circle-image left-image" fluid alt="Responsive image"></b-img>
           <b-img src="/images/27.jpg" class="circle-image" fluid alt="Responsive image"></b-img>
           <b-img src="/images/25.jpg" class="circle-image" fluid alt="Responsive image"></b-img>
           <b-img src="/images/26.jpg" class="circle-image right-image" fluid alt="Responsive image"></b-img>
         </div>
-        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/productos">Quiero ver todos los productos! ></b-button>
-        </div>
-      </div> 
+        <b-button class="d-flex mb-0 justify-content-center see-products text-center" href="/productos"
+          >Quiero ver todos los productos! ></b-button
+        >
+      </div>
+    </div>
     <div class="d-lg-flex d-none justify-content-center mobile-grid">
       <b-button v-b-modal.modal-center-1>
         <b-img class="image-bottom" src="/images/4.jpg" alt="Hecho a mano"></b-img>
@@ -87,195 +90,103 @@
         </b-modal> -->
       </b-button>
     </div>
-      <div class="d-lg-none umami-lovers">
-        <b-col cols="12" class="d-flex justify-content-center flex-column">
-          <p class="telas-umami-lovers">
-          #telasUMAMIlovers
-          </p>
-          <b-button class="d-flex mb-0 justify-content-center inspirate text-center" href="/nuestras-telas">
+    <div class="d-lg-none umami-lovers">
+      <b-col cols="12" class="d-flex justify-content-center flex-column">
+        <p class="telas-umami-lovers">#telasUMAMIlovers</p>
+        <b-button class="d-flex mb-0 justify-content-center inspirate text-center" href="/nuestras-telas">
           Inspírate con nuestras telas
-            <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
-          </b-button>
-        </b-col>
-      </div>
-      <div class="pb-1 d-lg-none d-flex">
-        <b-col cols="4" class="pl-0 pr-1">
-          <b-img class="image-bottom" src="/images/leo-peque.jpg" alt="telas de algodón"></b-img>
-        </b-col>
-        <b-col cols="4" class="pl-0 pr-1">
-          <b-img class="image-bottom" src="/images/unicornios-rosas.jpg" alt="telas de algodón"></b-img>
-        </b-col>
-        <b-col cols="4" class="pl-0 pr-1">
-          <b-img class="image-bottom" src="/images/helados.jpg" alt="telas de algodón"></b-img>
-        </b-col>
-      </div>
-      <div class="d-lg-none d-flex umami-second-lovers">
-        <b-col cols="4" class="pl-0 pr-1">
-          <b-img class="image-bottom" src="/images/got.jpg" alt="telas de algodón"></b-img>
-        </b-col>
-        <b-col cols="4" class="pl-0 pr-1">
-          <b-img class="image-bottom" src="/images/bano.jpg" alt="telas de algodón"></b-img>
-        </b-col>
-        <b-col cols="4" class="pl-0 pr-1">
-          <b-img class="image-bottom" src="/images/chupetero.jpg" alt="telas de algodón"></b-img>
-        </b-col>
-      </div>
-    <div class="py-4 d-none d-lg-flex justify-content-center subtitle-section">
-      ¿Cómo realizar tu pedido?
+          <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']" />
+        </b-button>
+      </b-col>
     </div>
+    <div class="pb-1 d-lg-none d-flex">
+      <b-col cols="4" class="pl-0 pr-1">
+        <b-img class="image-bottom" src="/images/leo-peque.jpg" alt="telas de algodón"></b-img>
+      </b-col>
+      <b-col cols="4" class="pl-0 pr-1">
+        <b-img class="image-bottom" src="/images/unicornios-rosas.jpg" alt="telas de algodón"></b-img>
+      </b-col>
+      <b-col cols="4" class="pl-0 pr-1">
+        <b-img class="image-bottom" src="/images/helados.jpg" alt="telas de algodón"></b-img>
+      </b-col>
+    </div>
+    <div class="d-lg-none d-flex umami-second-lovers">
+      <b-col cols="4" class="pl-0 pr-1">
+        <b-img class="image-bottom" src="/images/got.jpg" alt="telas de algodón"></b-img>
+      </b-col>
+      <b-col cols="4" class="pl-0 pr-1">
+        <b-img class="image-bottom" src="/images/bano.jpg" alt="telas de algodón"></b-img>
+      </b-col>
+      <b-col cols="4" class="pl-0 pr-1">
+        <b-img class="image-bottom" src="/images/chupetero.jpg" alt="telas de algodón"></b-img>
+      </b-col>
+    </div>
+    <div class="py-4 d-none d-lg-flex justify-content-center subtitle-section">¿Cómo realizar tu pedido?</div>
     <b-button href="/comprar" class="py-4 w-100 d-lg-none d-flex justify-content-center buy-section">
-    <div></div>
-    ¿Cómo realizar tu pedido? 
-      <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
+      <div></div>
+      ¿Cómo realizar tu pedido?
+      <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']" />
     </b-button>
     <div class="d-flex background-icons">
       <b-button href="/contacta" class="py-4 w-25 d-lg-none d-flex justify-content-center buy-icons">
-          <fa class="icon my-auto ml-1" :icon="['fas', 'user-edit']"/>
+        <fa class="icon my-auto ml-1" :icon="['fas', 'user-edit']" />
       </b-button>
       <b-button href="/productos" class="py-4 w-25 d-lg-none d-flex justify-content-center buy-icons">
-          <fa class="icon my-auto ml-1" :icon="['fas', 'gift']"/>
+        <fa class="icon my-auto ml-1" :icon="['fas', 'gift']" />
       </b-button>
       <b-button href="/nuestras-telas" class="py-4 w-25 d-lg-none d-flex justify-content-center buy-icons">
-          <fa class="icon my-auto ml-1" :icon="['fas', 'hand-pointer']"/>
+        <fa class="icon my-auto ml-1" :icon="['fas', 'hand-pointer']" />
       </b-button>
       <b-button href="/productos" class="w-25 d-lg-none d-flex justify-content-center buy-icons">
-          <fa class="icon my-auto ml-1" :icon="['fas', 'truck']"/>
+        <fa class="icon my-auto ml-1" :icon="['fas', 'truck']" />
       </b-button>
     </div>
-      <b-card-group deck class="screen-width  mobile-grid d-lg-flex justify-content-center d-none py-4 mx-auto">
-        <b-card
-          class="first-box"
-          title="Contáctanos"
-          img-src="/images/telefono.jpg"
-          img-alt="Image"
-          img-top
-          href="/contacta"
-        > 
-          <b-card-text>
-            Contáctanos por instagram umami_cottons o por mail
-            <a class="text-section font-weight-bold p-0" href="mailto:umamicottons@gmail.com">umamicottons@gmail.com</a>
-            (nuestro horario es de lunes a viernes de 9:00 a 18:00)
-            <a href="/comprar" class="pl-4">
-              <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']"/>
-            </a>
-          </b-card-text>
-        </b-card>
-        <b-card
-          title="Producto"
-          class="first-box"
-          img-src="/images/productos.jpg"
-          img-alt="Image"
-          img-top
-        >
-          <b-card-text>
-            Elige tu producto: una upenda, un meraki, un sobre cambiador, una bandana, un pack...
-            <a href="/productos" class="pl-4">
-              <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']"/>
-            </a>
-          </b-card-text>
-        </b-card>
-        <b-card
-          title="Tela"
-          class="first-box"
-          img-src="/images/21.jpg"
-          img-alt="Image"
-          img-top
-        >
-          <b-card-text>
-          Elige la tela que mas te guste, recuerda que todas son 100% algodón las puedes ver 
-          <a class="text-section p-0 font-weight-bold" href="/nuestras-telas">
-          aquí</a>
-          <a href="/nuestras-telas" class="pl-4">
-              <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']"/>
-            </a>
-          </b-card-text>
-        </b-card>
-        <b-card
-          class="first-box"
-          title="Packaging"
-          img-src="/images/car.jpg"
-          img-alt="Image"
-          img-top
-        > 
-          <b-card-text>
-            Indícanos la fecha que quieres recibir tu pedido.
-            Escríbenos la dirección de tu pedido + el nombre de la personita especial 
-            <a href="/contacta" class="pl-4">
-              <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']"/>
-            </a>
-          </b-card-text>
-        </b-card>
-      </b-card-group>
-      <div class="promotional-slider free-shipping py-4 d-lg-flex d-none">
-        Pedidos de más de 50 euros, los gastos de envío son gratuitos!
-      </div>
-    <div class="d-flex grid-slider mobile-grid justify-content-center py-4">
-    <b-carousel
-      id="carousel-1"
-      :interval="0"
-      background="#ababab"
-      class="image-slide"
-      style="text-shadow: 1px 1px 2px #333;"
-    >
-    <b-img src="/images/24.jpg" class="d-none d-lg-block w-100 borders" fluid alt="Responsive image"></b-img>
-    </b-carousel>
-    <b-carousel
-      id="carousel-1"
-      v-model="slide"
-      :interval="0"
-      controls
-      indicators
-      background="#ababab"
-      class="image-slide"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
-      <b-carousel-slide
-        caption="Alta Calidad"
-        text="Todas nuestras telas son de alta calidad tanto en diseño como en el tejido en sí."
-        img-src="/images/cierre.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Es su momento, es tu momento"
-        text="Pensada para hacer la vida del papá y la mamá más fácil"
-        img-src="/images/nina-con-upendas.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="Querer es sentir"
-        text="Siente la suavidad de nuestras telas"
-        img-src="/images/upenda.jpg"
-      ></b-carousel-slide>
-      <b-carousel-slide
-        caption="El regalo perfecto"
-        text="Una prenda única, hecha a mano con todo nuestro cariño y amor."
-        img-src="/images/upenda-abrazo.jpg"
-      ></b-carousel-slide>
-    </b-carousel>
-    <b-carousel
-      id="carousel-1"
-      :interval="0"
-      background="#ababab"
-      class="image-slide d-none d-lg-block"
-      style="text-shadow: 1px 1px 2px #333;"
-      @sliding-start="onSlideStart"
-      @sliding-end="onSlideEnd"
-    >
     <b-card-group deck class="screen-width mobile-grid d-lg-flex justify-content-center d-none py-4 mx-auto">
-      <b-card class="first-box" title="Cóntactanos" img-src="/images/telefono.jpg" img-alt="Image" img-top>
-        <b-card-text> Indícanos la fecha que quieres recibir tu pedido </b-card-text>
+      <b-card
+        class="first-box"
+        title="Contáctanos"
+        img-src="/images/telefono.jpg"
+        img-alt="Image"
+        img-top
+        href="/contacta"
+      >
+        <b-card-text>
+          Contáctanos por instagram umami_cottons o por mail
+          <a class="text-section font-weight-bold p-0" href="mailto:umamicottons@gmail.com">umamicottons@gmail.com</a>
+          (nuestro horario es de lunes a viernes de 9:00 a 18:00)
+          <a href="/comprar" class="pl-4">
+            <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']" />
+          </a>
+        </b-card-text>
       </b-card>
       <b-card title="Producto" class="first-box" img-src="/images/productos.jpg" img-alt="Image" img-top>
-        <b-card-text>una upenda, un meraki, un sobre cambiador, una bandana, un pack... </b-card-text>
+        <b-card-text>
+          Elige tu producto: una upenda, un meraki, un sobre cambiador, una bandana, un pack...
+          <a href="/productos" class="pl-4">
+            <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']" />
+          </a>
+        </b-card-text>
       </b-card>
       <b-card title="Tela" class="first-box" img-src="/images/21.jpg" img-alt="Image" img-top>
-        <b-card-text> Elige la tela que mas te guste, recuerda que todas son 100% algodón</b-card-text>
+        <b-card-text>
+          Elige la tela que mas te guste, recuerda que todas son 100% algodón las puedes ver
+          <a class="text-section p-0 font-weight-bold" href="/nuestras-telas"> aquí</a>
+          <a href="/nuestras-telas" class="pl-4">
+            <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']" />
+          </a>
+        </b-card-text>
       </b-card>
       <b-card class="first-box" title="Packaging" img-src="/images/car.jpg" img-alt="Image" img-top>
-        <b-card-text> Escríbenos la dirección de tu pedido + el nombre de la personita especial </b-card-text>
+        <b-card-text>
+          Indícanos la fecha que quieres recibir tu pedido. Escríbenos la dirección de tu pedido + el nombre de la
+          personita especial
+          <a href="/contacta" class="pl-4">
+            <fa class="arrow-right my-auto" :icon="['fas', 'chevron-right']" />
+          </a>
+        </b-card-text>
       </b-card>
     </b-card-group>
-    <div class="promotional-slider py-4 d-lg-flex d-none">
+    <div class="promotional-slider free-shipping py-4 d-lg-flex d-none">
       Pedidos de más de 50 euros, los gastos de envío son gratuitos!
     </div>
     <div class="d-flex grid-slider mobile-grid justify-content-center py-4">
@@ -390,6 +301,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.app * {
+  background-color: $light-grey;
+}
 .text-section {
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
@@ -415,7 +329,7 @@ export default {
   }
 }
 .subtitle-section {
-  font-size:48px;
+  font-size: 48px;
   background-color: #f8f9fa;
   @media (max-width: 880px) {
     font-size: 30px;
@@ -497,7 +411,7 @@ export default {
   box-shadow: 0px 0px 38px 0px rgba(53, 59, 62, 0.24);
   font-size: 30px;
 }
-.background-icons{
+.background-icons {
   background-color: #f5a3b7;
 
   .buy-icons {
@@ -522,70 +436,71 @@ export default {
   border-color: transparent;
   font-size: 20px;
   color: $umami-pink;
-  
+
   ::v-deep &.btn-secondary {
-    border-color:none;
+    border-color: none;
   }
   ::v-deep &.btn-secondary:hover {
-    background-color:pink !important;
+    background-color: pink !important;
   }
 }
 
 .circle-image {
-    border-radius: 50%;
-    width:73px;
-    min-height: 70px;
-    margin: 30px 20px;
-    &.left-image {
-      margin-left:40px;
-    }
-    &.right-image{
-      @media (max-width: 880px) { 
-        display: none;
-      }
+  border-radius: 50%;
+  width: 73px;
+  min-height: 70px;
+  margin: 30px 20px;
+  &.left-image {
+    margin-left: 40px;
+  }
+  &.right-image {
+    @media (max-width: 880px) {
+      display: none;
     }
   }
+}
 
 .modulo-imagenes {
   padding-bottom: 140px;
-  @media (max-width:700px) {
-    padding-bottom:10px;
+  @media (max-width: 700px) {
+    padding-bottom: 10px;
   }
 }
-.catalogo, .instagram {
-  padding-bottom: 20px!important;
-  padding-top:100px!important;
-  @media (max-width:700px) {
-    padding-top:20px!important;
+.catalogo,
+.instagram {
+  padding-bottom: 20px !important;
+  padding-top: 100px !important;
+  @media (max-width: 700px) {
+    padding-top: 20px !important;
   }
 }
 .nuestros-productos {
-  padding-top:80px!important;
-  @media (max-width:700px) {
-    padding-top:50px!important;
+  padding-top: 80px !important;
+  @media (max-width: 700px) {
+    padding-top: 50px !important;
   }
 }
-.free-shipping{
-  margin-bottom: 100px!important;
-  margin-top:100px!important;
+.free-shipping {
+  margin-bottom: 100px !important;
+  margin-top: 100px !important;
 }
 .arrow-right {
-  ::v-deep &.svg-inline--fa.fa-chevron-right{
+  ::v-deep &.svg-inline--fa.fa-chevron-right {
     color: $pink;
   }
 }
 .arrow {
-  ::v-deep &.svg-inline--fa.fa-chevron-right{
+  ::v-deep &.svg-inline--fa.fa-chevron-right {
     color: $pink;
-    background-color:transparent;
-    width:10px;
+    background-color: transparent;
+    width: 10px;
   }
 }
 .umami-lovers {
   padding-top: 80px;
   padding-bottom: 80px;
   font-size: 30px;
-  text-align:center;
+  text-align: center;
   .telas-umami-lovers {
     font-family: 'Montserrat';
   }
@@ -595,35 +510,35 @@ export default {
     color: black;
     border-color: transparent;
     font-size: 20px;
-    
+
     ::v-deep &.btn-secondary {
-      border-color:none;
+      border-color: none;
     }
     ::v-deep &.btn-secondary:hover {
-      background-color:pink !important;
+      background-color: pink !important;
     }
   }
   .see-products {
-  color: black;
-  border-color: transparent;
-  font-size: 20px;
-  color: $umami-pink;
-  
-  ::v-deep &.btn-secondary {
-    border-color:none;
+    color: black;
+    border-color: transparent;
+    font-size: 20px;
+    color: $umami-pink;
+
+    ::v-deep &.btn-secondary {
+      border-color: none;
+    }
+    ::v-deep &.btn-secondary:hover {
+      background-color: pink !important;
+    }
   }
-  ::v-deep &.btn-secondary:hover {
-    background-color:pink !important;
-  }
-}
 }
 .umami-second-lovers {
   padding-bottom: 140px;
 }
 .grid-slider {
-  @media (max-width:700px) {
-    padding-bottom:140px !important;
-    padding-top:140px!important;
+  @media (max-width: 700px) {
+    padding-bottom: 140px !important;
+    padding-top: 140px !important;
   }
 }
 </style>
