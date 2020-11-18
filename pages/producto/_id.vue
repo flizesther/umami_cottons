@@ -30,7 +30,6 @@
 import { mapGetters } from  'Vuex'
 export default {
   mounted() {
-    console.log('route:', this.$route.params.id)
     const productName = this.$route.params.id
     this.product = this.getProductById(productName)
   },

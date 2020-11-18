@@ -4,14 +4,34 @@
       <h1 class="mx-auto py-4">Nuestras telas</h1>
       <b-img src="/images/telas-upenda.jpg" class="w-75 mx-auto" fluid alt="Nuestras Telas"></b-img>
     </div> -->
-    <div v-for="fabric in fabrics" :key="fabric.id" class="d-flex flex-column align-items-center">
-        <b-img class="fabric-image d-flex w-25" :src="fabric.image" :alt="fabric.name">
+    <div v-for="(fabric, index) in fabrics" :key="fabric.id" class="d-flex flex-column align-items-center">
+        <b-img class="fabric-image d-flex w-25 mb-2" :src="fabric.image" :alt="fabric.name">
           </b-img>
-        <b-row class="d-flex fabrics-container">
-          <div v-for="imageFabric in fabric" :key="imageFabric.id">
+        <b-row class="fabrics-container d-none d-lg-flex">
+          <div v-for="imageFabric in fabric.list" :key="imageFabric.id">
             <b-img class="fabric-image d-flex" :src="imageFabric.image" :alt="imageFabric.name">{{imageFabric.image}}</b-img>
           </div>
       </b-row>
+      <!-- <b-button @click="showFabrics = !showFabrics">
+        show all telas
+      </b-button> -->
+      <b-carousel
+        :id="`carousel-${fabric.id}${index}`"
+        :interval="0"
+        controls
+        indicators
+        background="#ababab"
+        class="image-slide d-lg-none"
+        style="text-shadow: 1px 1px 2px #333;"
+        @sliding-start="onSlideStart"
+        @sliding-end="onSlideEnd"
+      >
+      <b-carousel-slide
+        v-for="imageFabric in fabric.list" :key="imageFabric.id"
+      >
+        <b-img :src="imageFabric.image" :alt="imageFabric.name" class="w-100">{{imageFabric.image}}</b-img>
+      </b-carousel-slide>
+      </b-carousel>
     </div>
   </b-container>
 </template>
@@ -25,11 +45,25 @@ export default {
       title: "Nuestras Telas"
     };
   },
+  // data () {
+  //   return { showFabrics: false }
+  // },
+  data () {
+    return { slide: 0 }
+  },
   computed: {
     ...mapState(['fabrics']),
     imageTelas () {
       let telas = fabrics.map(f => f.id).map(i => i.image)
       return telas
+    }
+  },
+  methods: {
+    onSlideStart(slide) {
+      this.sliding = true;
+    },
+    onSlideEnd(slide) {
+      this.sliding = false;
     }
   }
 };
@@ -53,5 +87,14 @@ export default {
 }
 * {
   font-family: "merlodAutre";
+}
+
+::v-deep .carousel-caption {
+  position: relative;
+    padding: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width:100;
 }
 </style>
