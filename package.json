@@ -28,6 +28,9 @@
     "@nuxtjs/firebase": "^6.1.1",
     "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/style-resources": "^1.0.0",
+    "@nuxtjs/fontawesome": "^1.1.2",
+    "@fortawesome/free-brands-svg-icons": "^5.13.1",
+    "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "axios": "^0.20.0",
     "bootstrap": "^4.5.0",
     "bootstrap-vue": "^2.15.0",
@@ -43,11 +46,8 @@
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
-    "@fortawesome/free-brands-svg-icons": "^5.13.1",
-    "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/fontawesome": "^1.1.2",
     "@vue/test-utils": "^1.1.0",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
@@ -66,6 +66,6 @@
     "vue-jest": "^3.0.4"
   },
   "engines": {
-    "node": "10"
+    "node": "8"
   }
 }

@@ -1,7 +1,8 @@
 #!/bin/bash
-enviroment=$1
+ENVIROMENT=${1:-emulation}
+DEPLOY=${2:-functions,hosting}
 
-cp ".env.${enviroment}" ./firebase/functions/.env
+cp ".env.${ENVIROMENT}" ./firebase/functions/.env
 
 npm run build
 
@@ -11,10 +12,9 @@ cp -R .nuxt/ ./firebase/functions/nuxt/
 cp -R api/ ./firebase/functions/api/
 cp nuxt.config.js ./firebase/functions/nuxt.config.js
 
-if [ $enviroment = "prod" ];
+if [ $ENVIROMENT = "prod" ];
 then
-    #firebase -c firebase/firebase.json deploy
-    echo "No enable deploy prod"
+    firebase -c firebase/firebase.json deploy --only ${DEPLOY}
 else
-    firebase -c firebase/firebase.json serve --only functions,hosting
+    firebase -c firebase/firebase.json serve --only ${DEPLOY}
 fi
