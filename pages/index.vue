@@ -226,7 +226,7 @@
         </b-card>
       </b-card-group>
       <div class="promotional-slider free-shipping py-4 d-lg-flex d-none">
-        Pedidos de más de 50 euros, los gastos de envío son gratuitos!
+        Pedidos de más de 50 euros en España, los gastos de envío son gratuitos!
       </div>
     <div class="d-flex grid-slider mobile-grid justify-content-center py-4">
     <b-carousel
