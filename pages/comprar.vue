@@ -9,7 +9,7 @@
           class="first-box"
           title="1.- Cóntactanos"
           img-src="/images/telefono.jpg"
-          img-alt="Image"
+          img-alt="Contáctanos"
           img-top
         > 
           <b-card-text>
@@ -22,7 +22,7 @@
           title="2.- Producto"
           class="first-box"
           img-src="/images/productos.jpg"
-          img-alt="Image"
+          img-alt="Producto"
           img-top
         >
           <b-card-text>
@@ -33,7 +33,7 @@
           title="3.- Tela"
           class="first-box"
           img-src="/images/21.jpg"
-          img-alt="Image"
+          img-alt="Tela"
           img-top
         >
           <b-card-text>
@@ -46,7 +46,7 @@
           class="first-box"
           title="4.- Packaging"
           img-src="/images/car.jpg"
-          img-alt="Image"
+          img-alt="Packaging"
           img-top
         > 
           <b-card-text>

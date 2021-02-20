@@ -3,13 +3,13 @@
     <div class="promotional-slider">
       Haciendo + fácil la vida de mamás & papás
     </div>
-    <b-img src="/images/main-image.jpg" class="w-100" fluid alt="Responsive image"></b-img>
+    <b-img src="/images/main-image.jpg" class="w-100" fluid alt="Regalos para bebés y recién nacidos"></b-img>
     <h1 class="d-flex py-2 justify-content-center catalogo">Catálogo Umami Cottons</h1>
     <b-img
       src="/images/um.png"
       class="banner-umm d-flex mx-auto justify-content-center"
       fluid
-      alt="Responsive image"
+      alt="Umami Cottons - productos artesanales de alta calidad y diseño"
     ></b-img>
     <div class="py-4 d-flex justify-content-center subtitle-section nuestros-productos">
       Nuestros productos
@@ -20,16 +20,16 @@
           <p class="d-lg-flex d-none mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
         <div>
           <a href="/producto/Upenda">
-            <b-img src="/images/19.jpg" class="circle-image left-image" fluid alt="Responsive image"/>
+            <b-img src="/images/19.jpg" class="circle-image left-image" fluid alt="Upenda"/>
           </a>
           <a href="/producto/Meraki">
-            <b-img src="/images/27.jpg" class="circle-image" fluid alt="Responsive image"/>
+            <b-img src="/images/27.jpg" class="circle-image" fluid alt="Poncho Meraki"/>
           </a>
           <a href="/producto/Sobres">
-            <b-img src="/images/25.jpg" class="circle-image" fluid alt="Responsive image"/>
+            <b-img src="/images/25.jpg" class="circle-image" fluid alt="Sobres"/>
           </a>
           <a href="/producto/Babero">
-            <b-img src="/images/26.jpg" class="circle-image right-image" fluid alt="Responsive image"></b-img>
+            <b-img src="/images/26.jpg" class="circle-image right-image" fluid alt="Babero"></b-img>
           </a>
         </div>
         <!-- <div class="d-lg-flex">
@@ -118,7 +118,7 @@
       </div>
       <div class="pb-1 d-lg-none d-flex">
         <b-col cols="4" class="pl-0 pr-1">
-          <b-img class="image-bottom" src="/images/leo-peque.jpg" alt="telas de algodón"></b-img>
+          <b-img class="image-bottom" src="/images/leo-peque.jpg" alt="telas de diseño"></b-img>
         </b-col>
         <b-col cols="4" class="pl-0 pr-1">
           <b-img class="image-bottom" src="/images/unicornios-rosas.jpg" alt="telas de algodón"></b-img>
@@ -236,7 +236,7 @@
       class="image-slide"
       style="text-shadow: 1px 1px 2px #333;"
     >
-    <b-img src="/images/24.jpg" class="d-none d-lg-block w-100 borders" fluid alt="Responsive image"></b-img>
+    <b-img src="/images/24.jpg" class="d-none d-lg-block w-100 borders" fluid alt="Regalos para bebés y recién nacidos"></b-img>
     </b-carousel>
     <b-carousel
       id="carousel-1"
@@ -280,7 +280,7 @@
       @sliding-start="onSlideStart"
       @sliding-end="onSlideEnd"
     >
-      <b-img src="/images/25.jpg" class="w-100 borders" fluid alt="Responsive image"></b-img>
+      <b-img src="/images/25.jpg" class="w-100 borders" fluid alt="Regalos para bebés y recién nacidos"></b-img>
     </b-carousel>
     </div>
     <div class="d-flex justify-content-center subtitle-section instagram">

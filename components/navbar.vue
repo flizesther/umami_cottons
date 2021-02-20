@@ -9,7 +9,7 @@
     </b-navbar-toggle>
     <b-navbar-brand>
       <a href="/">
-        <b-img src="/images/logoUC.jpg" class="brand-image" fluid alt="Responsive image" />
+        <b-img src="/images/logoUC.jpg" class="brand-image" fluid alt="Regalos para bebés y recién nacidos" />
       </a>
     </b-navbar-brand>
     <b-collapse id="nav-text-collapse" :class="{'opened collapse show d-block' : opened}" is-nav>
