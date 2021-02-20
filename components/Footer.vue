@@ -8,6 +8,7 @@
             <p class="footer-links">
                 <a href="/productos">Nuestros Productos</a>
                 <a href="/sobre-umami">Sobre Umami</a>
+                <a href="/packs">Nuestros Packs</a>
                 <a href="/comprar">Cómo comprar?</a>
                 <a href="/contacta">Contáctanos</a>
             </p>

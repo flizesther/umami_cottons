@@ -2,6 +2,7 @@ export const state = () => ({
     posts: [],
     products: [],
     fabrics: [],
+    packs: [],
     test: ''
 });
 
@@ -11,6 +12,9 @@ export const mutations = {
     },
     setProducts(state, receivedProducts) {
         state.products = receivedProducts
+    },
+    setPacks(state, receivedPacks) {
+        state.packs = receivedPacks
     },
     test(state, test) {
         state.test = test
@@ -42,6 +46,11 @@ export const actions = {
         const productsJson = await response.json()
         commit('setProducts', productsJson.filter(p => p))
     },
+    async getPacks({ commit }) {
+        const response = await fetch('https://umami-a6083.firebaseio.com/packs.json')
+        const packsJson = await response.json()
+        commit('setPacks', packsJson.filter(p => p))
+    },
     async getTest({ commit }) {
         const response = await fetch('https://umami-a6083.firebaseio.com/test.json')
         const data = await response.json()
@@ -55,4 +64,7 @@ export const actions = {
 };
 export const getters = {
     getProductById: state => paramsName => state.products.find(p => p.title === paramsName)
+}
+export const getters = {
+    getPacksById: state => paramsName => state.packs.find(p => p.title === paramsName)
 }
