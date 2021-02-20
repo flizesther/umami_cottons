@@ -63,8 +63,6 @@ export const actions = {
     }
 };
 export const getters = {
-    getProductById: state => paramsName => state.products.find(p => p.title === paramsName)
-}
-export const getters = {
+    getProductById: state => paramsName => state.products.find(p => p.title === paramsName),
     getPacksById: state => paramsName => state.packs.find(p => p.title === paramsName)
 }
