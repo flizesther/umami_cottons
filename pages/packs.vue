@@ -11,7 +11,7 @@
                 {{ allPacks }}
             </span>
             <div class="list-group d-lg-block d-none" v-for="pack in packs" :key="pack.id">
-              <span v-if="pack" class="list-group-item" @click="setFilter(pack.category)">
+              <span v-if="packs" class="list-group-item" @click="setFilter(pack.category)">
                 {{ pack.category }}
               </span>
             </div>
