@@ -14,12 +14,12 @@
     </b-navbar-brand>
     <b-collapse id="nav-text-collapse" :class="{'opened collapse show d-block' : opened}" is-nav>
       <b-navbar-nav class="nav-titles">
-        <b-nav-item @click="redirect('/')" to="" exact>Inicio</b-nav-item>
-        <b-nav-item @click="redirect('/comprar')" to="">¿Cómo comprar?</b-nav-item>
         <b-nav-item @click="redirect('/productos')" to="">Nuestros Productos</b-nav-item>
         <b-nav-item @click="redirect('/packs')" to="">Nuestros Packs</b-nav-item>
         <b-nav-item @click="redirect('/nuestras-telas')" to="">Nuestras Telas</b-nav-item>
+        <b-nav-item @click="redirect('/packaging')" to="" exact>Packaging</b-nav-item>
         <b-nav-item @click="redirect('/sobre-umami')" to="">Sobre Umami_cottons</b-nav-item>
+        <b-nav-item @click="redirect('/comprar')" to="">¿Cómo comprar?</b-nav-item>
         <b-nav-item @click="redirect('/contacta')" to="">Contáctanos</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
