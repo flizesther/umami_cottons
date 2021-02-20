@@ -1,7 +1,7 @@
 <template>
     <div class="card h-100">
         <!-- <b-button> -->
-        <a :href="`/pack/${pack.title}`">
+        <a :href="`/pack/${pack.code}`">
             <a><img class="card-img-top" :src="pack.image" :alt="pack.image"></a>
                 <div class="card-body">
                     <h4 class="card-title font-weight-bold">

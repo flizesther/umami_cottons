@@ -40,6 +40,7 @@ export const actions = {
         await dispatch('getProducts')
         await dispatch('getFabrics')
         await dispatch('getTest')
+        await dispatch('getPacks')
     },
     async getProducts({ commit }) {
         const response = await fetch('https://umami-a6083.firebaseio.com/products.json')
@@ -49,6 +50,7 @@ export const actions = {
     async getPacks({ commit }) {
         const response = await fetch('https://umami-a6083.firebaseio.com/packs.json')
         const packsJson = await response.json()
+        console.log('packsJson', packsJson)
         commit('setPacks', packsJson.filter(p => p))
     },
     async getTest({ commit }) {
@@ -63,6 +65,7 @@ export const actions = {
     }
 };
 export const getters = {
-    getProductById: state => paramsName => state.products.find(p => p.title === paramsName),
-    getPacksById: state => paramsName => state.packs.find(p => p.title === paramsName)
+    getProductByCode: state => paramsCode => state.products.find(p => p.code === paramsCode),
+    getPackByCode: state => paramsCode => state.packs.find(p => p.code === paramsCode),
+    getProductById: state => paramsId => state.products.find(p => p.id === paramsId)
 }

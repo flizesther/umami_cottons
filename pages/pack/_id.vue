@@ -23,6 +23,9 @@
           <p class="bold card-text">{{ pack.modalDescriptionThree }}</p>
         </div>
     </b-col>
+    <div v-for="product in products" :key="product.id">
+      <a :href="`/producto/${product.code}`">{{ product.title }}</a>
+    </div>
   </b-row>
 </template>
 
@@ -30,14 +33,16 @@
 import { mapGetters } from  'Vuex'
 export default {
   mounted() {
-    const packName = this.$route.params.id
-    this.pack = this.getpackById(packName)
+    const packCode = this.$route.params.id
+    this.pack = this.getPackByCode(packCode)
+    this.products = this.pack.products.map(p => this.getProductById(p.id))
   },
   computed: {
-    ...mapGetters(['getpackById'])
+    ...mapGetters(['getPackByCode', 'getProductById'])
   },
   data: () => ({
-    pack: {}
+    pack: {},
+    products: []
   })
 }
 </script>

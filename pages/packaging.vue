@@ -9,6 +9,18 @@
     <p class="d-flex justify-content-center text-center text-bold">
         Os dejamos algunos ejemplos de algunas de las cajas personalizadas:
     </p>
+    <div class="d-lg-flex justify-content-center">
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-uno.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-dos.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-tres.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-cuatro.jpg" alt="Named color image (red)"></b-img>
+    </div>
+    <div class="d-lg-flex justify-content-center"> 
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-cinco.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-seis.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-ocho.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-diez.jpg" alt="Named color image (red)"></b-img>
+    </div>
   </b-container>
 </template>
 
@@ -55,5 +67,12 @@ p {
   margin: auto;
   padding: 20px;
   font-family: 'Montserrat', sans-serif;
+}
+.image-bottom {
+  width: 100%;
+  @media (min-width: 880px) { 
+    height: 250px;
+    width: 250px;
+  }
 }
 </style>

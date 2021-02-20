@@ -1,7 +1,7 @@
 <template>
     <div class="card h-100">
         <!-- <b-button> -->
-        <a :href="`/producto/${product.title}`">
+        <a :href="`/producto/${product.code}`">
             <a><img class="card-img-top" :src="product.image" :alt="product.image"></a>
                 <div class="card-body">
                     <h4 class="card-title font-weight-bold">
@@ -36,7 +36,6 @@
 </template>
 
 <script>
-
 export default {
     props: ['product']
 }

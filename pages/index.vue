@@ -41,13 +41,13 @@
         </div>
       </div> 
     <div class="d-lg-flex d-none justify-content-center mobile-grid">
-      <b-button v-b-modal.modal-center-1>
-        <b-img class="image-bottom" src="/images/4.jpg" alt="Hecho a mano"></b-img>
+      <b-button v-b-modal.modal-center-1 href="/packaging">
+        <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-siete.jpg" alt="Hecho a mano"></b-img>
         <!-- <b-modal id="modal-center-1" centered title="Hecho a mano" hide-footer>
           <p class="py-4">Hecho a mano</p>
         </b-modal> -->
       </b-button>
-      <b-button v-b-modal.modal-center-2 class="d-none d-lg-block">
+      <b-button v-b-modal.modal-center-2 class="d-none d-lg-block" href="/productos">
         <b-img class="image-bottom" src="/images/cierre.jpg" alt="vida sencilla"></b-img>
         <!-- <b-modal id="modal-center-2" hide-footer centered title="Si, un snap nos cambió la vida">
           <p class="py-4">Nuestros diseños están pensados para hacerte la vida más sencilla</p>
@@ -61,7 +61,7 @@
       </b-button>
     </div>
     <div class="d-flex justify-content-center mobile-grid">
-      <b-button v-b-modal.modal-center-4 class="mobile">
+      <b-button v-b-modal.modal-center-4 class="mobile" href="/productos">
         <b-img class="image-bottom" src="/images/nina-con-upendas.jpg" alt="fiesta" />
         <b-button class="d-lg-none d-flex mb-0 justify-content-center see-products text-center" href="/productos">Ver todos los productos<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
 </b-button>
@@ -69,13 +69,13 @@
           <p class="py-4">Y así empieza todo, con una fiesta!</p>
         </b-modal> -->
       </b-button>
-      <b-button v-b-modal.modal-center-5 class="d-none d-lg-block">
+      <b-button v-b-modal.modal-center-5 class="d-none d-lg-block" href="/productos">
         <b-img class="image-bottom mobile" src="/images/productos.jpg" alt="muselina"></b-img>
         <!-- <b-modal id="modal-center-5" hide-footer centered title="Muselina">
           <p class="py-4">Hemos incorporado tela muselina para tocar el cielo!</p>
         </b-modal> -->
       </b-button>
-      <b-button v-b-modal.modal-center-6 class="d-none d-lg-block">
+      <b-button v-b-modal.modal-center-6 class="d-none d-lg-block" href="/productos">
         <b-img class="image-bottom mobile" src="/images/banderola.jpg" alt="packs"></b-img>
         <!-- <b-modal id="modal-center-6" hide-footer centered title="Un pack lo arregla todo">
           <p class="py-4">A veces no sabes qué tienes que comprar o regalar. Un pack te cambia la vida! mira las posibles combinaciones</p>
@@ -83,13 +83,13 @@
       </b-button>
     </div>
     <div class="d-flex justify-content-center mobile-grid modulo-imagenes">
-      <b-button v-b-modal.modal-center-7 class="d-none d-lg-block">
+      <b-button v-b-modal.modal-center-7 class="d-none d-lg-block" href="/productos">
         <b-img class="image-bottom" src="/images/leo-portada.jpg" alt="sobres de muda"></b-img>
         <!-- <b-modal id="modal-center" hide-footer centered title="Sobre de muda">
           <p class="py-4">Producto estrella. Ten todo organizado. Uno sabe lo ordenado con lo que sale, pero no como llega. Con los sobres de muda, la organización está garantizada!</p>
         </b-modal> -->
       </b-button>
-      <b-button v-b-modal.modal-center-8>
+      <b-button v-b-modal.modal-center-8 href="/productos">
         <b-img class="image-bottom" src="/images/Upenda/upenda-12.jpg" alt="upenda"></b-img>
         <!-- <b-modal id="modal-center" hide-footer centered title="Upenda">
           <p class="py-4">El origen de todo, nuestra idea, nuestro comienzo, nuestro patrón... es la upenda!</p>
@@ -97,12 +97,12 @@
         <b-button class="d-lg-none d-flex mb-0 justify-content-center see-products text-center" href="/nuestras-telas">Ver todas las telas<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
       </b-button>
       </b-button>
-      <b-button v-b-modal.modal-center-9>
+      <b-button v-b-modal.modal-center-9 href="/productos">
         <b-img class="image-bottom" src="/images/upendas-colgadas.jpg" alt="disfruta con umami"></b-img>
         <!-- <b-modal id="modal-center" hide-footer centered title="Disfrutar con umami">
           <p class="py-4">Disfruta de cada momento con tu bebé, sobre todo del baño, para eso umami está aquí para ayudarte a disfrutar de estos momentos!</p>
         </b-modal> -->
-        <b-button class="d-lg-none d-flex mb-0 justify-content-center see-products text-center" href="/">Ver todos nuestros packs<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/> </b-button>
+        <b-button class="d-lg-none d-flex mb-0 justify-content-center see-products text-center" href="/packs">Ver todos nuestros packs<fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/> </b-button>
       </b-button>
     </div>
       <div class="d-lg-none umami-lovers">
@@ -166,7 +166,7 @@
           class="first-box"
           title="Contáctanos"
           img-src="/images/telefono.jpg"
-          img-alt="Image"
+          img-alt="Contáctanos"
           img-top
           href="/contacta"
         > 
@@ -183,7 +183,7 @@
           title="Producto"
           class="first-box"
           img-src="/images/productos.jpg"
-          img-alt="Image"
+          img-alt="Producto"
           img-top
         >
           <b-card-text>

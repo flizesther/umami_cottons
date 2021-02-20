@@ -31,10 +31,10 @@ import { mapGetters } from  'Vuex'
 export default {
   mounted() {
     const productName = this.$route.params.id
-    this.product = this.getProductById(productName)
+    this.product = this.getProductByCode(productName)
   },
   computed: {
-    ...mapGetters(['getProductById'])
+    ...mapGetters(['getProductByCode'])
   },
   data: () => ({
     product: {}

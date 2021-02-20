@@ -45,7 +45,7 @@
         <b-card
           class="first-box"
           title="4.- Packaging"
-          img-src="/images/car.jpg"
+          img-src="/images/Packaging/packaging-personalizado-nueve.jpg"
           img-alt="Packaging"
           img-top
         > 
