@@ -10,16 +10,16 @@
         Os dejamos algunos ejemplos de algunas de las cajas personalizadas:
     </p>
     <div class="d-lg-flex justify-content-center">
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-uno.jpg" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-dos.jpg" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-tres.jpg" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-cuatro.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-uno.jpg" alt="packaging-personalizado"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-dos.jpg" alt="caja con nombre"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-tres.jpg" alt="caja sostenible"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-cuatro.jpg" alt="pacakaging personalizado"></b-img>
     </div>
     <div class="d-lg-flex justify-content-center"> 
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-cinco.jpg" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-seis.jpg" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-ocho.jpg" alt="Named color image (red)"></b-img>
-      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-diez.jpg" alt="Named color image (red)"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-cinco.jpg" alt="caja con nombre del bebe"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-seis.jpg" alt="personalizado"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-ocho.jpg" alt="caja personalizada"></b-img>
+      <b-img class="image-bottom" src="/images/Packaging/packaging-personalizado-siete.jpg" alt="caja personalizada con nombre"></b-img>
     </div>
   </b-container>
 </template>
