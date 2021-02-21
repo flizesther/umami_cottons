@@ -2,9 +2,9 @@
   <b-container class="contain-width">
     <h1 class="d-flex justify-content-center py-4 title">Packaging personalizado</h1>
       <div class="text">
-        Podemos poner personalizar la caja en la que va tu pedido.
+        Además del diseño y costura, también hacemos que tus productos viajen en un packaging personalizado con el mensaje que más desees.
+        Y, lo hacemos de forma sostenible.
         Los detalles importan y hacer que tu pedido lleve el nombre o la frase que tu quieras es un plus.
-        Podemos poner un nombre, una frase cortita o un dibujo sencillo pero signficativo.
     </div>
     <p class="d-flex justify-content-center text-center text-bold">
         Os dejamos algunos ejemplos de algunas de las cajas personalizadas:

@@ -21,7 +21,6 @@
         <p class="card-text">{{ pack.modalDescriptionOne }}</p>
         <p class="card-text">{{ pack.modalDescriptionTwo }}</p>
         <p class="bold card-text">{{ pack.modalDescriptionThree }}</p>
-        <p>El pack está compuesto por:</p>
         <div class="d-flex related-products">
           <div v-for="product in products" :key="product.id" class="pr-2" >
             <b-button :href="`/producto/${product.code}`">
