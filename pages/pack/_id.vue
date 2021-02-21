@@ -16,16 +16,22 @@
     </b-col>
     <b-col cols="12" md="5">
       <div class="card-body">
-          <h3 class="card-title font-weight-bold"> {{ pack.title }}</h3>
-          <h4>{{ pack.price }}</h4>
-          <p class="card-text">{{ pack.modalDescriptionOne }}</p>
-          <p class="card-text">{{ pack.modalDescriptionTwo }}</p>
-          <p class="bold card-text">{{ pack.modalDescriptionThree }}</p>
+        <h3 class="card-title font-weight-bold"> {{ pack.title }}</h3>
+        <h4>{{ pack.price }}</h4>
+        <p class="card-text">{{ pack.modalDescriptionOne }}</p>
+        <p class="card-text">{{ pack.modalDescriptionTwo }}</p>
+        <p class="bold card-text">{{ pack.modalDescriptionThree }}</p>
+        <p>El pack está compuesto por:</p>
+        <div class="d-flex related-products">
+          <div v-for="product in products" :key="product.id" class="pr-2" >
+            <b-button :href="`/producto/${product.code}`">
+               <p class="text-center">{{ product.title }}</p>
+                <b-img :src="product.image" :alt="product.title" class="w-100" />
+            </b-button>
+          </div>
         </div>
+      </div>
     </b-col>
-    <div v-for="product in products" :key="product.id">
-      <a :href="`/producto/${product.code}`">{{ product.title }}</a>
-    </div>
   </b-row>
 </template>
 
@@ -80,9 +86,38 @@ export default {
 .button-go-back {
   border: 0;
   color:black;
-  background-color: white;
+  background-color: $white;
 }
 .card-text {
     font-family: 'Montserrat', sans-serif;
+}
+::v-deep .btn-secondary {
+  color: $umami-pink;
+  background-color: $white;
+  border-color: transparent;
+}
+::v-deep .btn-secondary:not(:disabled):not(.disabled):active {
+  color: #fff;
+  background-color: pink;
+  border-color: transparent;
+  box-shadow: unset;
+}
+::v-deep .btn-secondary:active {
+  color: #fff;
+  background-color: pink;
+  border-color: transparent;
+  box-shadow: unset;
+}
+::v-deep .btn-secondary:focus {
+  border-color: pink;
+  box-shadow: unset;
+}
+::v-deep .btn-secondary:focus, .btn-secondary.focus {
+  box-shadow: unset;
+}
+.related-products {
+  @media (max-width: 800px){
+    flex-direction: column;
+  }
 }
 </style>
