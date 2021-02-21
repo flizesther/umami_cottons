@@ -110,7 +110,7 @@
           <p class="telas-umami-lovers">
           #UMAMIlovers
           </p>
-          <b-button class="d-flex mb-0 justify-content-center inspirate text-center" href="/nuestras-telas">
+          <b-button class="d-flex mb-0 justify-content-center inspirate text-center" href="/packaging">
           Inspírate con nuestro packaging
             <fa class="arrow my-auto ml-1" :icon="['fas', 'chevron-right']"/>
           </b-button>
