@@ -19,7 +19,6 @@
         :id="`carousel-${fabric.id}${index}`"
         :interval="0"
         controls
-        indicators
         background="#ababab"
         class="image-slide d-lg-none"
         style="text-shadow: 1px 1px 2px #333;"
@@ -97,4 +96,22 @@ export default {
     bottom: 0;
     width:100;
 }
+::v-deep .carousel-control-next,
+  ::v-deep .carousel-control-prev {
+    z-index: 17;
+
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+
+::v-deep .carousel-control-prev-icon,
+  ::v-deep .carousel-control-next-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    background-size: 20px;
+    background-color:$grey;
+    border: 1px solid $grey;
+  }
 </style>
