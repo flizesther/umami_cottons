@@ -1,11 +1,18 @@
 <template>
   <b-container class="telas">
-    <!-- <div class="d-flex justify-content-center flex-column">
-      <h1 class="mx-auto py-4">Nuestras telas</h1>
-      <b-img src="/images/telas-upenda.jpg" class="w-75 mx-auto" fluid alt="Nuestras Telas"></b-img>
-    </div> -->
+    <div class="d-flex justify-content-center flex-column">
+      <h1 class="mx-auto">
+        <b-img class="fabric-image d-flex justify-content-center mx-auto w-25 mb-2" :src="fabrics.image" :alt="fabrics.name" />
+      </h1>
+      <b-form-group v-slot="{ ariaDescribedby }" class="d-flex justify-content-center pb-lg-4">
+        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="todas" class="pr-lg-3">Todas</b-form-radio>
+        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="upenda" class="pr-lg-3">Upenda</b-form-radio>
+        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="meraki" class="pr-lg-3">Meraki</b-form-radio>
+        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="xs" class="pr-lg-3">Cosas Pequeñas</b-form-radio>
+        <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="muselina" class="pr-lg-3">Muselina</b-form-radio>
+      </b-form-group>
+    </div>
     <div class="d-flex flex-column align-items-center">
-        <b-img class="fabric-image d-flex w-25 mb-2" :src="fabrics.image" :alt="fabrics.name" />
         <b-row class="fabrics-container d-none d-lg-flex">
           <div v-for="fabricList in fabricWithStock" :key="fabricList">
             <b-img class="fabric-image d-flex" :src="fabricList.image" :alt="fabricList.name">
@@ -13,15 +20,6 @@
             </b-img>
           </div>
         </b-row>
-        <div>
-          <b-form-group v-slot="{ ariaDescribedby }">
-            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="todas">Todas las telas</b-form-radio>
-            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="upenda">Upenda</b-form-radio>
-            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="meraki">Meraki</b-form-radio>
-            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="xs">Cosas Pequeñas</b-form-radio>
-            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="muselina">Muselina</b-form-radio>
-          </b-form-group>
-        </div>
       <!-- <b-button @click="showFabrics = !showFabrics">
         show all telas
       </b-button> -->
@@ -125,5 +123,24 @@ export default {
     background-size: 20px;
     background-color:$grey;
     border: 1px solid $grey;
+  }
+
+  ::v-deep .custom-control-input:checked ~ .custom-control-label::before {
+  border-color: $umami-pink;
+  background-color:$umami-pink;
+  }
+  ::v-deep .custom-control-input:checked {
+    color: $umami-pink !important;
+  }
+  ::v-deep .bv-no-focus-ring {
+    display:flex;
+    padding-top:20px;
+  }
+  ::v-deep .custom-control-label {
+    @media (max-width: 880px) {
+      text-align: center;
+      font-size: 14px;
+      padding-right:10px;
+    }
   }
 </style>
