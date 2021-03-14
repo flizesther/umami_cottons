@@ -4,19 +4,28 @@
       <h1 class="mx-auto py-4">Nuestras telas</h1>
       <b-img src="/images/telas-upenda.jpg" class="w-75 mx-auto" fluid alt="Nuestras Telas"></b-img>
     </div> -->
-    <div v-for="(fabric, index) in fabrics" :key="fabric.id" class="d-flex flex-column align-items-center">
-        <b-img class="fabric-image d-flex w-25 mb-2" :src="fabric.image" :alt="fabric.name">
-          </b-img>
+    <div class="d-flex flex-column align-items-center">
+        <b-img class="fabric-image d-flex w-25 mb-2" :src="fabrics.image" :alt="fabrics.name" />
         <b-row class="fabrics-container d-none d-lg-flex">
-          <div v-for="imageFabric in fabric.list" :key="imageFabric.id">
-            <b-img class="fabric-image d-flex" :src="imageFabric.image" :alt="imageFabric.name">{{imageFabric.image}}</b-img>
+          <div v-for="fabricList in fabricWithStock" :key="fabricList">
+            <b-img class="fabric-image d-flex" :src="fabricList.image" :alt="fabricList.name">
+              {{fabricList.image}}
+            </b-img>
           </div>
-      </b-row>
+        </b-row>
+        <div>
+          <b-form-group v-slot="{ ariaDescribedby }">
+            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="todas">Todas las telas</b-form-radio>
+            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="upenda">Upenda</b-form-radio>
+            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="meraki">Meraki</b-form-radio>
+            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="xs">Cosas Pequeñas</b-form-radio>
+            <b-form-radio v-model="selected" :aria-describedby="ariaDescribedby" name="radio" value="muselina">Muselina</b-form-radio>
+          </b-form-group>
+        </div>
       <!-- <b-button @click="showFabrics = !showFabrics">
         show all telas
       </b-button> -->
       <b-carousel
-        :id="`carousel-${fabric.id}${index}`"
         :interval="0"
         controls
         background="#ababab"
@@ -26,9 +35,9 @@
         @sliding-end="onSlideEnd"
       >
       <b-carousel-slide
-        v-for="imageFabric in fabric.list" :key="imageFabric.id"
+        v-for="fabricList in fabricWithStock" :key="fabricList"
       >
-        <b-img :src="imageFabric.image" :alt="imageFabric.name" class="w-100">{{imageFabric.image}}</b-img>
+        <b-img :src="fabricList.image" :alt="fabricList.name" class="w-100">{{fabricList.image}}</b-img>
       </b-carousel-slide>
       </b-carousel>
     </div>
@@ -48,13 +57,16 @@ export default {
   //   return { showFabrics: false }
   // },
   data () {
-    return { slide: 0 }
+    return { slide: 0, selected: 'todas' }
   },
   computed: {
     ...mapState(['fabrics']),
-    imageTelas () {
-      let telas = fabrics.map(f => f.id).map(i => i.image)
-      return telas
+    fabricWithStock () {
+      let fabricWithStock = this.fabrics.list.filter(f => f.stock > 0)
+      if (this.selected !== 'todas') {
+        fabricWithStock = fabricWithStock.filter(f => f.available === undefined || f.available[this.selected] === undefined || f.available[this.selected])
+      }
+      return fabricWithStock
     }
   },
   methods: {

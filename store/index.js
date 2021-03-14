@@ -50,7 +50,6 @@ export const actions = {
     async getPacks({ commit }) {
         const response = await fetch('https://umami-a6083.firebaseio.com/packs.json')
         const packsJson = await response.json()
-        console.log('packsJson', packsJson)
         commit('setPacks', packsJson.filter(p => p))
     },
     async getTest({ commit }) {
