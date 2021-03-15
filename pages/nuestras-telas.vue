@@ -14,7 +14,7 @@
     </div>
     <div class="d-flex flex-column align-items-center">
         <b-row class="fabrics-container d-none d-lg-flex">
-          <div v-for="fabricList in fabricWithStock" :key="fabricList">
+          <div v-for="fabricList in fabricWithStock" :key="fabricList.id">
             <b-img class="fabric-image d-flex" :src="fabricList.image" :alt="fabricList.name">
               {{fabricList.image}}
             </b-img>
@@ -33,7 +33,7 @@
         @sliding-end="onSlideEnd"
       >
       <b-carousel-slide
-        v-for="fabricList in fabricWithStock" :key="fabricList"
+        v-for="fabricList in fabricWithStock" :key="fabricList.id"
       >
         <b-img :src="fabricList.image" :alt="fabricList.name" class="w-100">{{fabricList.image}}</b-img>
       </b-carousel-slide>
