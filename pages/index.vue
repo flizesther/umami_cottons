@@ -19,16 +19,16 @@
           <p class="py-2 mb-0 d-flex justify-content-center text-section text-center">Todos nuestros productos están cosidos a mano, además todas nuestras cajas están estampadas a mano. Todo está hecho con grandes dosis de amor</p>
           <p class="d-lg-flex d-none mb-0 justify-content-center text-section text-center">Tu pedido se puede enviar a cualquier destino, nacional o internacional.</p>
         <div>
-          <a href="/producto/Upenda">
+          <a href="/productos">
             <b-img src="/images/19.jpg" class="circle-image left-image" fluid alt="Upenda"/>
           </a>
-          <a href="/producto/Meraki">
+          <a href="/packaging">
             <b-img src="/images/27.jpg" class="circle-image" fluid alt="Poncho Meraki"/>
           </a>
-          <a href="/producto/Sobres">
+          <a href="/nuestras-telas">
             <b-img src="/images/25.jpg" class="circle-image" fluid alt="Sobres"/>
           </a>
-          <a href="/producto/Babero">
+          <a href="/comprar">
             <b-img src="/images/26.jpg" class="circle-image right-image" fluid alt="Babero"></b-img>
           </a>
         </div>
