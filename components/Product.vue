@@ -4,11 +4,11 @@
         <a :href="`/producto/${product.code}`">
             <a><img class="card-img-top" :src="product.image" :alt="product.image"></a>
                 <div class="card-body">
-                    <h4 class="card-title font-weight-bold">
-                    <a href="#">{{ product.title }}</a>
+                    <h4 :href="`/producto/${product.code}`" class="card-title font-weight-bold">
+                    <a :href="`/producto/${product.code}`" >{{ product.title }}</a>
                     </h4>
-                    <h5>{{ product.price }}</h5>
-                    <p class="card-text">{{ product.shortDescription }}</p>
+                    <h5 :href="`/producto/${product.code}`">{{ product.price }}</h5>
+                    <p :href="`/producto/${product.code}`" class="card-text">{{ product.shortDescription }}</p>
                 </div>
             <!-- <b-modal :id="`modal-center-${product.title}`" centered :title="product.title" hide-footer>
                 <div class="col-lg-12">
