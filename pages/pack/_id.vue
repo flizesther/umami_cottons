@@ -4,7 +4,7 @@
     <b-button href="/packs" class="button-height d-none d-lg-block">
       <fa class="arrow" :icon="['fas', 'chevron-left']" />
     </b-button>
-        <img class="card-img-top h-100 img-fluid" :src="pack.modalImage" :alt="pack.modalImage">
+        <img v-if="pack.modalImage" class="card-img-top h-100 img-fluid" :src="pack.modalImage" :alt="pack.modalImage">
     </b-col>
     <b-col cols="12" md="5" class="d-flex d-lg-none">
         <div class="d-flex d-lg-none align-items-center">

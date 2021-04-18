@@ -1,5 +1,5 @@
 <template>
-  <b-container-fluid class="home">
+  <b-container fluid class="home">
     <div class="promotional-slider">
       Haciendo + fácil la vida de mamás & papás
     </div>
@@ -317,7 +317,7 @@
         img-src="/images/15.jpg"
       ></b-carousel-slide>
     </b-carousel>
-  </b-container-fluid>
+  </b-container>
 </template>
 
 <script>

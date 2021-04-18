@@ -4,7 +4,7 @@
     <b-button href="/productos" class="button-height d-none d-lg-block">
       <fa class="arrow" :icon="['fas', 'chevron-left']" />
     </b-button>
-        <img class="card-img-top h-100 img-fluid" :src="product.modalImage" :alt="product.modalImage">
+        <img v-if="product.modalImage" class="card-img-top h-100 img-fluid" :src="product.modalImage" :alt="product.modalImage">
     </b-col>
     <b-col cols="12" md="5" class="d-flex d-lg-none">
         <div class="d-flex d-lg-none align-items-center">
@@ -16,7 +16,7 @@
     </b-col>
     <b-col cols="12" md="5">
       <div class="card-body">
-          <h3 class="card-title font-weight-bold"> {{ product.title }}</h3>
+          <h3 v-if="product.title" class="card-title font-weight-bold"> {{ product.title }}</h3>
           <h4>{{ product.price }}</h4>
           <p class="card-text">{{ product.modalDescriptionOne }}</p>
           <p class="card-text">{{ product.modalDescriptionTwo }}</p>
