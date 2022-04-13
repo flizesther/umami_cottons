@@ -30,6 +30,9 @@ $ firebase serve --only hosting
 # generate project
 $ npm run generate
 
+# permissions in firebase
+$ firebase login --reauth
+
 # deploy project
 $ firebase login
 $ firebase deploy
